@@ -1,28 +1,35 @@
-import React from 'react'
-import './loading.css'
+import React from "react";
+import "./loading.css";
 
 function Loading() {
-    return (
-        <div className="load-page">
-            <div className="loader">
+  return (
+    <div>
+      <img
+        style={{height: "4rem", width: "4rem"}}
+        src="./pics/pjlogo1.jpeg"
+        alt="reload"
+      />
+      <div className="load-page">
+        <div className="loader">
+          <div>
+            <div>
+              <div>
                 <div>
+                  <div>
                     <div>
-                        <div>
-                            <div>
-                                <div>
-                                    <div>
-                                        <div>
-                                            <div></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                      <div>
+                        <div></div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
 
-export default Loading
+export default Loading;
