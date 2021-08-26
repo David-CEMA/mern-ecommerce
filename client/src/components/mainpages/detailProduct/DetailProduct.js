@@ -2,6 +2,7 @@ import React, {useContext, useState, useEffect} from "react";
 import {useParams, Link} from "react-router-dom";
 import {GlobalState} from "../../../GlobalState";
 import ProductItem from "../utils/productItem/ProductItem";
+import "./detailProduct.css";
 
 function DetailProduct() {
   const params = useParams();
@@ -32,7 +33,7 @@ function DetailProduct() {
           <span>GHS ¢ {detailProduct.price}</span>
           <p>{detailProduct.description}</p>
           <p>{detailProduct.content}</p>
-          <p>Sold: {detailProduct.sold}</p>
+          {/* <p>Sold: {detailProduct.sold}</p> */}
           <Link
             to="/cart"
             className="cart"

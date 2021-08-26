@@ -12,8 +12,10 @@
     "flutterwave-node-v3": "^1.0.8",
     "flutterwave-react-v3": "^1.0.10",
     "react": "^16.13.1",
+    "react-awesome-slider": "^4.1.0",
     "react-dom": "^16.13.1",
     "react-paypal-express-checkout": "^1.0.5",
+    "react-responsive-carousel": "^3.2.21",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-whatsapp": "^0.2.1"

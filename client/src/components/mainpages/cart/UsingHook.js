@@ -1,5 +1,5 @@
 import React from "react";
-import tranSuccess from "../cart/Cart";
+// import tranSuccess from "../cart/Cart";
 // import  total from "../cart/Cart";
 import {useFlutterwave, closePaymentModal} from "flutterwave-react-v3";
 import {useState} from "react";
@@ -51,7 +51,7 @@ export default function UsingHook() {
           handleFlutterPayment({
             callback: (response) => {
               console.log(response);
-              closePaymentModal(); // this will close the modal programmatically
+              closePaymentModal();
             },
             onClose: () => {},
           });

@@ -1,4 +1,5 @@
 import React from "react";
+import "./Footer.css";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import CallIcon from "@material-ui/icons/Call";
@@ -11,6 +12,7 @@ function Footer() {
       <div
         className="con"
         style={{
+          color: "green",
           display: "flex",
           flexWrap: "wrap",
           alignItems: "center",
@@ -33,6 +35,7 @@ function Footer() {
                   backgroundColor: "transparent",
                   height: "2rem",
                   width: "2rem",
+                  color: "green",
                 }}
               />
             </ReactWhatsapp>
@@ -53,6 +56,7 @@ function Footer() {
                 style={{
                   height: "2rem",
                   width: "2rem",
+                  color: "blue",
                 }}
               />
             </button>
@@ -74,6 +78,7 @@ function Footer() {
                   backgroundColor: "transparent",
                   height: "2rem",
                   width: "2rem",
+                  color: "blue",
                 }}
               />
             </button>

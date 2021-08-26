@@ -70,12 +70,10 @@ function Cart() {
     }
   };
 
-  const tranSuccess = async (payment) => {
-    const {paymentID, address} = payment;
-
+  const tranSuccess = async () => {
     await axios.post(
       "/api/payment",
-      {cart, paymentID, address},
+      {cart},
       {
         headers: {Authorization: token},
       }
@@ -84,20 +82,39 @@ function Cart() {
     setCart([]);
     addToCart([]);
     alert("You have successfully placed an order.");
+    alert(
+      "customer delivery address under maintaince, Call customer care to send your address."
+    );
   };
+  // the original code below
+  // const tranSuccess = async (payment) => {
+  //   const {paymentID, address} = payment;
+
+  //   await axios.post(
+  //     "/api/payment",
+  //     {cart, paymentID, address},
+  //     {
+  //       headers: {Authorization: token},
+  //     }
+  //   );
+
+  //   setCart([]);
+  //   addToCart([]);
+  //   alert("You have successfully placed an order.");
+  // };
 
   if (cart.length === 0)
     return <h2 style={{textAlign: "center", fontSize: "5rem"}}>Cart Empty</h2>;
   // ---flutter---
   const config = {
-    public_key: "FLWPUBK_TEST-233ae3ddc63c755e763b9d95cb278d6a-X",
+    public_key: "FLWPUBK_TEST-95cfb4379a017a1bbd5fd98d64eb1de9-X",
     tx_ref: Date.now(),
     amount: `${total}`,
     currency: "GHS",
     payment_options: "card,mobilemoney,ussd",
     customer: {
       email: "praisejoint1customer@gmail.com",
-      // phonenumber: "0555148783",
+      phonenumber: "0555148783",
       name: "user",
     },
     customizations: {
@@ -109,10 +126,11 @@ function Cart() {
   //   const handleFlutterPayment = useFlutterwave(config);
   const fwConfig = {
     ...config,
-    text: "Pay with MobileMoney / Card",
+    text: "Click to Pay Via MobileMoney/Card",
     callback: (response) => {
       console.log(response);
-      closePaymentModal(); // this will close the modal programmatically
+      closePaymentModal();
+      tranSuccess();
     },
     onClose: () => {},
   };
@@ -146,8 +164,11 @@ function Cart() {
         style={{
           height: "7px",
           borderRadius: "10px",
-          color: "blue",
+          display: "block",
+          justifyContent: "center",
+          alignContent: "center",
           fontSize: "large",
+          zIndex: "1",
         }}>
         {/* <button
           onClick={() => {
@@ -162,30 +183,60 @@ function Cart() {
           }}>
           Pay Now
         </button> */}
-        <FlutterWaveButton
+        <div
           style={{
-            height: "5px",
+            height: "60px",
             borderRadius: "10px",
-            color: "grey",
-            fontSize: "large",
-            margin: "15px",
-          }}
-          {...fwConfig}
-        />
+            backgroundColor: "#070928",
+            display: "flex",
+            justifyContent: "center",
+            alignContent: "center",
+          }}>
+          <div
+            style={{
+              height: "60px",
+              borderRadius: "10px",
+              backgroundColor: "#f8f8fa",
+              display: "flex",
+              justifyContent: "center",
+              alignContent: "center",
+            }}>
+            <FlutterWaveButton
+              style={{
+                borderRadius: "10px",
+                border: "5px solid black",
+                borderStyle: "dotted",
+                fontSize: "larger",
+              }}
+              {...fwConfig}
+            />
+          </div>
+        </div>
+        {/* <button
+          type="button"
+          class="btn btn-primary"
+          onClick={() => tranSuccess()}>
+          COMPLETE TRANSACTION
+        </button> */}
+        <a href="tel:+233557548921">
+          <button
+            style={{
+              margin: "10px",
+            }}
+            type="button"
+            class="btn btn-primary">
+            CUSTOMER CARE
+          </button>
+        </a>
+
         <div>
           <img
-            style={{maxHeight: "50px", maxWidth: "70px"}}
+            style={{maxHeight: "200px", maxWidth: "2000px"}}
             src="./pics/battlogo.jpeg"
             alt="reload"
           />
         </div>
       </div>
-      {/* <div className="total">
-        <Link href to="/payout">
-          <h3>Total: GHS ¢ {total}</h3>
-          <button>Proceed to checkout</button>
-        </Link>
-      </div> */}
     </div>
   );
 }
