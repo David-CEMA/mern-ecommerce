@@ -5,6 +5,8 @@ import Loading from "../utils/loading/Loading";
 import axios from "axios";
 import Filters from "./Filters";
 import LoadMore from "./LoadMore";
+import Scarousel from "../../carousels/Scarousel";
+import Footer from "../../footer/Footer";
 
 function Products() {
   const state = useContext(GlobalState);
@@ -67,6 +69,7 @@ function Products() {
     );
   return (
     <>
+      <Footer />
       <Filters />
 
       {isAdmin && (
@@ -76,19 +79,21 @@ function Products() {
           <button onClick={deleteAll}>Delete ALL</button>
         </div>
       )}
-
-      <div className="products">
-        {products.map((product) => {
-          return (
-            <ProductItem
-              key={product._id}
-              product={product}
-              isAdmin={isAdmin}
-              deleteProduct={deleteProduct}
-              handleCheck={handleCheck}
-            />
-          );
-        })}
+      <div className="main">
+        <Scarousel />
+        <div className="products">
+          {products.map((product) => {
+            return (
+              <ProductItem
+                key={product._id}
+                product={product}
+                isAdmin={isAdmin}
+                deleteProduct={deleteProduct}
+                handleCheck={handleCheck}
+              />
+            );
+          })}
+        </div>
       </div>
 
       <LoadMore />

@@ -4,8 +4,8 @@ import {BrowserRouter as Router} from "react-router-dom";
 import {DataProvider} from "./GlobalState";
 import Header from "./components/headers/Header";
 import MainPages from "./components/mainpages/Pages";
-import Footer from "./components/footer/Footer";
-import Scarousel from "./components/carousels/Scarousel";
+// import Footer from "./components/footer/Footer";
+// import Scarousel from "./components/carousels/Scarousel";
 
 function App() {
   return (
@@ -13,8 +13,8 @@ function App() {
       <Router>
         <div className="App">
           <Header />
-          <Footer />
-          <Scarousel />
+          {/* <Footer /> */}
+          {/* <Scarousel /> */}
           <MainPages />
         </div>
       </Router>

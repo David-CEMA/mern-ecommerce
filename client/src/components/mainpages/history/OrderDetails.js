@@ -1,13 +1,17 @@
 import React, {useState, useEffect, useContext} from "react";
 import {useParams} from "react-router-dom";
+// import {getUser} from "../../../../../../../controllers/userCtrl";
 import {GlobalState} from "../../../GlobalState";
 
 function OrderDetails() {
   const state = useContext(GlobalState);
   const [history] = state.userAPI.history;
+  // const Users = state.userAPI.token;
   const [orderDetails, setOrderDetails] = useState([]);
+  // const Users = getUser;
 
   const params = useParams();
+  // getting the user details for the history
 
   useEffect(() => {
     if (params.id) {
@@ -32,7 +36,7 @@ function OrderDetails() {
         </thead>
         <tbody>
           <tr>
-            <td>{orderDetails.address}</td>
+            <td>user info</td>
             {/* <td>
               {orderDetails.address.line1 + " - " + orderDetails.address.city}
             </td>

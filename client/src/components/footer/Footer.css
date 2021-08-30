@@ -1,3 +1,11 @@
 .footer {
   background-image: linear-gradient(to top, #9e9ea3, #f8f8fa, #ffffff);
+  display: block;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.footer h1 {
+  font-family: "Fredericka the Great", cursive;
 }

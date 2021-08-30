@@ -5,7 +5,7 @@ import Close from "./icon/close.svg";
 import Cart from "./icon/cart.svg";
 import {Link} from "react-router-dom";
 import axios from "axios";
-import Footer from "../footer/Footer";
+// import Footer from "../footer/Footer";
 
 function Header() {
   const state = useContext(GlobalState);
@@ -90,8 +90,8 @@ function Header() {
         ""
       ) : (
         <div className="cart-icon">
-          <span>{cart.length}</span>
           <Link to="/cart">
+            <span>{cart.length}</span>
             <img src={Cart} alt="" width="30" />
           </Link>
         </div>

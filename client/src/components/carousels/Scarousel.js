@@ -21,10 +21,22 @@ function Scarousel() {
           <p className="legend">Best Alkaline/Lithium/Micro Batteries</p>
         </div>
         <div>
+          <img src="./pics/ph.png" alt="reload" />
+          <p className="legend">Best Alkaline/Lithium/Micro Batteries</p>
+        </div>
+        <div>
+          <img src="./pics/lp.png" alt="reload" />
+          <p className="legend">Best Alkaline/Lithium/Micro Batteries</p>
+        </div>
+        <div>
           <img src="./pics/bp3.jpg" alt="reload" />
           <p className="legend">
             Get the best quality and original alkaline batteries right here.
           </p>
+        </div>
+        <div>
+          <img src="./pics/ph.jpg" alt="reload" />
+          <p className="legend">Need a battery replacement ?</p>
         </div>
         <div>
           <img src="./pics/bp4.png" alt="reload" />

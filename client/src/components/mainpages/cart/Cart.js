@@ -1,8 +1,8 @@
 import React, {useContext, useState, useEffect} from "react";
 import {GlobalState} from "../../../GlobalState";
 import axios from "axios";
-import {Link} from "react-router-dom";
-import PaypalButton from "./PaypalButton";
+// import {Link} from "react-router-dom";
+// import PaypalButton from "./PaypalButton";
 // import {useFlutterwave, closePaymentModal} from "flutterwave-react-v3";
 import {FlutterWaveButton, closePaymentModal} from "flutterwave-react-v3";
 

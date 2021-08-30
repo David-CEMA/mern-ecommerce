@@ -13,6 +13,7 @@ import CreateProduct from "./createProduct/CreateProduct";
 // import Scarousel from "../../components/carousels/Scarousel";
 
 import {GlobalState} from "../../GlobalState";
+import Scarousel from "../carousels/Scarousel";
 
 function Pages() {
   const state = useContext(GlobalState);
@@ -22,6 +23,7 @@ function Pages() {
   return (
     <Switch>
       <Route path="/" exact component={Products} />
+      <Route path="/" exact component={Scarousel} />
       <Route path="/detail/:id" exact component={DetailProduct} />
 
       <Route path="/login" exact component={isLogged ? NotFound : Login} />
