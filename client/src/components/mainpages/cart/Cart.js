@@ -1,17 +1,22 @@
 import React, {useContext, useState, useEffect} from "react";
 import {GlobalState} from "../../../GlobalState";
 import axios from "axios";
-// import {Link} from "react-router-dom";
-// import PaypalButton from "./PaypalButton";
-// import {useFlutterwave, closePaymentModal} from "flutterwave-react-v3";
 import {FlutterWaveButton, closePaymentModal} from "flutterwave-react-v3";
+import "../../Email/Hgmail.css";
+import PinDropIcon from "@material-ui/icons/PinDrop";
+import emailjs from "emailjs-com";
 
 function Cart() {
   const state = useContext(GlobalState);
   const [cart, setCart] = state.userAPI.cart;
   const [token] = state.token;
   const [total, setTotal] = useState(0);
-  //   const handleFlutterPayment = useFlutterwave(config);
+  // -----delivery form
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  // const [message1, setMessage1] = useState("");
 
   useEffect(() => {
     const getTotal = () => {
@@ -69,6 +74,29 @@ function Cart() {
       addToCart(cart);
     }
   };
+  // handle submit-------------------------
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_iz9cqfk",
+        "template_l9y3527",
+        e.target,
+        "user_iapuX0T9u5NnpKLDnR0ro"
+      )
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
+    alert("Delivery Details Sent successful ✔");
+    // setName("");
+    // setNumber("");
+    // setEmail("");
+    // setMessage1("");
+    // setMessage("");
+    // ====
+  };
 
   const tranSuccess = async () => {
     await axios.post(
@@ -82,25 +110,12 @@ function Cart() {
     setCart([]);
     addToCart([]);
     alert("You have successfully placed an order.");
-    alert(
-      "customer delivery address under maintaince, Call customer care to send your address."
-    );
   };
-  // the original code below
-  // const tranSuccess = async (payment) => {
-  //   const {paymentID, address} = payment;
-
-  //   await axios.post(
-  //     "/api/payment",
-  //     {cart, paymentID, address},
-  //     {
-  //       headers: {Authorization: token},
-  //     }
-  //   );
-
-  //   setCart([]);
-  //   addToCart([]);
-  //   alert("You have successfully placed an order.");
+  //   setName("");
+  //   setNumber("");
+  //   setEmail("");
+  //   setMessage1("");
+  //   setMessage("");
   // };
 
   if (cart.length === 0)
@@ -113,9 +128,9 @@ function Cart() {
     currency: "GHS",
     payment_options: "card,mobilemoney,ussd",
     customer: {
-      email: "praisejoint1customer@gmail.com",
-      phonenumber: "0555148783",
-      name: "user",
+      email: `${email}`,
+      phonenumber: `${number}`,
+      name: `${name}`,
     },
     customizations: {
       title: "PRAISEJOINT1",
@@ -130,6 +145,7 @@ function Cart() {
     callback: (response) => {
       console.log(response);
       closePaymentModal();
+      // handleSubmit();
       tranSuccess();
     },
     onClose: () => {},
@@ -160,6 +176,115 @@ function Cart() {
           </div>
         </div>
       ))}
+      {/* email-form for customer-- details to shop owner */}
+      <section className="sec-main">
+        {/* ====== */}
+        <div className="snd">
+          <button type="button" class="btn btn-light pulse position-relative">
+            <PinDropIcon />
+            <span class="position-absolute top-0 start-100 translate-middle p-2 bg-success pulse border border-light rounded-circle">
+              <span class="visually-hidden">EMAIL</span>
+            </span>
+          </button>
+          <p className="snd-p">Complete The Delivery Address Form</p>
+        </div>
+
+        <div className="row">
+          <div className="formholder">
+            <form onSubmit={handleSubmit} name="contactForm">
+              {/* ========name========= */}
+              <div className="singleItems" class="form-floating mb-3">
+                <h5 className="txt-5">Your Name</h5>
+                <input
+                  type="text"
+                  name="name"
+                  className="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  class="form-control"
+                  id="floatingInput1"
+                />
+              </div>
+              {/* ========phone number========= */}
+              <div className="singleItems" class="form-floating mb-3">
+                <h5 className="txt-5">Phone Number</h5>
+                <input
+                  type="text"
+                  name="number"
+                  className="name"
+                  value={number}
+                  onChange={(e) => setNumber(e.target.value)}
+                  class="form-control"
+                  id="floatingInput2"
+                />
+              </div>
+              {/* ========email========= */}
+              <div className="singleItems" class="form-floating mb-3">
+                <h5 className="txt-5">Your Email address</h5>
+                <input
+                  type="email"
+                  name="email"
+                  className="name"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  class="form-control"
+                  id="floatingInput4"
+                />
+              </div>
+
+              {/* ========message========= */}
+              <div className="singleItems" class="form-floating">
+                <h5 className="txt-5">
+                  {" "}
+                  Delivery Address (House No. Landmarks <br /> Ghana-Post-GPS
+                  e.g : GA-183-8164)
+                </h5>
+                <textarea
+                  name="message"
+                  className="txt"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  class="form-control"
+                  id="floatingTextarea1"></textarea>
+              </div>
+              {/* ========Dcart========= */}
+              {/* <div
+                className="singleItems"
+                class="form-floating"
+                style={{display: "none"}}>
+                {cart.map((product) => (
+                  <p
+                    type="text"
+                    name="message1"
+                    className="cartDelivery"
+                    value={message1}
+                    onBeforeInput={(e) => setMessage1(e.target.value)}
+                    class="form-control"
+                    id="floatingTextarea2"
+                    key={product._id}>
+                    <p>
+                      <h5> {product.title}</h5>
+                      <br />
+                      <h5>GHS ¢ {product.price * product.quantity}</h5>
+                    </p>
+                    {total}
+                  </p>
+                ))}
+              </div> */}
+              {/* ========submit button========= */}
+              <div className="btn">
+                <button type="submit" class="btn btn-light">
+                  Done
+                </button>
+              </div>
+            </form>
+
+            {/* ========some error========= */}
+          </div>
+        </div>
+      </section>
+      {/* -------------- */}
       <div
         style={{
           height: "7px",
@@ -170,19 +295,6 @@ function Cart() {
           fontSize: "large",
           zIndex: "1",
         }}>
-        {/* <button
-          onClick={() => {
-            handleFlutterPayment({
-              callback: (response) => {
-                console.log(response);
-                closePaymentModal(); 
-                tranSuccess = {tranSuccess};
-              },
-              onClose: () => {},
-            });
-          }}>
-          Pay Now
-        </button> */}
         <div
           style={{
             height: "60px",

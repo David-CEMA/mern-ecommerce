@@ -31,7 +31,7 @@ function UserAPI(token) {
 
   const addCart = async (product) => {
     if (!isLogged) return alert("Please register or login to continue buying");
-    window.location.href = "/register";
+    // window.location.href = "/register";
 
     const check = cart.every((item) => {
       return item._id !== product._id;
