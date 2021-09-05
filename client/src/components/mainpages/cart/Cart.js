@@ -122,7 +122,8 @@ function Cart() {
     return <h2 style={{textAlign: "center", fontSize: "5rem"}}>Cart Empty</h2>;
   // ---flutter---
   const config = {
-    public_key: "FLWPUBK_TEST-95cfb4379a017a1bbd5fd98d64eb1de9-X",
+    public_key: "FLWPUBK-a10e4978d2db851ef1c7acaa462952cd-X",
+    // public_key: "FLWPUBK_TEST-95cfb4379a017a1bbd5fd98d64eb1de9-X",
     tx_ref: Date.now(),
     amount: `${total}`,
     currency: "GHS",
@@ -141,7 +142,7 @@ function Cart() {
   //   const handleFlutterPayment = useFlutterwave(config);
   const fwConfig = {
     ...config,
-    text: "Click to Pay Via MobileMoney/Card",
+    text: "Checkout",
     callback: (response) => {
       console.log(response);
       closePaymentModal();
@@ -237,7 +238,7 @@ function Cart() {
               <div className="singleItems" class="form-floating">
                 <h5 className="txt-5">
                   {" "}
-                  Delivery Address (House No. Landmarks <br /> Ghana-Post-GPS
+                  Delivery Address (House No. Or Landmarks <br /> Ghana-Post-GPS
                   e.g : GA-183-8164)
                 </h5>
                 <textarea
@@ -249,17 +250,17 @@ function Cart() {
                   id="floatingTextarea1"></textarea>
               </div>
               {/* ========Dcart========= */}
-              {/* <div
+              <div
                 className="singleItems"
                 class="form-floating"
                 style={{display: "none"}}>
                 {cart.map((product) => (
                   <p
                     type="text"
-                    name="message1"
-                    className="cartDelivery"
-                    value={message1}
-                    onBeforeInput={(e) => setMessage1(e.target.value)}
+                    name="cart"
+                    // className="cartDelivery"
+                    value={cart}
+                    // onBeforeInput={(e) => setMessage1(e.target.value)}
                     class="form-control"
                     id="floatingTextarea2"
                     key={product._id}>
@@ -268,10 +269,9 @@ function Cart() {
                       <br />
                       <h5>GHS ¢ {product.price * product.quantity}</h5>
                     </p>
-                    {total}
                   </p>
                 ))}
-              </div> */}
+              </div>
               {/* ========submit button========= */}
               <div className="btn">
                 <button type="submit" class="btn btn-light">
@@ -287,49 +287,67 @@ function Cart() {
       {/* -------------- */}
       <div
         style={{
-          height: "7px",
           borderRadius: "10px",
           display: "block",
           justifyContent: "center",
           alignContent: "center",
           fontSize: "large",
-          zIndex: "1",
         }}>
         <div
           style={{
-            height: "60px",
             borderRadius: "10px",
             backgroundColor: "#070928",
             display: "flex",
+            flexWrap: "wrap",
             justifyContent: "center",
             alignContent: "center",
+            alignItems: "center",
+            padding: "10px",
           }}>
+          <div>
+            <p style={{color: "whitesmoke", padding: "10px", margin: "5px"}}>
+              Click to pay via mobile money or credit/debit card
+              <br />
+              MTN MOMO_VODA CASH_TIGO CASH <br />
+              SECURED BY FlutterWave
+            </p>
+            <img
+              style={{width: "auto", height: "60px", margin: "5px"}}
+              src="./pics/f1.png"
+              alt="reload"
+            />
+            <img
+              style={{width: "auto", height: "60px", margin: "5px"}}
+              src="./pics/f2.jpg"
+              alt="reload"
+            />
+            <img
+              style={{width: "auto", height: "60px", margin: "5px"}}
+              src="./pics/f3.png"
+              alt="reload"
+            />
+          </div>
           <div
             style={{
-              height: "60px",
+              maxHeight: "40px",
+              maxWidth: "100px",
               borderRadius: "10px",
-              backgroundColor: "#f8f8fa",
+              backgroundColor: "#1d2594e3",
               display: "flex",
               justifyContent: "center",
               alignContent: "center",
+              alignSelf: "center",
+              justifySelf: "center",
+              border: "1px solid #CCC",
+              boxShadow: "0 0 5px -1px gray",
+              cursor: "pointer",
+              margin: "10px",
+              fontSize: "larger",
             }}>
-            <FlutterWaveButton
-              style={{
-                borderRadius: "10px",
-                border: "5px solid black",
-                borderStyle: "dotted",
-                fontSize: "larger",
-              }}
-              {...fwConfig}
-            />
+            <FlutterWaveButton style={{margin: "5px"}} {...fwConfig} />
           </div>
         </div>
-        {/* <button
-          type="button"
-          class="btn btn-primary"
-          onClick={() => tranSuccess()}>
-          COMPLETE TRANSACTION
-        </button> */}
+
         <a href="tel:+233557548921">
           <button
             style={{
@@ -337,17 +355,9 @@ function Cart() {
             }}
             type="button"
             class="btn btn-primary">
-            CUSTOMER CARE
+            CALL CUSTOMER CARE
           </button>
         </a>
-
-        <div>
-          <img
-            style={{maxHeight: "200px", maxWidth: "2000px"}}
-            src="./pics/battlogo.jpeg"
-            alt="reload"
-          />
-        </div>
       </div>
     </div>
   );

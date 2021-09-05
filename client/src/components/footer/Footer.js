@@ -66,7 +66,7 @@ function Footer() {
         </div>
         {/* -----facebook----- */}
         <div style={{margin: "5px"}}>
-          <a href="https://web.facebook.com/111861823703209/posts/praise-joint-1-ltd-general-merchant-deals-in-all-types-and-brands-of-batteries-a/303065054582884/?_rdc=1&_rdr">
+          <a href="https://web.facebook.com/batteryGhana.pj1">
             <button
               type="button"
               class="btn btn-light"

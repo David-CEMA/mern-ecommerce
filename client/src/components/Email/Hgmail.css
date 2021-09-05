@@ -11,7 +11,7 @@
 }
 .row {
   margin: 10px;
-  background-color: #0709284d;
+  background-color: #0709288f;
 }
 
 .txt-5 {
@@ -23,8 +23,9 @@
   border-style: unset;
   background-image: linear-gradient(
     to bottom right,
-    rgba(110, 32, 32, 0.055),
-    rgba(70, 67, 67, 0.699)
+    #07092811,
+    #070928,
+    #070928
   );
 }
 
