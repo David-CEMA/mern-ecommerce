@@ -122,7 +122,7 @@ function Cart() {
     return <h2 style={{textAlign: "center", fontSize: "5rem"}}>Cart Empty</h2>;
   // ---flutter---
   const config = {
-    public_key: "FLWPUBK-a10e4978d2db851ef1c7acaa462952cd-X",
+    public_key: "FLWPUBK-60e03d415807654522f47b19ca9c121e-X",
     // public_key: "FLWPUBK_TEST-95cfb4379a017a1bbd5fd98d64eb1de9-X",
     tx_ref: Date.now(),
     amount: `${total}`,
