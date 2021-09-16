@@ -24,7 +24,8 @@ header .logo {
 header a {
   text-transform: uppercase;
   color: #070928;
-  font-family: "Fredericka the Great", cursive;
+  font-family: "Roboto";
+  /* font-family: "Fredericka the Great", cursive; */
 }
 
 header ul li {

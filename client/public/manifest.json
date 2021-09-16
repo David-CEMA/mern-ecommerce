@@ -1,19 +1,19 @@
 {
-  "short_name": "PRAISEJOINT1",
+  "short_name": "PJ1",
   "name": "praisejoint1",
   "icons": [
     {
-      "src": "pjlogo1.jpeg",
+      "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "battlogo.jpeg",
+      "src": "favicon.ico",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "battlogo.jpeg",
+      "src": "favicon.ico",
       "type": "image/png",
       "sizes": "512x512"
     }
