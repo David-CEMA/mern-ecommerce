@@ -80,7 +80,30 @@ function Products() {
         </div>
       )}
       <div className="main">
-        <Scarousel />
+        {/* <Scarousel /> */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            alignContent: "center",
+          }}>
+          <button
+            class="btn btn-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample"
+            aria-expanded="false"
+            aria-controls="collapseExample">
+            Gallery
+          </button>
+        </div>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body" style={{width: "100%", height: "auto"}}>
+            <Scarousel />
+          </div>
+        </div>
+        {/* ----------- */}
         <div className="products">
           {products.map((product) => {
             return (
@@ -98,6 +121,7 @@ function Products() {
 
       <LoadMore />
       {products.length === 0 && <Loading />}
+      <Scarousel />
     </>
   );
 }

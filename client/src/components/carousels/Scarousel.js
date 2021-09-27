@@ -7,7 +7,7 @@ function Scarousel() {
     <div>
       <Carousel>
         <div>
-          <img src="./pics/bp.png" alt="reload" />
+          <img src="./pics/bp2.jpg" alt="reload" />
           <p className="legend">DEALERS IN ALL TYPES OF BATTERIES & CHARGERS</p>
         </div>
         <div>
@@ -65,7 +65,7 @@ function Scarousel() {
           <p className="legend">New Products</p>
         </div>
         <div>
-          <img src="./pics/bp2.jpg" alt="reload" />
+          <img src="./pics/bp.png" alt="reload" />
           <p className="legend">Various Charges Available</p>
         </div>
       </Carousel>

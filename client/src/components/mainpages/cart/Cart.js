@@ -1,9 +1,12 @@
 import React, {useContext, useState, useEffect} from "react";
 import {GlobalState} from "../../../GlobalState";
 import axios from "axios";
-import {FlutterWaveButton, closePaymentModal} from "flutterwave-react-v3";
+// import {FlutterWaveButton, closePaymentModal} from "flutterwave-react-v3";
 import "../../Email/Hgmail.css";
+import {PaystackButton} from "react-paystack";
 import PinDropIcon from "@material-ui/icons/PinDrop";
+import CancelIcon from "@material-ui/icons/Cancel";
+// import CancelIcon from "@mui/icons-material/Cancel";
 import emailjs from "emailjs-com";
 
 function Cart() {
@@ -17,6 +20,9 @@ function Cart() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   // const [message1, setMessage1] = useState("");
+  // --paystack--------
+
+  // const publicKey = process.env.PAYSTACK_PUBLIC_KEY;
 
   useEffect(() => {
     const getTotal = () => {
@@ -90,12 +96,6 @@ function Cart() {
       })
       .catch((err) => console.log(err));
     alert("Delivery Details Sent successful ✔");
-    // setName("");
-    // setNumber("");
-    // setEmail("");
-    // setMessage1("");
-    // setMessage("");
-    // ====
   };
 
   const tranSuccess = async () => {
@@ -111,46 +111,131 @@ function Cart() {
     addToCart([]);
     alert("You have successfully placed an order.");
   };
-  //   setName("");
-  //   setNumber("");
-  //   setEmail("");
-  //   setMessage1("");
-  //   setMessage("");
-  // };
 
   if (cart.length === 0)
-    return <h2 style={{textAlign: "center", fontSize: "5rem"}}>Cart Empty</h2>;
-  // ---flutter---
-  const config = {
-    public_key: "FLWPUBK-60e03d415807654522f47b19ca9c121e-X",
-    // public_key: "FLWPUBK_TEST-95cfb4379a017a1bbd5fd98d64eb1de9-X",
-    tx_ref: Date.now(),
-    amount: `${total}`,
+    return (
+      <div
+        style={{
+          display: "block",
+          justifyContent: "center",
+          alignItems: "center",
+          justifyItems: "center",
+        }}>
+        <img
+          style={{height: "auto", width: "100%"}}
+          src="./pics/bp2.jpg"
+          alt="praisejoint 1"
+        />
+        <br style={{height: "4px", color: "blue"}} />
+        <h1 style={{justifySelf: "center"}}>camera Batteries</h1>
+        <img
+          style={{height: "auto", width: "100%"}}
+          src="./pics/cb.jpg"
+          alt="praisejoint 1"
+        />
+        <br style={{height: "4px", color: "blue"}} />
+        <h1 style={{justifySelf: "center"}}>www.praisejoint1.com</h1>
+        <br style={{height: "4px", color: "blue"}} />
+        <img
+          style={{height: "auto", width: "100%"}}
+          src="./pics/j6.jpg"
+          alt="praisejoint 1"
+        />
+        <img
+          style={{height: "auto", width: "100%"}}
+          src="./pics/j2.jpg"
+          alt="praisejoint 1"
+        />
+        <img
+          style={{height: "auto", width: "100%"}}
+          src="./pics/j3.jpg"
+          alt="praisejoint 1"
+        />
+        <img
+          style={{height: "auto", width: "100%"}}
+          src="./pics/j4.jpg"
+          alt="praisejoint 1"
+        />
+        <img
+          style={{height: "auto", width: "100%"}}
+          src="./pics/j5.jpg"
+          alt="praisejoint 1"
+        />
+        <img
+          style={{height: "auto", width: "100%"}}
+          src="./pics/td.jpg"
+          alt="praisejoint 1"
+        />
+        <img
+          style={{height: "auto", width: "100%"}}
+          src="./pics/td1.jpg"
+          alt="praisejoint 1"
+        />
+      </div>
+    );
+
+  console.log(total);
+
+  // ---------paystack-----------
+  // const amount = 1000000
+  // const [email, setEmail] = useState("")
+  // const [name, setName] = useState("")
+  // const [phone, setPhone] = useState("")
+
+  const componentProps = {
     currency: "GHS",
-    payment_options: "card,mobilemoney,ussd",
-    customer: {
-      email: `${email}`,
-      phonenumber: `${number}`,
+    email: `${email}`,
+    amount: `${total * 100}`,
+    metadata: {
       name: `${name}`,
+      number: `${number}`,
     },
-    customizations: {
-      title: "PRAISEJOINT1",
-      description: "Secure Payments",
-      logo: "https://scontent.facc5-1.fna.fbcdn.net/v/t1.6435-9/160537798_293659202190136_7712127883670045037_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEXbk78K0EKkY0RUoX-mSWg7Rf_fvFFrMftF_9-8UWsxxwAOfWJLBmUnUJUPU8gLmcb-lFMHSDILoBjZS3yqd4D&_nc_ohc=rFmIrDzj8P0AX-yD0lb&_nc_ht=scontent.facc5-1.fna&oh=973c6159840cec8dd249abe8a54a1bdc&oe=61461EA8",
-    },
-  };
-  //   const handleFlutterPayment = useFlutterwave(config);
-  const fwConfig = {
-    ...config,
-    text: "Checkout",
-    callback: (response) => {
-      console.log(response);
-      closePaymentModal();
-      // handleSubmit();
+
+    publicKey: "pk_live_8c6beb8d305d66ed9a6b84cf48fe861890a1fbed",
+    text: "Pay Now",
+    onSuccess: () => {
+      setEmail("");
+      setName("");
+      setNumber("");
       tranSuccess();
+      handleSubmit();
+      // alert("tranSuccess occured");
     },
-    onClose: () => {},
+    onClose: () =>
+      alert(
+        "Share your experience with us on facebook also share and our website to others. Thank you for shopping with us !"
+      ),
   };
+  // ---flutter---
+  // const config = {
+  //   public_key: "FLWPUBK-9c169af83ef819ded55fc9ee1c871150-X",
+  //   tx_ref: Date.now(),
+  //   amount: `${total}`,
+  //   currency: "GHS",
+  //   country: "GHANA",
+  //   network: "MTN, VODAFONE, TIGO",
+  //   payment_options: "mobilemoney,card",
+  //   customer: {
+  //     email: `${email}`,
+  //     phonenumber: `${number}`,
+  //     name: `${name}`,
+  //   },
+  //   customizations: {
+  //     title: "PRAISEJOINT1",
+  //     description: "Secure Payments For Items in Cart",
+  //     logo: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fsk.pinterest.com%2Fpin%2F68398488074792794%2F&psig=AOvVaw2SAEf919v2Wpr-yFcMr62_&ust=1632677287720000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJiaxYHTmvMCFQAAAAAdAAAAABAO",
+  //   },
+  // };
+  // const fwConfig = {
+  //   ...config,
+  //   text: "Checkout",
+  //   callback: (response) => {
+  //     console.log(response);
+  //     closePaymentModal();
+  //     tranSuccess();
+  //   },
+  //   onClose: () => {},
+  // };
 
   return (
     <div>
@@ -172,14 +257,14 @@ function Cart() {
             </div>
 
             <div className="delete" onClick={() => removeProduct(product._id)}>
-              X
+              <CancelIcon />
             </div>
           </div>
         </div>
       ))}
       {/* email-form for customer-- details to shop owner */}
       <section className="sec-main">
-        {/* ====== */}
+        {/* ===-------------------------=== */}
         <div className="snd">
           <button type="button" class="btn btn-light pulse position-relative">
             <PinDropIcon />
@@ -208,7 +293,7 @@ function Cart() {
               </div>
               {/* ========phone number========= */}
               <div className="singleItems" class="form-floating mb-3">
-                <h5 className="txt-5">Phone Number</h5>
+                <h5 className="txt-5">Phone Number [mobile money number]</h5>
                 <input
                   type="text"
                   name="number"
@@ -238,8 +323,8 @@ function Cart() {
               <div className="singleItems" class="form-floating">
                 <h5 className="txt-5">
                   {" "}
-                  Delivery Address (House No. Or Landmarks <br /> Ghana-Post-GPS
-                  e.g : GA-183-8164)
+                  Delivery Address (House No./ close Landmarks <br />{" "}
+                  Ghana-Post-GPS )
                 </h5>
                 <textarea
                   name="message"
@@ -273,11 +358,11 @@ function Cart() {
                 ))}
               </div>
               {/* ========submit button========= */}
-              <div className="btn">
+              {/* <div className="btn">
                 <button type="submit" class="btn btn-light">
                   Done
                 </button>
-              </div>
+              </div> */}
             </form>
 
             {/* ========some error========= */}
@@ -306,14 +391,14 @@ function Cart() {
           }}>
           <div>
             <p style={{color: "whitesmoke", padding: "10px", margin: "5px"}}>
-              Click to pay via mobile money or credit/debit card
+              Click 'Pay Now' to pay via mobile money or credit/debit card
               <br />
               MTN MOMO_VODA CASH_TIGO CASH <br />
-              SECURED BY FlutterWave
+              SECURED BY PAYSTACK
             </p>
             <img
               style={{width: "auto", height: "60px", margin: "5px"}}
-              src="./pics/f1.png"
+              src="./pics/pk.png"
               alt="reload"
             />
             <img
@@ -321,30 +406,36 @@ function Cart() {
               src="./pics/f2.jpg"
               alt="reload"
             />
-            <img
+            {/* <img
               style={{width: "auto", height: "60px", margin: "5px"}}
               src="./pics/f3.png"
               alt="reload"
-            />
+            /> */}
           </div>
           <div
             style={{
               maxHeight: "40px",
               maxWidth: "100px",
               borderRadius: "10px",
-              backgroundColor: "#1d2594e3",
+              backgroundColor: "whitesmoke",
+              // backgroundColor: "#1d2594e3",
               display: "flex",
               justifyContent: "center",
               alignContent: "center",
               alignSelf: "center",
               justifySelf: "center",
-              border: "1px solid #CCC",
-              boxShadow: "0 0 5px -1px gray",
+              border: "4px solid #CCC",
+              boxShadow: "2px 2px 5px 0px gray",
               cursor: "pointer",
               margin: "10px",
               fontSize: "larger",
             }}>
-            <FlutterWaveButton style={{margin: "5px"}} {...fwConfig} />
+            {/* <FlutterWaveButton style={{margin: "5px"}} {...fwConfig} /> */}
+            <PaystackButton
+              className="paystack-button"
+              style={{margin: "5px"}}
+              {...componentProps}
+            />
           </div>
         </div>
 

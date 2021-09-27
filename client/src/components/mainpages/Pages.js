@@ -23,8 +23,8 @@ function Pages() {
   return (
     <Switch>
       <Route path="/" exact component={Products} />
-      <Route path="/" exact component={Scarousel} />
       <Route path="/detail/:id" exact component={DetailProduct} />
+      <Route path="/" exact component={Scarousel} />
 
       <Route path="/login" exact component={isLogged ? NotFound : Login} />
       <Route
