@@ -6,7 +6,6 @@ import "../../Email/Hgmail.css";
 import {PaystackButton} from "react-paystack";
 import PinDropIcon from "@material-ui/icons/PinDrop";
 import CancelIcon from "@material-ui/icons/Cancel";
-// import CancelIcon from "@mui/icons-material/Cancel";
 import emailjs from "emailjs-com";
 
 function Cart() {
