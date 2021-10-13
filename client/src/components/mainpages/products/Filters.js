@@ -16,9 +16,9 @@ function Filters() {
   };
 
   return (
-    <div style={{backgroundColor: "#8EC5FC"}} className="filter_menu">
+    <div style={{backgroundColor: "transparent"}} className="filter_menu">
       <div className="row">
-        <span>Filters: </span>
+        <span style={{color: "white"}}>Filters: </span>
         <select name="category" value={category} onChange={handleCategory}>
           <option value="">All Products</option>
           {categories.map((category) => (
@@ -36,11 +36,11 @@ function Filters() {
           placeholder="Type to Search!"
           onChange={(e) => setSearch(e.target.value.toLowerCase())}
         />
-        <SearchIcon style={{marginLeft: "-25px"}} />
+        <SearchIcon style={{marginLeft: "-35px"}} />
       </>
 
       <div className="row sort">
-        <span>Sort By: </span>
+        <span style={{color: "white"}}>Sort By: </span>
         <select value={sort} onChange={(e) => setSort(e.target.value)}>
           <option value="">New Products</option>
           <option value="sort=oldest">Old Products</option>

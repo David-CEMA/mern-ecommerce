@@ -11,11 +11,12 @@ header {
   border-bottom: 1px solid #070928;
   background-image: linear-gradient(
     to bottom,
+    #000000,
     #070928,
-    #3456ff,
-    #f7f8fc,
-    #f8f8fa,
-    #ffffff
+    #ff6200,
+    #bd4d07fa,
+    #ff6200de,
+    #ebd7b3
   );
 }
 header .logo {
@@ -51,7 +52,7 @@ header ul li:hover {
   }
 }
 .cart-icon span {
-  background: rgba(139, 147, 158, 0.856);
+  background: rgba(52, 53, 54, 0.856);
   border-radius: 20px;
   color: white;
   position: absolute;
