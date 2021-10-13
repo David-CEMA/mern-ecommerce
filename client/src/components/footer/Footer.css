@@ -1,5 +1,5 @@
 .footer {
-  background-image: linear-gradient(to top, #9e9ea3, #f8f8fa, #ffffff);
+  background-image: linear-gradient(to top, transparent, #f8f8fa, #ffffff);
   display: block;
   align-content: center;
   justify-content: center;

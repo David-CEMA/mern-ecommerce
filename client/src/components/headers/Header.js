@@ -38,7 +38,7 @@ function Header() {
   const loggedRouter = () => {
     return (
       <>
-        <li>
+        <li onClick={() => setMenu(!menu)}>
           <Link to="/history">History</Link>
         </li>
         <li>
@@ -52,6 +52,8 @@ function Header() {
 
   const styleMenu = {
     left: menu ? 0 : "-100%",
+    backgroundColor: "#0093E9",
+    backgroundImage: "linear-gradient(19deg,  #0093E9 0%, #80D0C7 100%)",
   };
 
   return (

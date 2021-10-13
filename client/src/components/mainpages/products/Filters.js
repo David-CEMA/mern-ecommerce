@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import {GlobalState} from "../../../GlobalState";
+import SearchIcon from "@material-ui/icons/Search";
 
 function Filters() {
   const state = useContext(GlobalState);
@@ -15,7 +16,7 @@ function Filters() {
   };
 
   return (
-    <div style={{backgroundColor: "#f8f8fa"}} className="filter_menu">
+    <div style={{backgroundColor: "#8EC5FC"}} className="filter_menu">
       <div className="row">
         <span>Filters: </span>
         <select name="category" value={category} onChange={handleCategory}>
@@ -28,21 +29,24 @@ function Filters() {
         </select>
       </div>
 
-      <input
-        type="text"
-        value={search}
-        placeholder="Enter your search!"
-        onChange={(e) => setSearch(e.target.value.toLowerCase())}
-      />
+      <>
+        <input
+          type="text"
+          value={search}
+          placeholder="Type to Search!"
+          onChange={(e) => setSearch(e.target.value.toLowerCase())}
+        />
+        <SearchIcon style={{marginLeft: "-25px"}} />
+      </>
 
       <div className="row sort">
         <span>Sort By: </span>
         <select value={sort} onChange={(e) => setSort(e.target.value)}>
-          <option value="">Newest</option>
-          <option value="sort=oldest">Oldest</option>
+          <option value="">New Products</option>
+          <option value="sort=oldest">Old Products</option>
           <option value="sort=-sold">Best sales</option>
-          <option value="sort=-price">Price: Hight-Low</option>
-          <option value="sort=price">Price: Low-Hight</option>
+          <option value="sort=-price">Price: Highest-Lowest</option>
+          <option value="sort=price">Price: Lowest-Highest</option>
         </select>
       </div>
     </div>

@@ -64,6 +64,12 @@ function Register() {
           <Link to="/login">Login</Link>
         </div>
       </form>
+      <div className="png-icons">
+        <img className="pngs" src="./pics/dtruck.png" alt="delivery image" />
+        <img className="pngs" src="./pics/delivery.png" alt="delivery image" />
+        <img className="pngs" src="./pics/star.png" alt="delivery image" />
+      </div>
+      <img className="flag" src="./pics/ghflag.png" alt="ghana flag" />
     </div>
   );
 }
