@@ -69,7 +69,6 @@ function Products() {
     );
   return (
     <>
-      <Footer />
       <Filters />
 
       {isAdmin && (
@@ -121,6 +120,7 @@ function Products() {
 
       <LoadMore />
       {products.length === 0 && <Loading />}
+      <Footer />
       <Scarousel />
     </>
   );

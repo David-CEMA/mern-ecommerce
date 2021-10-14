@@ -22,7 +22,7 @@ code {
    */
   backdrop-filter: blur(17px) saturate(180%);
   -webkit-backdrop-filter: blur(17px) saturate(180%);
-  background-color: #ff6200;
+  background-color: #d6d6d8;
   /* border-radius: 12px; */
   border: 1px solid rgba(209, 213, 219, 0.3);
 }

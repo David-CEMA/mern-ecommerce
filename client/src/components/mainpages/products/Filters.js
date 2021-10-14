@@ -16,7 +16,7 @@ function Filters() {
   };
 
   return (
-    <div style={{backgroundColor: "transparent"}} className="filter_menu">
+    <div style={{backgroundColor: "#cccbd673"}} className="filter_menu">
       <div className="row">
         <span style={{color: "white"}}>Filters: </span>
         <select name="category" value={category} onChange={handleCategory}>

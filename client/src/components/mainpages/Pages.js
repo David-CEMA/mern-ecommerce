@@ -24,7 +24,7 @@ function Pages() {
     <Switch>
       <Route path="/" exact component={Products} />
       <Route path="/detail/:id" exact component={DetailProduct} />
-      <Route path="/" exact component={Scarousel} />
+      {/* <Route path="/" exact component={Scarousel} /> */}
 
       <Route path="/login" exact component={isLogged ? NotFound : Login} />
       <Route

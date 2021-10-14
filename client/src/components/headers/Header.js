@@ -52,10 +52,9 @@ function Header() {
 
   const styleMenu = {
     left: menu ? 0 : "-100%",
-    backgroundColor: "#ff6200",
-    backgroundImage: "linear-gradient(19deg,  ##d86331 0%, #080b54 100%)",
-    borderRadius: "20px",
-    // boxShadow: "20px px 60px #d95300, -10px -20px 60px #ff7100",
+    backgroundColor: "gray",
+    backgroundImage: "linear-gradient(19deg,  darkgray 0%, lightgray 100%)",
+    position: "absolute",
   };
 
   return (
@@ -66,7 +65,7 @@ function Header() {
 
       <div className="logo">
         <h1>
-          <Link to="/">{isAdmin ? "Admin" : "PRAISE JOINT 1"}</Link>
+          <Link to="/">{isAdmin ? "Admin" : "PRAISE JOINT 1 LTD."}</Link>
         </h1>
       </div>
 

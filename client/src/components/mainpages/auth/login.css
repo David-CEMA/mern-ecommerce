@@ -6,8 +6,8 @@
   margin: 50px auto;
   display: grid;
   /* border-radius: 50px; */
-  background: linear-gradient(145deg, #e65800, #ff6900);
-  box-shadow: 10px 10px 30px #d95300, -10px -10px 30px #ff7100;
+  background: linear-gradient(145deg, #bfd8f1, #5e7075);
+  box-shadow: 10px 10px 30px #b4b6bb, -10px -10px 30px #e2e3e5;
 }
 .login-page h2 {
   text-transform: uppercase;
@@ -31,9 +31,9 @@
   /* background-color: #ff6200; */
   backdrop-filter: blur(8px) saturate(180%);
   -webkit-backdrop-filter: blur(8px) saturate(180%);
-  background-color: rgba(255, 98, 0, 0.53);
+  background-color: #4b4c4daf;
   border-radius: 12px;
-  border: 1px solid rgba(209, 213, 219, 0.3);
+  border: 1px solid rgb(209, 213, 219);
 }
 .login-page form button {
   width: 150px;
@@ -53,7 +53,7 @@
   background: #e8e8e8dc;
   border: 1px solid #e8e8e8b9;
   transition: all 0.3s;
-  box-shadow: 3px 6px 12px #c5c5c5, -3px -6px 12px #ffffffd8;
+  box-shadow: 3px 3px 6px #c5c5c5, -3px -3px 6px #ffffffd8;
 }
 .login-page form button:hover {
   border: 1px solid white;
@@ -62,7 +62,7 @@
   box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff;
 }
 .login-page form a {
-  color: rgb(46, 45, 45);
+  color: rgb(255, 255, 255);
   letter-spacing: 1.3px;
   text-transform: uppercase;
 }
