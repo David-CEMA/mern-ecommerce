@@ -7,6 +7,7 @@ import Filters from "./Filters";
 import LoadMore from "./LoadMore";
 import Scarousel from "../../carousels/Scarousel";
 import Footer from "../../footer/Footer";
+import ContactIcon from "../../ContactIcon";
 
 function Products() {
   const state = useContext(GlobalState);
@@ -121,7 +122,9 @@ function Products() {
       <LoadMore />
       {products.length === 0 && <Loading />}
       <Footer />
+
       <Scarousel />
+      <ContactIcon />
     </>
   );
 }

@@ -1,0 +1,7 @@
+.chat-help {
+  width: 4rem;
+  display: block;
+  position: sticky;
+  bottom: 50px;
+  z-index: 10;
+}

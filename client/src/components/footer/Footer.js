@@ -1,8 +1,8 @@
 import React from "react";
 import "./Footer.css";
 import FacebookIcon from "@material-ui/icons/Facebook";
-import WhatsAppIcon from "@material-ui/icons/WhatsApp";
-import CallIcon from "@material-ui/icons/Call";
+// import WhatsAppIcon from "@material-ui/icons/WhatsApp";
+// import CallIcon from "@material-ui/icons/Call";
 import InfoIcon from "@material-ui/icons/Info";
 // import EmailIcon from "@material-ui/icons/Email";
 import ReactWhatsapp from "react-whatsapp";
@@ -22,7 +22,7 @@ function Footer() {
         }}>
         {/* whatsapp, facebook,phone,email, */}
         {/* -------whatsapp----- */}
-        <div style={{margin: "5px"}}>
+        {/* <div style={{margin: "5px"}}>
           <button
             type="button"
             class="btn btn-light position-relative"
@@ -42,9 +42,9 @@ function Footer() {
               />
             </ReactWhatsapp>
           </button>
-        </div>
+        </div> */}
         {/* ----call----- */}
-        <div style={{margin: "5px"}}>
+        {/* <div style={{margin: "5px"}}>
           <a href="tel:+233557548921" class="Blondie">
             <button
               type="button"
@@ -63,10 +63,10 @@ function Footer() {
               />
             </button>
           </a>
-        </div>
+        </div> */}
         {/* -----facebook----- */}
         <div style={{margin: "5px"}}>
-          <a href="https://web.facebook.com/batteryGhana.pj1">
+          <a href="https://web.facebook.com/pj1batteries">
             <button
               type="button"
               class="btn btn-light"

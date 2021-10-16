@@ -9,12 +9,12 @@ header {
   justify-content: space-around;
   align-items: center;
   border-bottom: 2px solid #2f2f30;
+  /* color: black; */
   background-image: linear-gradient(
     to bottom,
-    #3a3a3d,
-    #5c5c5e,
-    #4f4f50,
-    #4d4b4bde
+    rgba(0, 0, 0, 0.884),
+    #04c5bb,
+    /* #ff6c00, #4f4f50, */ #1db2dffd
   );
 }
 header .logo {
