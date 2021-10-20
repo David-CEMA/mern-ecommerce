@@ -10,7 +10,7 @@ function ContactIcon() {
       <div className="icon-1">
         <button
           type="button"
-          class="btn btn-transparent  position-relative"
+          class="btn btn-light  position-relative"
           style={{
             display: "flex",
             alignItems: "center",
@@ -20,8 +20,8 @@ function ContactIcon() {
             <WhatsAppIcon
               style={{
                 backgroundColor: "transparent",
-                height: "2rem",
-                width: "2rem",
+                height: "1.5rem",
+                width: "1.5rem",
                 color: "green",
               }}
             />
@@ -32,7 +32,7 @@ function ContactIcon() {
       <a href="tel:+233557548921">
         <button
           type="button"
-          class="btn btn-transparent position-relative"
+          class="btn btn-light position-relative"
           style={{
             display: "flex",
             alignItems: "center",
@@ -41,8 +41,8 @@ function ContactIcon() {
           }}>
           <CallIcon
             style={{
-              height: "2rem",
-              width: "2rem",
+              height: "1.5rem",
+              width: "1.5rem",
               color: "black",
             }}
           />

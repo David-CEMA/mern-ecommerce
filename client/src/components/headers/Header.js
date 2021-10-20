@@ -40,7 +40,7 @@ function Header() {
       <>
         <li>
           <Link to="/history">
-            <h3>History</h3>
+            <p>History</p>
           </Link>
         </li>
         <li>
@@ -54,9 +54,6 @@ function Header() {
 
   const styleMenu = {
     left: menu ? 0 : "-100%",
-    backgroundColor: "gray",
-    backgroundImage: "linear-gradient(19deg,  darkgray 0%, lightgray 100%)",
-    position: "absolute",
   };
 
   return (
@@ -70,14 +67,19 @@ function Header() {
           <Link to="/">{isAdmin ? "Admin" : "PRAISE JOINT 1 "}</Link>
         </h1>
       </div>
-
+      {/* <div className="menulist"> */}
       <ul style={styleMenu}>
         <li onClick={() => setMenu(!menu)}>
           <Link to="/">
-            {isAdmin ? "Products" : <h3 style={{color: "black"}}>SHOP</h3>}
+            {isAdmin ? (
+              "Products"
+            ) : (
+              <p className="m1" style={{color: "black"}}>
+                SHOP
+              </p>
+            )}
           </Link>
         </li>
-
         {isAdmin && adminRouter()}
 
         {isLogged ? (
@@ -85,7 +87,9 @@ function Header() {
         ) : (
           <li onClick={() => setMenu(!menu)}>
             <Link to="/login">
-              <h3 style={{color: "black"}}>Login ✥ Register</h3>
+              <p className="m1" style={{color: "black"}}>
+                Login ✥ Register
+              </p>
             </Link>
           </li>
         )}
@@ -94,6 +98,7 @@ function Header() {
           <img src={Close} alt="" width="30" className="menu" />
         </li>
       </ul>
+      {/* </div> */}
 
       {isAdmin ? (
         ""

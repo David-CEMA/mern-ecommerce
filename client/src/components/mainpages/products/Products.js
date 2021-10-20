@@ -7,7 +7,7 @@ import Filters from "./Filters";
 import LoadMore from "./LoadMore";
 import Scarousel from "../../carousels/Scarousel";
 import Footer from "../../footer/Footer";
-import ContactIcon from "../../ContactIcon";
+// import ContactIcon from "../../ContactIcon";
 
 function Products() {
   const state = useContext(GlobalState);
@@ -69,7 +69,7 @@ function Products() {
       </div>
     );
   return (
-    <>
+    <div style={{display: "block"}}>
       <Filters />
 
       {isAdmin && (
@@ -124,8 +124,8 @@ function Products() {
       <Footer />
 
       <Scarousel />
-      <ContactIcon />
-    </>
+      {/* <ContactIcon /> */}
+    </div>
   );
 }
 

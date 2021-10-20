@@ -4,6 +4,7 @@ import {BrowserRouter as Router} from "react-router-dom";
 import {DataProvider} from "./GlobalState";
 import Header from "./components/headers/Header";
 import MainPages from "./components/mainpages/Pages";
+import ContactIcon from "./components/ContactIcon";
 // import Footer from "./components/footer/Footer";
 // import Scarousel from "./components/carousels/Scarousel";
 
@@ -16,6 +17,7 @@ function App() {
           {/* <Footer /> */}
           {/* <Scarousel /> */}
           <MainPages />
+          <ContactIcon />
         </div>
       </Router>
     </DataProvider>

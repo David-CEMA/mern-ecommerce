@@ -5,7 +5,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 // import CallIcon from "@material-ui/icons/Call";
 import InfoIcon from "@material-ui/icons/Info";
 // import EmailIcon from "@material-ui/icons/Email";
-import ReactWhatsapp from "react-whatsapp";
+// import ReactWhatsapp from "react-whatsapp";
 
 function Footer() {
   return (

@@ -1,12 +1,15 @@
 * {
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+*::-webkit-scrollbar {
+  display: none;
 }
 
 code {
@@ -15,7 +18,7 @@ code {
 }
 .App {
   max-width: 1230px;
-  min-height: 100vh;
+  height: 100vh;
   margin: 0 auto;
   padding: 0 10px;
   /* box-shadow: 0 0 35px rgb(160, 38, 38);
@@ -23,7 +26,6 @@ code {
   backdrop-filter: blur(17px) saturate(180%);
   -webkit-backdrop-filter: blur(17px) saturate(180%);
   background-color: #d6d6d8;
-  /* border-radius: 12px; */
   border: 1px solid rgba(209, 213, 219, 0.3);
 }
 a {
@@ -74,21 +76,30 @@ button {
     padding: 10px 0;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 820px) {
   header ul {
-    position: fixed;
-    top: 0;
+    overflow: hidden !important;
+    position: fixed !important;
+    top: 0px;
     left: -100%;
     width: 100%;
     height: 100vh;
-    background: white;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(185, 180, 180, 0.993),
+      #04c5bb,
+      #1db2dffd
+    );
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    align-self: center;
+    justify-self: center;
     opacity: 0.98;
     z-index: 99;
-    transition: 0.5s ease-in;
+    transition: 0.4s ease-in;
   }
   header .menu {
     display: block;
