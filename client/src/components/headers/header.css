@@ -2,7 +2,7 @@ header {
   min-height: 70px;
   width: 100%;
   display: flex;
-  position: sticky !important;
+  position: sticky;
   z-index: 10;
   top: 0;
   flex-wrap: wrap;
