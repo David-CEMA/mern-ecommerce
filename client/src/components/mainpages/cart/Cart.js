@@ -120,6 +120,18 @@ function Cart() {
           alignItems: "center",
           justifyItems: "center",
         }}>
+        <h1>We deliver to your doorstep</h1>
+        <img
+          style={{height: "auto", width: "100%"}}
+          src="./pics/ad.jpeg"
+          alt="praisejoint 1"
+        />
+        <h1>AAA & AAAA & C2 Batteries available</h1>
+        <img
+          style={{height: "auto", width: "100%"}}
+          src="./pics/ad1.jpeg"
+          alt="praisejoint 1"
+        />
         <img
           style={{height: "auto", width: "100%"}}
           src="./pics/bp2.jpg"

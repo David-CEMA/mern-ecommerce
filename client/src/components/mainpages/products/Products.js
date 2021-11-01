@@ -69,7 +69,7 @@ function Products() {
       </div>
     );
   return (
-    <div style={{display: "block"}}>
+    <>
       <Filters />
 
       {isAdmin && (
@@ -80,8 +80,7 @@ function Products() {
         </div>
       )}
       <div className="main">
-        {/* <Scarousel /> */}
-        <div
+        {/* <div
           style={{
             display: "flex",
             justifyContent: "center",
@@ -102,7 +101,7 @@ function Products() {
           <div class="card card-body" style={{width: "100%", height: "auto"}}>
             <Scarousel />
           </div>
-        </div>
+        </div> */}
         {/* ----------- */}
         <div className="products">
           {products.map((product) => {
@@ -125,7 +124,7 @@ function Products() {
 
       <Scarousel />
       {/* <ContactIcon /> */}
-    </div>
+    </>
   );
 }
 

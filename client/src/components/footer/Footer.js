@@ -98,69 +98,43 @@ function Footer() {
           {/* ------- */}
         </div>
         {/* modal for the about us */}
-        <button
-          type="button"
-          class="btn btn-light"
-          data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}>
-          <InfoIcon
+        <p>
+          <button
+            class="btn btn-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample"
+            aria-expanded="false"
+            aria-controls="collapseExample"
             style={{
-              backgroundColor: "transparent",
-              height: "2rem",
-              width: "2rem",
-              color: "blue",
-            }}
-          />
-        </button>
-        {/* modal */}
-        <div
-          class="modal fade"
-          id="staticBackdrop"
-          data-bs-backdrop="static"
-          data-bs-keyboard="false"
-          tabindex="-1"
-          aria-labelledby="staticBackdropLabel"
-          aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">
-                  ABOUT PRAISE JOINT 1 LTD
-                </h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                PRAISE JOINT 1 is Incorporated under the Companies Act 2019, Act
-                992 as a Limited Company, on the 12th day of January 2021.
-                <br />
-                Reg No. CS012280121
-                <br />
-                TIN : C005857770X
-                <img
-                  style={{width: "100%", height: "auto"}}
-                  src="./pics/pjlogo1.jpeg"
-                  alt="reload"
-                />
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal">
-                  Close
-                </button>
-                {/* <button type="button" class="btn btn-primary">Understood</button> */}
-              </div>
-            </div>
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}>
+            <InfoIcon
+              style={{
+                backgroundColor: "transparent",
+                height: "2rem",
+                width: "2rem",
+                color: "blue",
+              }}
+            />
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            <h5>ABOUT PRAISE JOINT 1 LTD</h5>
+            PRAISE JOINT 1 is Incorporated under the Companies Act 2019, Act 992
+            as a Limited Company, on the 12th day of January 2021.
+            <br />
+            Reg No. CS012280121
+            <br />
+            TIN : C005857770X
+            <img
+              style={{width: "100%", height: "auto"}}
+              src="./pics/pjlogo1.jpeg"
+              alt="reload"
+            />
           </div>
         </div>
       </div>
