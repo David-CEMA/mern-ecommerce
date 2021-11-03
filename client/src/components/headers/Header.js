@@ -1,11 +1,12 @@
 import React, {useContext, useState} from "react";
 import {GlobalState} from "../../GlobalState";
-import Menu from "./icon/menu.svg";
-import Close from "./icon/close.svg";
-import Cart from "./icon/cart.svg";
+// import Menu from "./icon/menu.svg";
+// import Close from "./icon/close.svg";
+// import Cart from "./icon/cart.svg";
 import {Link} from "react-router-dom";
 import axios from "axios";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import SearchIcon from "@material-ui/icons/Search";
 // import Footer from "../footer/Footer";
 
 function Header() {
@@ -13,7 +14,8 @@ function Header() {
   const [isLogged] = state.userAPI.isLogged;
   const [isAdmin] = state.userAPI.isAdmin;
   const [cart] = state.userAPI.cart;
-  const [menu, setMenu] = useState(false);
+  // const [menu, setMenu] = useState(false);
+  const [search, setSearch] = state.productsAPI.search;
 
   const logoutUser = async () => {
     await axios.get("/user/logout");
@@ -106,6 +108,18 @@ function Header() {
                   </p>
                 )}
               </Link>
+            </li>
+            <li>
+              <>
+                <input
+                  type="text"
+                  value={search}
+                  style={{margin: "10px"}}
+                  placeholder="Type to Search!"
+                  onChange={(e) => setSearch(e.target.value.toLowerCase())}
+                />
+                <SearchIcon style={{marginLeft: "-35px"}} />
+              </>
             </li>
             {isAdmin && adminRouter()}
 

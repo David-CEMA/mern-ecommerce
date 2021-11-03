@@ -80,14 +80,19 @@ function Products() {
         </div>
       )}
       <div className="main">
-        {/* <div
+        <div
           style={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             alignContent: "center",
           }}>
-          <button
+          <img
+            style={{maxWidth: "100%", maxHeight: "150px", margin: "5px"}}
+            src="./pics/ss.png"
+            alt="refresh"
+          />
+          {/* <button
             class="btn btn-light"
             type="button"
             data-bs-toggle="collapse"
@@ -99,9 +104,13 @@ function Products() {
         </div>
         <div class="collapse" id="collapseExample">
           <div class="card card-body" style={{width: "100%", height: "auto"}}>
-            <Scarousel />
-          </div>
-        </div> */}
+            <img
+              style={{width: "100%", height: "auto", margin: "5px"}}
+              src="./pics/dd1.jpg"
+              alt="refresh"
+            />
+          </div> */}
+        </div>
         {/* ----------- */}
         <div className="products">
           {products.map((product) => {
