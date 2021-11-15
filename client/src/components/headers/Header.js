@@ -109,7 +109,7 @@ function Header() {
                 )}
               </Link>
             </li>
-            <li>
+            {/* <li>
               <>
                 <input
                   type="text"
@@ -120,7 +120,7 @@ function Header() {
                 />
                 <SearchIcon style={{marginLeft: "-35px"}} />
               </>
-            </li>
+            </li> */}
             {isAdmin && adminRouter()}
 
             {isLogged ? (

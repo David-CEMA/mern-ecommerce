@@ -6,6 +6,7 @@ import axios from "axios";
 import Filters from "./Filters";
 import LoadMore from "./LoadMore";
 import Scarousel from "../../carousels/Scarousel";
+import Gallery from "../../carousels/Gallery";
 import Footer from "../../footer/Footer";
 // import ContactIcon from "../../ContactIcon";
 
@@ -87,11 +88,31 @@ function Products() {
             alignItems: "center",
             alignContent: "center",
           }}>
-          <img
-            style={{maxWidth: "100%", maxHeight: "150px", margin: "5px"}}
-            src="./pics/ss.png"
-            alt="refresh"
-          />
+          <div
+            style={{
+              display: "blog",
+              justifyContent: "center",
+              alignItems: "center",
+              alignContent: "center",
+            }}>
+            <div>
+              <img
+                style={{maxWidth: "100%", maxHeight: "110px", margin: "5px"}}
+                src="./pics/ss.png"
+                alt="refresh"
+              />
+            </div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                alignContent: "center",
+              }}>
+              {" "}
+              <Gallery />
+            </div>
+          </div>
           {/* <button
             class="btn btn-light"
             type="button"
