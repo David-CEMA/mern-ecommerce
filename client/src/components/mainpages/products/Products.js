@@ -95,13 +95,13 @@ function Products() {
               alignItems: "center",
               alignContent: "center",
             }}>
-            <div>
+            {/* <div>
               <img
                 style={{maxWidth: "100%", maxHeight: "110px", margin: "5px"}}
                 src="./pics/ss.png"
                 alt="refresh"
               />
-            </div>
+            </div> */}
             <div
               style={{
                 display: "flex",
@@ -149,8 +149,59 @@ function Products() {
       </div>
 
       <LoadMore />
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          alignItems: "center",
+          alignContent: "center",
+        }}>
+        <img
+          style={{maxWidth: "100%", maxHeight: "150px", margin: "5px"}}
+          src="./pics/bf.png"
+          alt="refresh"
+        />
+        <img
+          style={{maxWidth: "100%", maxHeight: "150px", margin: "5px"}}
+          src="./pics/fc.png"
+          alt="refresh"
+        />
+        <img
+          style={{maxWidth: "100%", maxHeight: "150px", margin: "5px"}}
+          src="./pics/ff.png"
+          alt="refresh"
+        />
+        <img
+          style={{maxWidth: "100%", maxHeight: "150px", margin: "5px"}}
+          src="./pics/bf1.jpg"
+          alt="refresh"
+        />
+      </div>
       {products.length === 0 && <Loading />}
       <Footer />
+      {/* ----------- */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          alignContent: "center",
+        }}>
+        <div className="nextProducts">
+          {products.map((product) => {
+            return (
+              <ProductItem
+                key={product._id}
+                product={product}
+                isAdmin={isAdmin}
+                deleteProduct={deleteProduct}
+                handleCheck={handleCheck}
+              />
+            );
+          })}
+        </div>
+      </div>
 
       <Scarousel />
       {/* <ContactIcon /> */}

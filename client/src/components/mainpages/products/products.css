@@ -2,7 +2,8 @@
   border-radius: 10px;
   box-shadow: 15px 10px 52px #050216a8, -15px -10px 52px #0502188f;
 }
-.products {
+.products,
+.nextProducts {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -75,9 +76,20 @@ input {
 @media only screen and (max-width: 720px) {
   .products {
     width: 100%;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow-x: scroll;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+  }
+  .nextProducts {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
     align-items: center;
     align-content: center;
   }

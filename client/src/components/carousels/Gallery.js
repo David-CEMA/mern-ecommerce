@@ -4,8 +4,8 @@ import "react-image-lightbox/style.css"; // This only needs to be imported once 
 import PanoramaIcon from "@material-ui/icons/Panorama";
 
 const images = [
-  "./pics/m1.jpg",
   "./pics/kb.png",
+  "./pics/m1.jpg",
   "./pics/ad1.jpeg",
   "./pics/toyb.jpg",
   "./pics/toyb2.jpg",
