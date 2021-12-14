@@ -5,12 +5,14 @@ import {DataProvider} from "./GlobalState";
 import Header from "./components/headers/Header";
 import MainPages from "./components/mainpages/Pages";
 import ContactIcon from "./components/ContactIcon";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <DataProvider>
       <Router>
         <div className="app">
+          <ScrollToTop />
           <Header />
           <MainPages />
           <ContactIcon />
