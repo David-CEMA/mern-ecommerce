@@ -1,7 +1,7 @@
 {
-  "name": "ecommerce",
+  "name": "praisejoint1",
   "version": "1.0.0",
-  "description": "",
+  "description": "battery, charger, 9v, rechargeable battery, calculator battery,key fob battery,key fob battery replacement, coin battery, 18650, AAA, AAAA, aaa, aa, car battery,motor battery,digital charger, watch battery, toy car batteries",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

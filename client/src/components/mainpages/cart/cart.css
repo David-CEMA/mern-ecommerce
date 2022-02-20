@@ -3,6 +3,37 @@
     border: 1px solid #ccc;
     transform: scaleY(0.98);
 }
+.bmain{
+    /* margin-top: 20px; */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+.detail-cart{
+    background-color: rgba(128, 128, 128, 0.302);
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+}
+.cart-pic{
+    flex: 0.3;
+}
+.sides{
+    height: 100px;
+}
+.box-detail{
+    flex: 0.7;
+}
+.box-detail h2{
+    color: black;
+}
 .amount span{
     color: crimson;
     padding: 0 20px;
@@ -13,12 +44,16 @@
     border: 1px solid #777;
 }
 .delete{
-    position: absolute;
+    /* position: absolute; */
     top:0;
-    right: 5px;
+    /* width: 25px; */
+    /* margin-left: 180px; */
+   margin-right: 0px;
     color: crimson;
     font-weight: 900;
     cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
 }
 .total{
     width: 100%;
@@ -29,4 +64,17 @@
 }
 .total h3{
     color: crimson;
+}
+.c-pis .img{
+    justify-self: center;
+    align-self: center;
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+   .detail-cart {
+      width: 60%;
+   }
+   .sides {
+       height: 200px;
+   }
 }

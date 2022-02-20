@@ -1,32 +1,33 @@
 .sec-main {
   margin: 10px;
   display: grid;
-  background-color: #1d2594e3;
+  background-color: #e4e4ebe3;
 }
 .snd {
   margin: 10px;
 }
 .snd p {
-  color: whitesmoke;
+  color: gray;
 }
 .row {
   margin: 10px;
-  background-color: #0709288f;
+  background-color: #f4f4fdf5;
 }
 
 .txt-5 {
-  color: white;
+  color: black;
 }
 .formholder {
   padding: 1rem;
   margin: 5px;
   border-style: unset;
-  background-image: linear-gradient(
+  background-color: rgba(128, 128, 128, 0.439);
+  /* background-image: linear-gradient(
     to bottom right,
-    #07092811,
-    #070928,
-    #070928
-  );
+    #f1f1f511,
+    #ffffff05,
+    #e3e4eb0e
+  ); */
 }
 
 /* Large devices (laptops/desktops, 992px and up) */

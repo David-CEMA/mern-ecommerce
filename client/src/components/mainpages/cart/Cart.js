@@ -113,34 +113,35 @@ function Cart() {
 
   if (cart.length === 0)
     return (
-      <div
+      <div className="c-pis"
         style={{
           display: "block",
           justifyContent: "center",
+          alignContent: 'center',
           alignItems: "center",
           justifyItems: "center",
         }}>
         <h1>We deliver to your doorstep</h1>
         <img
-          style={{height: "auto", width: "100%"}}
+          style={{height: "auto", width: "80%"}}
           src="./pics/ad.jpeg"
           alt="praisejoint 1"
         />
         <h1>AAA & AAAA & C2 Batteries available</h1>
         <img
-          style={{height: "auto", width: "100%"}}
+          style={{height: "auto", width: "80%"}}
           src="./pics/ad1.jpeg"
           alt="praisejoint 1"
-        />
+        /> 
         <img
-          style={{height: "auto", width: "100%"}}
+          style={{height: "auto", width: "80%"}}
           src="./pics/bp2.jpg"
           alt="praisejoint 1"
         />
         <br style={{height: "4px", color: "blue"}} />
         <h1 style={{justifySelf: "center"}}>camera Batteries</h1>
         <img
-          style={{height: "auto", width: "100%"}}
+          style={{height: "auto", width: "80%"}}
           src="./pics/cb.jpg"
           alt="praisejoint 1"
         />
@@ -148,38 +149,33 @@ function Cart() {
         <h1 style={{justifySelf: "center"}}>www.praisejoint1.com</h1>
         <br style={{height: "4px", color: "blue"}} />
         <img
-          style={{height: "auto", width: "100%"}}
+          style={{height: "auto", width: "80%"}}
           src="./pics/j6.jpg"
           alt="praisejoint 1"
         />
         <img
-          style={{height: "auto", width: "100%"}}
+          style={{height: "auto", width: "80%"}}
           src="./pics/j2.jpg"
           alt="praisejoint 1"
         />
         <img
-          style={{height: "auto", width: "100%"}}
+          style={{height: "auto", width: "80%"}}
           src="./pics/j3.jpg"
           alt="praisejoint 1"
         />
         <img
-          style={{height: "auto", width: "100%"}}
+          style={{height: "auto", width: "80%"}}
           src="./pics/j4.jpg"
           alt="praisejoint 1"
         />
         <img
-          style={{height: "auto", width: "100%"}}
+          style={{height: "auto", width: "80%"}}
           src="./pics/j5.jpg"
           alt="praisejoint 1"
         />
         <img
-          style={{height: "auto", width: "100%"}}
+          style={{height: "auto", width: "80%"}}
           src="./pics/td.jpg"
-          alt="praisejoint 1"
-        />
-        <img
-          style={{height: "auto", width: "100%"}}
-          src="./pics/td1.jpg"
           alt="praisejoint 1"
         />
       </div>
@@ -187,11 +183,7 @@ function Cart() {
 
   console.log(total);
 
-  // ---------paystack-----------
-  // const amount = 1000000
-  // const [email, setEmail] = useState("")
-  // const [name, setName] = useState("")
-  // const [phone, setPhone] = useState("")
+  
 
   const componentProps = {
     currency: "GHS",
@@ -217,59 +209,33 @@ function Cart() {
         "Share your experience with us on facebook also share and our website to others. Thank you for shopping with us !"
       ),
   };
-  // ---flutter---
-  // const config = {
-  //   public_key: "FLWPUBK-9c169af83ef819ded55fc9ee1c871150-X",
-  //   tx_ref: Date.now(),
-  //   amount: `${total}`,
-  //   currency: "GHS",
-  //   country: "GHANA",
-  //   network: "MTN, VODAFONE, TIGO",
-  //   payment_options: "mobilemoney,card",
-  //   customer: {
-  //     email: `${email}`,
-  //     phonenumber: `${number}`,
-  //     name: `${name}`,
-  //   },
-  //   customizations: {
-  //     title: "PRAISEJOINT1",
-  //     description: "Secure Payments For Items in Cart",
-  //     logo: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fsk.pinterest.com%2Fpin%2F68398488074792794%2F&psig=AOvVaw2SAEf919v2Wpr-yFcMr62_&ust=1632677287720000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJiaxYHTmvMCFQAAAAAdAAAAABAO",
-  //   },
-  // };
-  // const fwConfig = {
-  //   ...config,
-  //   text: "Checkout",
-  //   callback: (response) => {
-  //     console.log(response);
-  //     closePaymentModal();
-  //     tranSuccess();
-  //   },
-  //   onClose: () => {},
-  // };
 
   return (
-    <div>
+    <div className="bmain">
       {cart.map((product) => (
-        <div className="detail cart" key={product._id}>
-          <img src={product.images.url} alt="" />
-
+        <div className="detail-cart" key={product._id}>
+          <div className="cart-pic">
+            <img className="sides" src={product.images.url} alt="product-image" />
+            </div>
           <div className="box-detail">
+            <div className="delete" onClick={() => removeProduct(product._id)}>
+              <CancelIcon /> 
+            </div>
             <h2>{product.title}</h2>
 
             <h3>GHS ¢ {product.price * product.quantity}</h3>
-            <p>{product.description}</p>
-            <p>{product.content}</p>
+            {/* <p>{product.description}</p>  */}
+            {/* <p>{product.content}</p> */}
 
-            <div className="amount">
+            <div className="amount"> 
               <button onClick={() => decrement(product._id)}> - </button>
               <span>{product.quantity}</span>
               <button onClick={() => increment(product._id)}> + </button>
-            </div>
+            </div> 
 
-            <div className="delete" onClick={() => removeProduct(product._id)}>
-              <CancelIcon />
-            </div>
+            {/* <div className="delete" onClick={() => removeProduct(product._id)}>
+              <CancelIcon /> 
+            </div> */}
           </div>
         </div>
       ))}
@@ -334,9 +300,10 @@ function Cart() {
               <div className="singleItems" class="form-floating">
                 <h5 className="txt-5">
                   {" "}
-                  Delivery Address (House No./ close Landmarks <br />{" "}
-                  Ghana-Post-GPS )
+                  Delivery Address
                 </h5>
+                <h8> (House No./ close Landmarks <br />
+                  Ghana-Post-GPS )</h8>
                 <textarea
                   name="message"
                   className="txt"
@@ -369,11 +336,7 @@ function Cart() {
                 ))}
               </div>
               {/* ========submit button========= */}
-              {/* <div className="btn">
-                <button type="submit" class="btn btn-light">
-                  Done
-                </button>
-              </div> */}
+            
             </form>
 
             {/* ========some error========= */}
@@ -392,7 +355,7 @@ function Cart() {
         <div
           style={{
             borderRadius: "10px",
-            backgroundColor: "#070928",
+            backgroundColor: "transparent",
             display: "flex",
             flexWrap: "wrap",
             justifyContent: "center",
@@ -401,27 +364,19 @@ function Cart() {
             padding: "10px",
           }}>
           <div>
-            <p style={{color: "whitesmoke", padding: "10px", margin: "5px"}}>
-              Click 'Pay Now' to pay via mobile money or credit/debit card
-              <br />
-              MTN MOMO_VODA CASH_TIGO CASH <br />
-              SECURED BY PAYSTACK
+            <p style={{color: "black", padding: "10px", margin: "5px"}}>
+              Click 'Pay Now' to pay via mobile money or credit/debit card.
             </p>
-            <img
+            {/* <img
               style={{width: "auto", height: "60px", margin: "5px"}}
               src="./pics/pk.png"
               alt="reload"
-            />
+            /> */}
             <img
-              style={{width: "auto", height: "60px", margin: "5px"}}
+              style={{width: "auto", height: "80px", margin: "5px"}}
               src="./pics/f2.jpg"
               alt="reload"
             />
-            {/* <img
-              style={{width: "auto", height: "60px", margin: "5px"}}
-              src="./pics/f3.png"
-              alt="reload"
-            /> */}
           </div>
           <div
             style={{
@@ -456,7 +411,7 @@ function Cart() {
               margin: "10px",
             }}
             type="button"
-            class="btn btn-primary">
+            class="btn btn-warning">
             CALL CUSTOMER CARE
           </button>
         </a>

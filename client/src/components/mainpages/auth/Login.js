@@ -51,7 +51,7 @@ function Login() {
 
         <div className="row">
           <button type="submit">Login</button>
-          <Link to="/register">Register</Link>
+          <Link to="/register">Sign Up</Link>
         </div>
       </form>
       <div className="png-icons">

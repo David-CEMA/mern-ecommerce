@@ -1,12 +1,11 @@
 .login-page {
   max-width: 500px;
-  border: 2px solid #000000;
+  border: 2px solid #00000077;
   border-radius: 30px;
   padding: 30px;
   margin: 50px auto;
   display: grid;
-  /* border-radius: 50px; */
-  background: linear-gradient(145deg, #bfd8f1, #5e7075);
+  background: linear-gradient(145deg, #daed88, rgba(96, 192, 28, 0.9));
   box-shadow: 10px 10px 30px #b4b6bb, -10px -10px 30px #e2e3e5;
 }
 .login-page h2 {
@@ -36,13 +35,11 @@
   border: 1px solid rgb(209, 213, 219);
 }
 .login-page form button {
-  width: 150px;
+  width: 180px;
   margin: 10px;
   display: flex;
-  /* background: #ff6200; */
   text-transform: uppercase;
   letter-spacing: 2px;
-  /* border: none; */
   color: #090909;
   padding: 0.7em 1.7em;
   font-size: larger;
@@ -69,7 +66,7 @@
 .png-icons {
   display: flex;
   flex-wrap: nowrap;
-  border: 2px solid #000000;
+  border: 2px solid #000000ad;
   border-radius: 20px;
   padding: 10px;
   align-content: center;

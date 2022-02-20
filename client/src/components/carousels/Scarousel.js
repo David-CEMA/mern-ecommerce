@@ -35,7 +35,7 @@ function Scarousel() {
           </p>
         </div>
         <div>
-          <img src="./pics/ph.jpg" alt="reload" />
+          <img src="./pics/diypi.jpg" alt="reload" />
           <p className="legend">Need a battery replacement ?</p>
         </div>
         <div>

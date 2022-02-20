@@ -16,9 +16,8 @@ function Filters() {
   };
 
   return (
-    <div style={{backgroundColor: "#cccbd673"}} className="filter_menu">
+    <div className="filter_menu">
       <div className="row">
-        <span style={{color: "white"}}>Filters: </span>
         <select name="category" value={category} onChange={handleCategory}>
           <option value="">All Products</option>
           {categories.map((category) => (
@@ -29,17 +28,17 @@ function Filters() {
         </select>
       </div>
 
-      <>
+      <div className="searchbar">
         <input
           type="text"
           value={search}
-          placeholder="Type to Search!"
+          placeholder="Type to Search"
           onChange={(e) => setSearch(e.target.value.toLowerCase())}
         />
         <SearchIcon style={{marginLeft: "-35px"}} />
-      </>
+      </div>
 
-      <div className="row sort">
+      <div className="row-sort">
         <span style={{color: "white"}}>Sort By: </span>
         <select value={sort} onChange={(e) => setSort(e.target.value)}>
           <option value="">New Products</option>

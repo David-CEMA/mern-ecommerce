@@ -5,8 +5,6 @@ import Loading from "../utils/loading/Loading";
 import axios from "axios";
 import Filters from "./Filters";
 import LoadMore from "./LoadMore";
-import Scarousel from "../../carousels/Scarousel";
-import Gallery from "../../carousels/Gallery";
 import Footer from "../../footer/Footer";
 // import ContactIcon from "../../ContactIcon";
 
@@ -70,8 +68,10 @@ function Products() {
       </div>
     );
   return (
-    <>
+    <div>
+      <div className="filter-Holder">
       <Filters />
+      </div>
 
       {isAdmin && (
         <div className="delete-all">
@@ -81,57 +81,6 @@ function Products() {
         </div>
       )}
       <div className="main">
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            alignContent: "center",
-          }}>
-          <div
-            style={{
-              display: "blog",
-              justifyContent: "center",
-              alignItems: "center",
-              alignContent: "center",
-            }}>
-            {/* <div>
-              <img
-                style={{maxWidth: "100%", maxHeight: "110px", margin: "5px"}}
-                src="./pics/ss.png"
-                alt="refresh"
-              />
-            </div> */}
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                alignContent: "center",
-              }}>
-              {" "}
-              <Gallery />
-            </div>
-          </div>
-          {/* <button
-            class="btn btn-light"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseExample"
-            aria-expanded="false"
-            aria-controls="collapseExample">
-            Gallery
-          </button>
-        </div>
-        <div class="collapse" id="collapseExample">
-          <div class="card card-body" style={{width: "100%", height: "auto"}}>
-            <img
-              style={{width: "100%", height: "auto", margin: "5px"}}
-              src="./pics/dd1.jpg"
-              alt="refresh"
-            />
-          </div> */}
-        </div>
         {/* ----------- */}
         <div className="products">
           {products.map((product) => {
@@ -149,35 +98,6 @@ function Products() {
       </div>
 
       <LoadMore />
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          alignItems: "center",
-          alignContent: "center",
-        }}>
-        <img
-          style={{maxWidth: "100%", maxHeight: "150px", margin: "5px"}}
-          src="./pics/bf.png"
-          alt="refresh"
-        />
-        <img
-          style={{maxWidth: "100%", maxHeight: "150px", margin: "5px"}}
-          src="./pics/fc.png"
-          alt="refresh"
-        />
-        <img
-          style={{maxWidth: "100%", maxHeight: "150px", margin: "5px"}}
-          src="./pics/ff.png"
-          alt="refresh"
-        />
-        <img
-          style={{maxWidth: "100%", maxHeight: "150px", margin: "5px"}}
-          src="./pics/bf1.jpg"
-          alt="refresh"
-        />
-      </div>
       {products.length === 0 && <Loading />}
       <Footer />
       {/* ----------- */}
@@ -204,9 +124,7 @@ function Products() {
       </div>
       <LoadMore />
 
-      <Scarousel />
-      {/* <ContactIcon /> */}
-    </>
+    </div>
   );
 }
 

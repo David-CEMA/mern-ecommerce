@@ -85,20 +85,6 @@ const Hgmail = () => {
                 id="floatingInput4"
               />
             </div>
-            {/* ========GPS========= */}
-            {/* <div className="singleItems" class="form-floating mb-3">
-              <input
-                type="email"
-                name="Email"
-                className="name"
-                required
-                value={gps}
-                onChange={(e) => setGps(e.target.value)}
-                class="form-control"
-                id="floatingInput"
-              />
-              <label for="floatingInput">GPS (Ghana-Post-GPS)<br/>e.g : GA-183-8164</label>
-            </div> */}
 
             {/* ========message========= */}
             <div className="singleItems" class="form-floating">

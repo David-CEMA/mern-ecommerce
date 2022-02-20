@@ -54,36 +54,21 @@ function Header() {
         </li>
         <li>
           <Link to="/" onClick={logoutUser}>
-            <p style={{color: "black", margin: "10px"}}>Logout</p>
+            <p style={{color: "black", margin: "10px"}}>Logout</p> 
           </Link>
         </li>
       </>
     );
   };
 
-  // const styleMenu = {
-  //   left: menu ? 0 : "-100%",
-  // };
-
   return (
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-primary">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light "
+      style={{ backgroundColor: 'rgb(96, 192, 28)' }}
+    >
       <div class="container-fluid">
-        {/* <header> */}
-        {/* <div className="menu" onClick={() => setMenu(!menu)}>
-        <img src={Menu} alt="" width="30" />
-      </div> */}
-
-        <div className="logo">
-          <Link to="/">
-            {isAdmin ? (
-              "Admin"
-            ) : (
-              <img className="logoB" src="./pics/9.png" alt="refresh" />
-            )}
-          </Link>
-        </div>
-        <button
-          style={{border: "none"}}
+        
+         <button
+          style={{borderStyle: "none",boxShadow:'none'}}
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -94,12 +79,21 @@ function Header() {
           <span class="navbar-toggler-icon"></span>
         </button>
 
+        <div className="logo">
+          <Link to="/">
+            {isAdmin ? ( 
+              "Admin"
+            ) : (
+              <img className="logoB" src="./pics/9.png" alt="refresh" />
+            )}
+          </Link>
+        </div>
+       
+
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          {/* <ul style={styleMenu}>
-        <li onClick={() => setMenu(!menu)}> */}
           <ul class="navbar-nav">
             <li class="nav-item">
-              <Link to="/">
+              <Link to="/shop">
                 {isAdmin ? (
                   "Products"
                 ) : (
@@ -109,18 +103,6 @@ function Header() {
                 )}
               </Link>
             </li>
-            {/* <li>
-              <>
-                <input
-                  type="text"
-                  value={search}
-                  style={{margin: "10px"}}
-                  placeholder="Type to Search!"
-                  onChange={(e) => setSearch(e.target.value.toLowerCase())}
-                />
-                <SearchIcon style={{marginLeft: "-35px"}} />
-              </>
-            </li> */}
             {isAdmin && adminRouter()}
 
             {isLogged ? (
@@ -130,46 +112,35 @@ function Header() {
               <li class="nav-item">
                 <Link to="/login">
                   <p className="m1" style={{color: "black", margin: "10px"}}>
-                    Login ✥ Register
+                    Login ✥ Sign Up
                   </p>
                 </Link>
               </li>
             )}
-
-            {/* <li onClick={() => setMenu(!menu)}>
-          <img src={Close} alt="" width="30" className="menu" />
-        </li> */}
           </ul>
         </div>
 
         {isAdmin ? (
-          ""
+       ""
         ) : (
           <div className="cart-icon">
             <Link to="/cart">
-              {/* <span>{cart.length}</span>
-                <img src={Cart} alt="" width="30" /> */}
-              <button type="button" class="btn btn-primary position-relative">
+              <button type="button" class="btn  position-relative"  style={{color:'white',backgroundColor:'rgba(96, 192, 28, 0.9)',padding:'5px'}}>
                 <ShoppingCartIcon />
                 <span
                   style={{
-                    // fontSize: "10px",
                     display: "flex",
                     alignContent: "center",
-                    justifyContent: "center",
+                      justifyContent: "center"
                   }}
-                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">
+                  class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-light text-dark">
                   {cart.length}
-                  <span class="visually-hidden">unread messages</span>
                 </span>
               </button>
             </Link>
           </div>
         )}
-        {/* </header>
-         */}
-        {/* </div> */}
-      </div>
+      </div>  
     </nav>
   );
 }

@@ -8,26 +8,18 @@ function LoadMore() {
 
   return (
     <div className="load_more">
-      {result < page * 9 ? (
+      {result < page * 16 ? (
         ""
       ) : (
-        // <button
-        //   style={{
-        //     color: "#070928",
-        //     fontSize: "large",
-        //     borderRadius: "15px",
-        //     padding: "10px",
-        //   }}
-        //   onClick={() => setPage(page + 1)}>
-        //   Load more
-        // </button>
         <button
           type="button"
-          class="btn btn-primary"
-          onClick={() => setPage(page + 1)}>
+          class="btn"
+          onClick={() => setPage(page + 1)} style={{
+            backgroundColor: "rgb(96, 192, 28)"
+          }}>
           Load more
         </button>
-      )}
+      )} 
     </div>
   );
 }

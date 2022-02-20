@@ -10,10 +10,10 @@ import Cart from "./cart/Cart";
 import NotFound from "./utils/not_found/NotFound";
 import Categories from "./categories/Categories";
 import CreateProduct from "./createProduct/CreateProduct";
-// import Scarousel from "../../components/carousels/Scarousel";
+// import  '../../../public/homeIndex.html'
 
 import {GlobalState} from "../../GlobalState";
-import Scarousel from "../carousels/Scarousel";
+import LandingPage from "../landingpages/LandingPage";
 
 function Pages() {
   const state = useContext(GlobalState);
@@ -22,9 +22,10 @@ function Pages() {
 
   return (
     <Switch>
-      <Route path="/" exact component={Products} />
+      <Route path="/" exact component={LandingPage} />
+      <Route path="/shop" exact component={Products} />
+      {/* <Route path="/landingpage" exact component={LandingPage}/> */}
       <Route path="/detail/:id" exact component={DetailProduct} />
-      {/* <Route path="/" exact component={Scarousel} /> */}
 
       <Route path="/login" exact component={isLogged ? NotFound : Login} />
       <Route
