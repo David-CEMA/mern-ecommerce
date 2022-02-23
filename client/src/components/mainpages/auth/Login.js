@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import axios from "axios";
+import Header from "../../headers/Header";
 
 function Login() {
   const [user, setUser] = useState({
@@ -27,6 +28,7 @@ function Login() {
   };
 
   return (
+    <div> <Header/>
     <div className="login-page">
       <form onSubmit={loginSubmit}>
         <h2>Login</h2>
@@ -60,7 +62,8 @@ function Login() {
         <img className="pngs" src="./pics/star.png" alt="delivery image" />
       </div>
       <img className="flag" src="./pics/ghflag.png" alt="ghana flag" />
-    </div>
+      </div>
+      </div>
   );
 }
 

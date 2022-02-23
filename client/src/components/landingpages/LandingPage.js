@@ -6,6 +6,7 @@ import './landingPage.css'
 import LoadMore from "../mainpages/products/LoadMore";
 import Flip from 'react-reveal/Flip';
 import Zoom from 'react-reveal/Zoom';
+import Header from "../headers/Header";
 
 
 function LandingPage() {
@@ -13,6 +14,7 @@ function LandingPage() {
     const [products, setProducts] = state.productsAPI.products;
     
     return <div className="lp">
+         <Header/>
         <div className='slider'>
             <div className="ccss">
                 <div  id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -53,9 +55,9 @@ function LandingPage() {
                     <div className="pic-pics">
                         <div className="sp">
                         <Flip left>
-                            <a href='https://www.praisejoint1.com/detail/6122db4106484d0016723343'>
+                            {/* <Link to='/detail/6122db4106484d0016723343'> */}
                                 <img className="side-pic" src='./pics/truu.jpg' alt='battery'/>
-                            </a>
+                            {/* </Link> */}
                             </Flip>
                         </div>
                         <div className="sp">
@@ -156,7 +158,7 @@ function LandingPage() {
                 <div  id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner"> 
                             <div class="carousel-item active">
-                        <img className='landing-image-1' src="./pics/kb2.jpg"  alt="..." />
+                        <img className='landing-image-1' src="./pics/kfb.jpeg"  alt="..." />
                         <div class="carousel-caption d-none d-md-block">
                             <h5>First slide label</h5>
                             <p>Some representative placeholder content for the first slide.</p>
@@ -218,14 +220,14 @@ function LandingPage() {
             </div>
             </Zoom>
                 
-        <div className="ads-banner">
+        {/* <div className="ads-banner">
             <div className="banner">
                 <img className="banner-img" src="./pics/fc.png" alt="praisejoint1patteries"/>
             </div>
             <div className="banner">
                 <img className="banner-img" src="./pics/rtyyt.png" alt="praisejoint1patteries"/>
             </div>
-        </div>
+        </div> */}
         {/* products................... */}
         <div className="landing-products">
              {products.map((product) => {
@@ -236,7 +238,15 @@ function LandingPage() {
               />
             );
             })}
-            <LoadMore />
+        </div>
+        <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          alignContent: "center",
+          }}>
+     <div> <LoadMore/></div>
         </div>
         <div className="foorter">
             <div className="f-info">

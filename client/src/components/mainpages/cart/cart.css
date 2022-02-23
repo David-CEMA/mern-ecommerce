@@ -23,19 +23,20 @@
     margin: 5px;
 }
 .cart-pic{
-    flex: 0.3;
+    flex: 0.4;
 }
 .sides{
-    height: 100px;
+    height: 100%;
+    width: 100%;
 }
 .box-detail{
-    flex: 0.7;
+    flex: 0.6;
 }
 .box-detail h2{
     color: black;
 }
 .amount span{
-    color: crimson;
+    color: black;
     padding: 0 20px;
 }
 .amount button{

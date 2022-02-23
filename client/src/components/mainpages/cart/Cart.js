@@ -7,6 +7,7 @@ import {PaystackButton} from "react-paystack";
 import PinDropIcon from "@material-ui/icons/PinDrop";
 import CancelIcon from "@material-ui/icons/Cancel";
 import emailjs from "emailjs-com";
+import Header from "../../headers/Header";
 
 function Cart() {
   const state = useContext(GlobalState);
@@ -113,72 +114,79 @@ function Cart() {
 
   if (cart.length === 0)
     return (
-      <div className="c-pis"
+       <div> <Header/>
+      <div className="c-pist"
         style={{
-          display: "block",
+          display: "flex",
+          flexDirection:'column',
           justifyContent: "center",
           alignContent: 'center',
           alignItems: "center",
           justifyItems: "center",
-        }}>
-        <h1>We deliver to your doorstep</h1>
+          textAlign:'center'
+          }}>
+          <div>
+           <p> Your cart is empty go to the shop to buy items.<br/>*** If you have items in the cart already, reload the page , Ensure you have a stable internet connection</p>
+          </div>
+        <div><h1>We deliver to your doorstep</h1>
         <img
           style={{height: "auto", width: "80%"}}
           src="./pics/ad.jpeg"
           alt="praisejoint 1"
-        />
-        <h1>AAA & AAAA & C2 Batteries available</h1>
+        /></div>
+        
+          <div><h1>AAA & AAAA & C2 Batteries available</h1>
         <img
           style={{height: "auto", width: "80%"}}
           src="./pics/ad1.jpeg"
           alt="praisejoint 1"
-        /> 
-        <img
+        /> </div>
+        <div><img
           style={{height: "auto", width: "80%"}}
           src="./pics/bp2.jpg"
           alt="praisejoint 1"
-        />
-        <br style={{height: "4px", color: "blue"}} />
-        <h1 style={{justifySelf: "center"}}>camera Batteries</h1>
+        /></div>
+        
+          <div><h1 style={{justifySelf: "center"}}>camera Batteries</h1>
         <img
           style={{height: "auto", width: "80%"}}
           src="./pics/cb.jpg"
           alt="praisejoint 1"
-        />
-        <br style={{height: "4px", color: "blue"}} />
-        <h1 style={{justifySelf: "center"}}>www.praisejoint1.com</h1>
-        <br style={{height: "4px", color: "blue"}} />
-        <img
+        /></div>
+       <div> <img
           style={{height: "auto", width: "80%"}}
           src="./pics/j6.jpg"
           alt="praisejoint 1"
-        />
-        <img
+        /></div>
+        <div><img
           style={{height: "auto", width: "80%"}}
           src="./pics/j2.jpg"
           alt="praisejoint 1"
-        />
-        <img
+        /></div>
+        <div><img
           style={{height: "auto", width: "80%"}}
           src="./pics/j3.jpg"
           alt="praisejoint 1"
-        />
-        <img
+        /></div>
+       <div> <img
           style={{height: "auto", width: "80%"}}
           src="./pics/j4.jpg"
           alt="praisejoint 1"
-        />
-        <img
+        /></div>
+        <div> <img
           style={{height: "auto", width: "80%"}}
-          src="./pics/j5.jpg"
+          src="./pics/j4.jpg"
           alt="praisejoint 1"
-        />
-        <img
+          /></div>
+          
+        <div><img
           style={{height: "auto", width: "80%"}}
           src="./pics/td.jpg"
           alt="praisejoint 1"
-        />
-      </div>
+          /></div>
+          
+        </div>
+        </div>
     );
 
   console.log(total);
@@ -211,6 +219,7 @@ function Cart() {
   };
 
   return (
+    <div> <Header/>
     <div className="bmain">
       {cart.map((product) => (
         <div className="detail-cart" key={product._id}>
@@ -270,7 +279,8 @@ function Cart() {
               </div>
               {/* ========phone number========= */}
               <div className="singleItems" class="form-floating mb-3">
-                <h5 className="txt-5">Phone Number [mobile money number]</h5>
+                  <h5 className="txt-5">Phone Number </h5>
+                   <h8>use momo number when paying via momo</h8>
                 <input
                   type="text"
                   name="number"
@@ -363,20 +373,24 @@ function Cart() {
             alignItems: "center",
             padding: "10px",
           }}>
-          <div>
-            <p style={{color: "black", padding: "10px", margin: "5px"}}>
+          <div  style={{
+            borderRadius: "10px",
+            backgroundColor: "transparent",
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            alignContent: "center",
+            alignItems: "center",
+            padding: "10px",
+          }}>
+            <div><p style={{color: "black", padding: "10px", margin: "5px"}}>
               Click 'Pay Now' to pay via mobile money or credit/debit card.
-            </p>
-            {/* <img
-              style={{width: "auto", height: "60px", margin: "5px"}}
-              src="./pics/pk.png"
-              alt="reload"
-            /> */}
-            <img
-              style={{width: "auto", height: "80px", margin: "5px"}}
+            </p></div>
+            <div><img
+              style={{width: "100%", height: "100%", margin: "5px"}}
               src="./pics/f2.jpg"
               alt="reload"
-            />
+            /></div>
           </div>
           <div
             style={{
@@ -405,7 +419,7 @@ function Cart() {
           </div>
         </div>
 
-        <a href="tel:+233557548921">
+        {/* <a href="tel:+233557548921">
           <button
             style={{
               margin: "10px",
@@ -414,9 +428,10 @@ function Cart() {
             class="btn btn-warning">
             CALL CUSTOMER CARE
           </button>
-        </a>
+        </a> */}
       </div>
-    </div>
+      </div> 
+      </div>
   );
 }
 

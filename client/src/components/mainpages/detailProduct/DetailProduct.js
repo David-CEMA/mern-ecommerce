@@ -1,6 +1,7 @@
 import React, {useContext, useState, useEffect} from "react";
 import {useParams, Link} from "react-router-dom";
 import {GlobalState} from "../../../GlobalState";
+import Header from "../../headers/Header";
 import ProductItem from "../utils/productItem/ProductItem";
 import "./detailProduct.css";
 
@@ -22,7 +23,8 @@ function DetailProduct() {
   if (detailProduct.length === 0) return null;
 
   return (
-    <>
+    <div>
+      <Header/>
       <div className="detail">
         <img src={detailProduct.images.url} alt="" />
         <div className="box-detail">
@@ -53,7 +55,7 @@ function DetailProduct() {
           })}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -42,13 +42,6 @@
   color: crimson;
   text-transform: uppercase;
 }
-/* filter-holder in the products.js */
-.filter-Holder{
-  position: sticky;
-  width: 100vw;
-  z-index: 10;
-  top: 90px;
-}
 /* ------------ Filters Menu ----------------- */
 .filter_menu {
   width: 100%;
@@ -90,13 +83,6 @@ input {
   text-transform: capitalize;
 }
 @media only screen and (max-width: 720px) {
-  /* filter-holder in the products.js */
-  .filter-Holder {
-    position: sticky;
-    width: 100vw;
-    z-index: 10;
-    top: 90px;
-  }
   /* .products {
     width: 100%; */
     /* display: flex;
@@ -125,25 +111,8 @@ input {
     align-content: center;
   }
 }
-@media only screen and (max-width: 620px) {
-
-  /* filter-holder in the products.js */
-  .filter-Holder {
-    position: sticky;
-    width: 100vw;
-    z-index: 10;
-    top: 50px;
-  }
-}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  /* filter-holder in the products.js */
-  .filter-Holder {
-    position: sticky;
-    width: 100vw;
-    z-index: 10;
-    top: 50px;
-  }
   /* ------------ Filters Menu ----------------- */
   .filter_menu {
     width: 100%;

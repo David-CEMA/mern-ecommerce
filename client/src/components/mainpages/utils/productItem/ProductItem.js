@@ -26,7 +26,7 @@ function ProductItem({product, isAdmin, deleteProduct, handleCheck}) {
       </div>
 
       <BtnRender product={product} deleteProduct={deleteProduct} />
-    </div>
+      </div>
   );
 }
 

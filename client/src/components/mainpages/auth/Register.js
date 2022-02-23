@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import axios from "axios";
+import Header from "../../headers/Header";
 
 function Register() {
   const [user, setUser] = useState({
@@ -28,6 +29,7 @@ function Register() {
   };
 
   return (
+    <div> <Header/>
     <div className="login-page">
       <form onSubmit={registerSubmit}>
         <h2>Sign Up</h2>
@@ -70,7 +72,8 @@ function Register() {
         <img className="pngs" src="./pics/star.png" alt="delivery image" />
       </div>
       <img className="flag" src="./pics/ghflag.png" alt="ghana flag" />
-    </div>
+      </div>
+      </div>
   );
 }
 

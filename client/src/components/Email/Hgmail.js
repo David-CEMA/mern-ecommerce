@@ -30,7 +30,7 @@ const Hgmail = () => {
   };
 
   return (
-    <section className="sec-main">
+    <div className="sec-main">
       {/* ====== */}
       <div className="snd">
         <button type="button" class="btn btn-light pulse position-relative">
@@ -111,7 +111,7 @@ const Hgmail = () => {
           {/* ========some error========= */}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

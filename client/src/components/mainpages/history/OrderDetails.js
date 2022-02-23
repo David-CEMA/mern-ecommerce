@@ -2,6 +2,7 @@ import React, {useState, useEffect, useContext} from "react";
 import {useParams} from "react-router-dom";
 // import {getUser} from "../../../../../../../controllers/userCtrl";
 import {GlobalState} from "../../../GlobalState";
+import Header from "../../headers/Header";
 
 function OrderDetails() {
   const state = useContext(GlobalState);
@@ -24,6 +25,7 @@ function OrderDetails() {
   if (orderDetails.length === 0) return null;
 
   return (
+    <div> <Header/>
     <div className="history-page">
       <table>
         <thead>
@@ -68,7 +70,8 @@ function OrderDetails() {
           ))}
         </tbody>
       </table>
-    </div>
+      </div>
+      </div>
   );
 }
 

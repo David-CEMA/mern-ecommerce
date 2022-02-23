@@ -6,6 +6,7 @@ import axios from "axios";
 import Filters from "./Filters";
 import LoadMore from "./LoadMore";
 import Footer from "../../footer/Footer";
+import Header1 from "../../headers/Header1";
 // import ContactIcon from "../../ContactIcon";
 
 function Products() {
@@ -63,15 +64,18 @@ function Products() {
 
   if (loading)
     return (
+       <div> <Header1/>
       <div>
         <Loading />
-      </div>
+        </div>
+        </div>
     );
   return (
+     <div> <Header1/>
     <div>
-      <div className="filter-Holder">
+      {/* <div className="filter-Holder">
       <Filters />
-      </div>
+      </div> */}
 
       {isAdmin && (
         <div className="delete-all">
@@ -95,9 +99,17 @@ function Products() {
             );
           })}
         </div>
-      </div>
+        </div>
+          <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          alignContent: "center",
+          }}>
+     <div> <LoadMore /></div>
+        </div>
 
-      <LoadMore />
       {products.length === 0 && <Loading />}
       <Footer />
       {/* ----------- */}
@@ -122,9 +134,17 @@ function Products() {
           })}
         </div>
       </div>
-      <LoadMore />
-
-    </div>
+       <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          alignContent: "center",
+          }}>
+     <div> <LoadMore /></div>
+        </div>
+      </div>
+      </div>
   );
 }
 
