@@ -25,6 +25,7 @@ function Pages() {
       <Route path="/" exact component={LandingPage} />
       <Route path="/shop" exact component={Products} />
       {/* <Route path="/landingpage" exact component={LandingPage}/> */}
+      <Route path="/detail/" exact component={DetailProduct} />
       <Route path="/detail/:id" exact component={DetailProduct} />
 
       <Route path="/login" exact component={isLogged ? NotFound : Login} />

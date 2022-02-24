@@ -43,17 +43,17 @@ function Header1() {
 
   const loggedRouter = () => {
     return (
-      <div>
-        <li class="nav-link">
+       <div style={{display:'flex'}}>
+        <div><li class="nav-link">
           <Link to="/history">
             <p style={{color: "#f8f9fa", margin: "10px"}}>History</p>
           </Link>
-        </li>
-        <li class="nav-link">
+        </li></div>
+        <div><li class="nav-link">
           <Link to="/" onClick={logoutUser}>
             <p style={{color: "#f8f9fa", margin: "10px"}}>Logout</p> 
           </Link>
-        </li>
+        </li></div>
       </div>
     );
   };

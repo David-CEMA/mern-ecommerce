@@ -230,7 +230,7 @@ function LandingPage() {
             </div>
         </div> */}
         {/* products................... */}
-        <div className="filter-Holder">
+        {/* <div className="filter-Holder">
       <Filters/>
       </div>
         <div className="landing-products">
@@ -242,7 +242,8 @@ function LandingPage() {
               />
             );
             })}
-        </div>
+        </div>*/}
+        <Link to='/shop'>
         <div
         style={{
           display: "flex",
@@ -250,8 +251,9 @@ function LandingPage() {
           alignItems: "center",
           alignContent: "center",
           }}>
-     <div> <LoadMore/></div>
-        </div>
+     <div style={{width:'80vw'}}> <img style={{width:'100%',height:'100%'}} src="./pics/proceedtoshop.png" alt="proceed to the pj1 shop"/></div>
+            </div> 
+            </Link>
         <div className="foorter">
             <div className="f-info">
               <div className="icon">
