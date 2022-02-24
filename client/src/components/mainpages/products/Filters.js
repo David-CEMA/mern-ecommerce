@@ -33,8 +33,9 @@ function Filters() {
           type="text"
           value={search}
           placeholder="Type to Search"
-          onChange={(e) => setSearch(e.target.value.toLowerCase())}
+          onChange={(e) => setSearch(e.target.value.toLowerCase() )}
         />
+        {/* window.location.href = "/"; */}
         <SearchIcon style={{marginLeft: "-35px"}} />
       </div>
 

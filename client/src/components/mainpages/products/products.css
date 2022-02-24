@@ -64,7 +64,6 @@ input {
 }
 .searchbar {
   width: 100%;
-  background-color: brown;
  margin-right: 15px;
 }
 .filter_menu input {

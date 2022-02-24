@@ -7,6 +7,10 @@
   animation-name: example;
   animation-duration: 10s;
   animation-iteration-count: infinite;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 99;
 }
 @keyframes example {
   0% {

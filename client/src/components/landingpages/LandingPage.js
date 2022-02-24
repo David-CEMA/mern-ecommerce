@@ -7,6 +7,7 @@ import LoadMore from "../mainpages/products/LoadMore";
 import Flip from 'react-reveal/Flip';
 import Zoom from 'react-reveal/Zoom';
 import Header from "../headers/Header";
+import Filters from "../mainpages/products/Filters";
 
 
 function LandingPage() {
@@ -229,6 +230,9 @@ function LandingPage() {
             </div>
         </div> */}
         {/* products................... */}
+        <div className="filter-Holder">
+      <Filters/>
+      </div>
         <div className="landing-products">
              {products.map((product) => {
             return (
