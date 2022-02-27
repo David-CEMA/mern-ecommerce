@@ -24,8 +24,10 @@ function Pages() {
     <Switch>
       <Route path="/" exact component={LandingPage} />
       <Route path="/shop" exact component={Products} />
+      <Route path="/products" exact component={Products} />
       {/* <Route path="/landingpage" exact component={LandingPage}/> */}
-      <Route path="/detail/" exact component={DetailProduct} />
+      {/* <Route path='/detail/' exact component={DetailProduct} /> */}
+      {/* `/detail/${product._id}` */}
       <Route path="/detail/:id" exact component={DetailProduct} />
 
       <Route path="/login" exact component={isLogged ? NotFound : Login} />

@@ -18,7 +18,7 @@ function DetailProduct() {
   const [isLogged] = state.userAPI.isLogged;
   const [isAdmin] = state.userAPI.isAdmin;
   const [cart] = state.userAPI.cart;
-  const [search, setSearch] = state.productsAPI.search;
+  // const [search, setSearch] = state.productsAPI.search;
 
    const logoutUser = async () => {
     await axios.get("/user/logout");

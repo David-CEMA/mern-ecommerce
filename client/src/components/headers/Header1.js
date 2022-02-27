@@ -54,7 +54,7 @@ function Header1() {
             <p style={{color: "#f8f9fa", margin: "10px"}}>Logout</p> 
           </Link>
         </li></div>
-      </div>
+      </div>  
     );
   };
 

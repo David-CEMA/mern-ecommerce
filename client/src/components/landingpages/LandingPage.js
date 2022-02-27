@@ -7,12 +7,12 @@ import LoadMore from "../mainpages/products/LoadMore";
 import Flip from 'react-reveal/Flip';
 import Zoom from 'react-reveal/Zoom';
 import Header from "../headers/Header";
-import Filters from "../mainpages/products/Filters";
+// import Filters from "../mainpages/products/Filters";
 
 
 function LandingPage() {
       const state = useContext(GlobalState);
-    const [products, setProducts] = state.productsAPI.products;
+    // const [products, setProducts] = state.productsAPI.products;
     
     return <div className="lp">
          <Header/>
@@ -73,15 +73,20 @@ function LandingPage() {
         <div className='warm-text'>
            Offering premium services & quality products at affordable prices
         </div>
+        <div className='warm-text'>
+            <Link to='/shop'>
+           <button>PROCEED TO SHOP</button>
+            </Link>
+        </div>
         {/* .... */}
         <div className='small-products'>
             <div className="s-i">
-                <a href='https://www.praisejoint1.com/detail/615bf25f58f93900165d78f4'>
+                <a href='https://www.praisejoint1.com/detail/621328dc3d0aa6001644eeab'>
                     <div className="ii">
                         <img className="s-img" src="https://images.unsplash.com/photo-1602845712625-a2b4e3c05311?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="batteries and chargers" /> <div className="overlay1">
                             <div className="text1">Key Fob battery replacement. Get coin batteries to replace the dead one in your key fob. </div>
-                            </div>
-                    </div>
+                            </div> 
+                    </div> 
                 </a>
             </div>
             <div className="s-i">
@@ -123,14 +128,14 @@ function LandingPage() {
                     </div>
             </div>
             </a>
-             <a href='https://www.praisejoint1.com/detail/615bf16258f93900165d78f3'>
+             <a href='https://www.praisejoint1.com/detail/62134fec3d0aa6001644eeb6'>
             <div className="s-i">
                     <div className="ii">
                         <img className="s-img" src="https://scontent.facc5-1.fna.fbcdn.net/v/t39.30808-6/273626348_352686053529214_22901362168682199_n.png?_nc_cat=107&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeG_yQlDWT8KbEPpowKChzHxAVgjBWrgvVcBWCMFauC9V3oNRB5H4F7DO63Wjs3xnoWV6B9k06hbz8ugXgUB31Ry&_nc_ohc=UZpgXss04CUAX_eS5xj&_nc_zt=23&_nc_ht=scontent.facc5-1.fna&oh=00_AT-cbnrHoTMWrrk5yzww0TlEMQnByWHeccU7GrMXujsSSw&oe=62133CC8" alt="batteries and chargers" />
                         <div className="overlay1">
                         <div className="text1">Guardian batteries. All number of plates Available for cars, trucks,generators & many more.</div>
                         </div>
-                    </div>
+                    </div> 
                 </div>
                 </a>
             <div className="s-i">
@@ -159,7 +164,7 @@ function LandingPage() {
                 <div  id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner"> 
                             <div class="carousel-item active">
-                        <img className='landing-image-1' src="./pics/kfb.jpeg"  alt="..." />
+                        <img className='landing-image-1' style={{width:'100%',height:'100%'}} src="./pics/m3.jpg"  alt="pj1" />
                         <div class="carousel-caption d-none d-md-block">
                             <h5>First slide label</h5>
                             <p>Some representative placeholder content for the first slide.</p>
@@ -219,7 +224,12 @@ function LandingPage() {
         <div className="ban">
                 <img className="ban-img" src="./pics/whatsAppl.png" alt="praisejoint1patteries" />
             </div>
-            </Zoom>
+        </Zoom>
+        <div className='warm-text'>
+            <Link to='/shop'>
+           <button>PROCEED TO SHOP</button>
+            </Link>
+        </div>
                 
         {/* <div className="ads-banner">
             <div className="banner">
