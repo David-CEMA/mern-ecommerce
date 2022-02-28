@@ -3,7 +3,8 @@ import {GlobalState} from "../../../GlobalState";
 import axios from "axios";
 // import {FlutterWaveButton, closePaymentModal} from "flutterwave-react-v3";
 import "../../Email/Hgmail.css";
-import {PaystackButton} from "react-paystack";
+import { PaystackButton } from "react-paystack";
+import ReactWhatsapp from 'react-whatsapp';
 import PinDropIcon from "@material-ui/icons/PinDrop";
 import CancelIcon from "@material-ui/icons/Cancel";
 import emailjs from "emailjs-com";
@@ -248,6 +249,10 @@ function Cart() {
           </div>
         </div>
       ))}
+        {/* whatsapp payment */}
+        <div className="w-a">
+          <ReactWhatsapp number="1-212-736-5000" message="Hello World!!!" ></ReactWhatsapp>
+        </div>
       {/* email-form for customer-- details to shop owner */}
       <section className="sec-main">
         {/* ===-------------------------=== */}
