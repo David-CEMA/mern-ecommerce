@@ -250,9 +250,9 @@ function Cart() {
         </div>
       ))}
         {/* whatsapp payment */}
-        <div className="w-a">
+        {/* <div className="w-a">
           <ReactWhatsapp number="1-212-736-5000" message="Hello World!!!" ></ReactWhatsapp>
-        </div>
+        </div> */}
       {/* email-form for customer-- details to shop owner */}
       <section className="sec-main">
         {/* ===-------------------------=== */}

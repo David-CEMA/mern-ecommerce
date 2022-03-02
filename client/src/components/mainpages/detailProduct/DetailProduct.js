@@ -159,7 +159,7 @@ function DetailProduct() {
             to="/cart"
             className="cart"
             onClick={() => addCart(detailProduct)}>
-           BUY NOW
+           Add To Cart
           </Link>
         </div>
       </div>

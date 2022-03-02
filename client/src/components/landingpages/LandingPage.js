@@ -7,15 +7,38 @@ import LoadMore from "../mainpages/products/LoadMore";
 import Flip from 'react-reveal/Flip';
 import Zoom from 'react-reveal/Zoom';
 import Header from "../headers/Header";
-// import Filters from "../mainpages/products/Filters";
+import Filters from "../mainpages/products/Filters";
 
 
 function LandingPage() {
       const state = useContext(GlobalState);
-    // const [products, setProducts] = state.productsAPI.products;
+    const [products, setProducts] = state.productsAPI.products;
     
     return <div className="lp">
-         <Header/>
+        <Header />
+         {/* products................... */}
+        <div className="filter-Holder">
+      <Filters/>
+      </div>
+        <div className="landing-products">
+             {products.map((product) => {
+            return (
+              <ProductItem
+                key={product._id}
+                product={product} 
+              /> 
+            );
+            })}
+        </div>
+        <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          alignContent: "center",
+          }}>
+     <div> <LoadMore /></div>
+        </div>
         <div className='slider'>
             <div className="ccss">
                 <div  id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -131,7 +154,7 @@ function LandingPage() {
              <a href='https://www.praisejoint1.com/detail/62134fec3d0aa6001644eeb6'>
             <div className="s-i">
                     <div className="ii">
-                        <img className="s-img" src="https://scontent.facc5-1.fna.fbcdn.net/v/t39.30808-6/273626348_352686053529214_22901362168682199_n.png?_nc_cat=107&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeG_yQlDWT8KbEPpowKChzHxAVgjBWrgvVcBWCMFauC9V3oNRB5H4F7DO63Wjs3xnoWV6B9k06hbz8ugXgUB31Ry&_nc_ohc=UZpgXss04CUAX_eS5xj&_nc_zt=23&_nc_ht=scontent.facc5-1.fna&oh=00_AT-cbnrHoTMWrrk5yzww0TlEMQnByWHeccU7GrMXujsSSw&oe=62133CC8" alt="batteries and chargers" />
+                        <img className="s-img" src="./pics/yyu.jpg" alt="batteries and chargers" />
                         <div className="overlay1">
                         <div className="text1">Guardian batteries. All number of plates Available for cars, trucks,generators & many more.</div>
                         </div>
@@ -141,7 +164,7 @@ function LandingPage() {
             <div className="s-i">
                 <a href="https://www.praisejoint1.com/detail/614b06604884f40016d66392">
                     <div className="ii">
-                        <img className="s-img" src="https://scontent.facc5-2.fna.fbcdn.net/v/t39.30808-6/273678831_352685763529243_404334318495198826_n.png?_nc_cat=109&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeEgMPICsyiUjGH39Tnxm7G701ot7NxT8oHTWi3s3FPygU9-7zi9sNkKjsMDKh5y__3DDwGY7Qb5W5ik4y9GomlD&_nc_ohc=2kGYTFz2s54AX-BLzVo&_nc_oc=AQkrNOOdb-wZNY3ks_zewCFrVjbJWMNuEe6lQP62RtNDSsv8en0fjSAGlIGLrsU0eko&_nc_zt=23&_nc_ht=scontent.facc5-2.fna&oh=00_AT_RtnC6PM0q9_izQvNipPsP2epx537RyTdBPsivT4GcdQ&oe=6212A687" alt="batteries and chargers" />
+                        <img className="s-img" src="./pics/bp1.png" alt="batteries and chargers" />
                         <div className="overlay1">
                             <div className="text1"> Car batteries. All number of plates Available for cars, trucks,generators & many more.</div>
                         </div>

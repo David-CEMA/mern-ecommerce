@@ -113,7 +113,7 @@ function Products() {
       {products.length === 0 && <Loading />}
       <Footer />
       {/* ----------- */}
-      <div
+      {/* <div
         style={{
           display: "flex",
           justifyContent: "center",
@@ -133,8 +133,8 @@ function Products() {
             );
           })}
         </div>
-      </div>
-       <div
+      </div> */}
+       {/* <div
         style={{
           display: "flex",
           justifyContent: "center",
@@ -142,7 +142,7 @@ function Products() {
           alignContent: "center",
           }}>
      <div> <LoadMore /></div>
-        </div>
+        </div> */}
       </div>
       </div>
   );
