@@ -30,7 +30,7 @@ margin: 10px;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: #a4e49f;
+  background-color: rgb(131, 233, 97);
   border-radius: 10px;
   padding: 10px;
   width: 100%;
@@ -53,14 +53,15 @@ margin: 10px;
   opacity: 0.8;
 }
 .cart {
-  background: rgb(34, 114, 31);
-  color: white;
+  background: rgb(131, 233, 97);
+  color: rgb(46, 45, 45);
   margin-top: 10px;
   padding: 10px 25px;
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 2px;
   border-radius: 10px;
+  box-shadow: gray 2px 2px;
 }
 @media only screen and (max-width: 720px) {
 

@@ -1,5 +1,5 @@
 import React, {useContext, useState, useEffect} from "react";
-import {useParams, Link} from "react-router-dom";
+import {useParams, Link,useHistory} from "react-router-dom";
 import {GlobalState} from "../../../GlobalState";
 import ProductItem from "../utils/productItem/ProductItem";
 import "./detailProduct.css";
@@ -14,6 +14,7 @@ function DetailProduct() {
   const [products] = state.productsAPI.products;
   const addCart = state.userAPI.addCart;
   const [detailProduct, setDetailProduct] = useState([]);
+  let history = useHistory();
   // --------
   const [isLogged] = state.userAPI.isLogged;
   const [isAdmin] = state.userAPI.isAdmin;
@@ -161,6 +162,7 @@ function DetailProduct() {
             onClick={() => addCart(detailProduct)}>
            Add To Cart
           </Link>
+         <button style={{padding:'10px'}} onClick={() => history.goBack()}>Back</button>
         </div>
       </div>
 

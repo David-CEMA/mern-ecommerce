@@ -276,7 +276,7 @@ function LandingPage() {
             );
             })}
         </div>*/}
-        <Link to='/shop'>
+        {/* <Link to='/shop'>
         <div
         style={{
           display: "flex",
@@ -286,7 +286,7 @@ function LandingPage() {
           }}>
      <div style={{width:'80vw'}}> <img style={{width:'100%',height:'100%'}} src="./pics/proceedtoshop.png" alt="proceed to the pj1 shop"/></div>
             </div> 
-            </Link>
+            </Link> */}
         <div className="foorter">
             <div className="f-info">
               <div className="icon">

@@ -247,7 +247,7 @@ function Cart() {
               <CancelIcon /> 
             </div> */}
           </div>
-        </div>
+        </div> 
       ))}
         {/* whatsapp payment */}
         {/* <div className="w-a">

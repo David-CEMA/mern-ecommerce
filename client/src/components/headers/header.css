@@ -15,23 +15,23 @@
 }
 @keyframes example {
   0% {
-    background-color: #348c54;
+    background-color: rgb(131, 233, 97);
   }
 
   25% {
-    background-color: #098f0d;
+    background-color: rgb(82, 190, 82);
   }
 
   50% {
-    background-color: #1D976C;
+    background-color: #377b4a;
   }
 
   75% {
-    background-color: green;
+    background-color: rgb(131, 233, 97);
   }
 
   100% {
-    background-color: #717c75;
+    background-color: rgb(74, 175, 111);
   }
 }
 .nb{

@@ -15,7 +15,7 @@ function LoadMore() {
           type="button"
           class="btn pulse"
           onClick={() => setPage(page + 1)} style={{
-            backgroundColor: "#1D976C"
+            backgroundColor: "rgb(131, 233, 97)", boxShadow:'gray 2px 2px'
           }}>
           Load more
         </button>
