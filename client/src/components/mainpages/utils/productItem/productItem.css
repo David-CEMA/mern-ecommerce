@@ -68,13 +68,13 @@
   margin-right: 5px;
   border-radius: 5px;
   color: #005903;
-  box-shadow: gray 2px 2px ;
+  box-shadow: rgba(128, 128, 128, 0.816) 1px 1px 5px 1px;
 }
 #btn_view {
   background: rgb(238, 235, 198);
   margin-left: 5px;
   border-radius: 5px;
-  box-shadow: gray 2px 2px ;
+  box-shadow: rgba(128, 128, 128, 0.842) 1px 1px 5px 1px;
 }
 .product_card input {
   position: absolute;

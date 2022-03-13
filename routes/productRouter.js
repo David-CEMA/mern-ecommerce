@@ -22,4 +22,4 @@ router.route('/shop/:id')
     .put(auth, authAdmin, productCtrl.updateProduct)
 
 
-module.exports = router
+module.exports = router 

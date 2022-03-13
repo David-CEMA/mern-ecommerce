@@ -178,6 +178,6 @@ function DetailProduct() {
       </div>
     </div>
   );
-}
+} 
 
 export default DetailProduct;

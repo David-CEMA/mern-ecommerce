@@ -20,7 +20,7 @@ function Pages() {
   const [isLogged] = state.userAPI.isLogged;
   const [isAdmin] = state.userAPI.isAdmin;
 
-  return (
+  return ( 
     <Switch>
       <Route path="/" exact component={LandingPage} />
       <Route path="/shop" exact component={Products} />

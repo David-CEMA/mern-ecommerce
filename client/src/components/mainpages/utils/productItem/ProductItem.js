@@ -4,7 +4,6 @@ import {GlobalState} from "../../../../GlobalState";
 import BtnRender from "./BtnRender";
 
 function ProductItem({product, isAdmin, deleteProduct, handleCheck}) {
-  const state = useContext(GlobalState);
 
   return (
     <div className="product_card">
@@ -15,9 +14,8 @@ function ProductItem({product, isAdmin, deleteProduct, handleCheck}) {
           onChange={() => handleCheck(product._id)}
         />
       )}
-      <Link to={`/detail/${product._id}`}>
-        <img src={product.images.url} alt="" />
-      </Link>
+        <img src={product.images.url} alt="pj1 battery image" />
+     
 
       <div className="product_box">
         <h2 title={product.title}>{product.title}</h2>

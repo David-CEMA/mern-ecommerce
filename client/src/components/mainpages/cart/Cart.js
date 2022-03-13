@@ -4,7 +4,7 @@ import axios from "axios";
 // import {FlutterWaveButton, closePaymentModal} from "flutterwave-react-v3";
 import "../../Email/Hgmail.css";
 import { PaystackButton } from "react-paystack";
-import ReactWhatsapp from 'react-whatsapp';
+// import ReactWhatsapp from 'react-whatsapp';
 import PinDropIcon from "@material-ui/icons/PinDrop";
 import CancelIcon from "@material-ui/icons/Cancel";
 import emailjs from "emailjs-com";
@@ -225,7 +225,7 @@ function Cart() {
       {cart.map((product) => (
         <div className="detail-cart" key={product._id}>
           <div className="cart-pic">
-            <img className="sides" src={product.images.url} alt="product-image" />
+            <img className="sides" src={product.images.url} alt="product" />
             </div>
           <div className="box-detail">
             <div className="delete" onClick={() => removeProduct(product._id)}>
