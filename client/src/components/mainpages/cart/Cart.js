@@ -26,7 +26,7 @@ function Cart() {
   // const publicKey = process.env.PAYSTACK_PUBLIC_KEY;
 
   useEffect(() => {
-    const getTotal = () => {
+    const getTotal = () => { 
       const total = cart.reduce((prev, item) => {
         return prev + item.price * item.quantity;
       }, 0);
