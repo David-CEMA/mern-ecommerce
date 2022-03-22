@@ -1,0 +1,19 @@
+.return-refund-policy{
+    display: flex;
+    justify-self: center;
+    width: 100%;
+    justify-content: center;
+}
+.policy-box{
+    height: 200px;
+    width: 300px;
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 10px;
+}
+.policy-text{
+    height: 190px;
+    width: 100%;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}

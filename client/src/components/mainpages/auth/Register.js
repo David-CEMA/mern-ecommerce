@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import axios from "axios";
 import Header from "../../headers/Header";
+import Rpolicy from "./Rpolicy";
 
 function Register() {
   const [user, setUser] = useState({
@@ -73,6 +74,7 @@ function Register() {
       </div>
       <img className="flag" src="./pics/ghflag.png" alt="ghana flag" />
       </div>
+      <Rpolicy/>
       </div>
   );
 }
