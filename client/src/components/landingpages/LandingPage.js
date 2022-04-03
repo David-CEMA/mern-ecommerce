@@ -7,15 +7,21 @@ import LoadMore from "../mainpages/products/LoadMore";
 import Flip from 'react-reveal/Flip';
 import Zoom from 'react-reveal/Zoom';
 import Header from "../headers/Header";
-import Filters from "../mainpages/products/Filters";
+import Filters from "../mainpages/products/Filters"; 
 
 
 function LandingPage() {
       const state = useContext(GlobalState);
     const [products, setProducts] = state.productsAPI.products;
+
+    
+    
+
+   
     
     return <div className="lp">
         <Header />
+        
          {/* products................... */}
         <div className="filter-Holder">
       <Filters/>
@@ -104,7 +110,7 @@ function LandingPage() {
         {/* .... */}
         <div className='small-products'>
             <div className="s-i">
-                <a href='https://www.praisejoint1.com/detail/621328dc3d0aa6001644eeab'>
+                <a href='https://www.praisejoint1.com/detail/624951fcc964610016531e60'>
                     <div className="ii">
                         <img className="s-img" src="https://images.unsplash.com/photo-1602845712625-a2b4e3c05311?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="batteries and chargers" /> <div className="overlay1">
                             <div className="text1">Key Fob battery replacement. Get coin batteries to replace the dead one in your key fob. </div>
@@ -113,7 +119,7 @@ function LandingPage() {
                 </a>
             </div>
             <div className="s-i">
-                <a href='https://www.praisejoint1.com/detail/612db69884bfd200164dd959'>
+                <a href='https://www.praisejoint1.com/detail/6232c382ee91ef0016881324'>
                     <div className="ii">
                         <img className="s-img" src="https://c0.wallpaperflare.com/preview/810/789/251/electronics-diy-circuit-board-attiny2313.jpg" alt="batteries and chargers" /> <div className="overlay1">
                             <div className="text1">18650 batteries for diy projects, drilling machines, portal hand fan, toys, RC cars, boats and drones.</div>
@@ -131,7 +137,7 @@ function LandingPage() {
                 </a>
             </div>
             <div className="s-i">
-                <a href="https://www.praisejoint1.com/detail/612ac9f809f35500161761df">
+                <a href="https://www.praisejoint1.com/detail/62356fcb1f24b5001611a9b9">
                     <div className="ii">
                         <img className="s-img" src="https://www.jameco.com/Jameco/workshop/JamecoBuilds/battery-level-indicator-fig3.png" alt="batteries and chargers" />
                         <div className="overlay1">
@@ -140,7 +146,7 @@ function LandingPage() {
                     </div>
                 </a>
             </div>
-                <a href='https://www.praisejoint1.com/detail/615bf16258f93900165d78f3'>
+                <a href='https://www.praisejoint1.com/detail/6234c505eb59a00016d6bae7'>
             <div className="s-i">
                     <div className="ii">
                         <img className="s-img" src='./pics/tvr.jpg'/>
@@ -151,7 +157,7 @@ function LandingPage() {
                     </div>
             </div>
             </a>
-             <a href='https://www.praisejoint1.com/detail/62134fec3d0aa6001644eeb6'>
+             <a href='https://www.praisejoint1.com/detail/6213521b3d0aa6001644eeb9'>
             <div className="s-i">
                     <div className="ii">
                         <img className="s-img" src="./pics/yyu.jpg" alt="batteries and chargers" />
@@ -172,7 +178,7 @@ function LandingPage() {
                 </a>
             </div>
             <div className="s-i">
-                <a href="https://www.praisejoint1.com/detail/619b617f06d8d3001691de11">
+                <a href="https://www.praisejoint1.com/detail/624950d6c964610016531e5f">
                     <div className="ii">
                         <img className="s-img" src="./pics/kb2.jpg" alt="batteries and chargers" />
                         <div className="overlay1">
@@ -286,7 +292,7 @@ function LandingPage() {
           }}>
      <div style={{width:'80vw'}}> <img style={{width:'100%',height:'100%'}} src="./pics/proceedtoshop.png" alt="proceed to the pj1 shop"/></div>
             </div> 
-            </Link> */}
+            </Link> */}                
         <div className="foorter">
             <div className="f-info">
               <div className="icon">

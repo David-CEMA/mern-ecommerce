@@ -60,11 +60,11 @@ input {
   height: 30px;
 }
 .searchbar ,.row{
-  flex: 0.5;
+  flex: 0.45;
 }
 .searchbar {
   width: 100%;
- margin-right: 15px;
+ margin-right: 5px;
 }
 .filter_menu input {
   width: 100%;
@@ -128,10 +128,10 @@ input {
     outline: none;
   }
 .searchbar,.row{
-  width: 80vw;
+  width: 70vw;
 }
   .filter_menu input {
-    width: 100%;
+    width: 90%;
   }
   
 }

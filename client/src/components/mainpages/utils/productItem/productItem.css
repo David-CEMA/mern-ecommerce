@@ -29,10 +29,11 @@
   cursor: pointer;
   color: black;
   font-size: medium;
-  background-color:rgb(238, 235, 198);
+  background-color:rgba(238, 235, 198, 0.705);
+  /* background-color:rgb(238, 235, 198); */
   padding: 5px;
   border-radius: 5px;
-  box-shadow: gray 1px 1px 5px 1px;
+  box-shadow: rgb(194, 194, 194) 1px 1px 5px 1px;
 }
 .product_card span {
   color: #005903;
@@ -88,7 +89,7 @@
     max-width: 160px;
     min-width: 80%;
     border-radius: 5px;
-    height: 320px;
+    height: 340px;
     margin: 10px;
   }
   .product_card img {
@@ -124,7 +125,7 @@
     max-width: 160px;
     min-width: 80%;
     border-radius: 5px;
-    height: 270px;
+    height: 280px;
     margin: 5px;
   }
   .product_card img {
@@ -133,7 +134,7 @@
     justify-self: center;
   }
   .product_box h2 {
-    font-size: medium;
+    font-size: small;
   }
   .product_box p {
     display: none;

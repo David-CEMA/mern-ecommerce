@@ -146,7 +146,7 @@ function DetailProduct() {
   </div>
 </nav>
       <div className="detail">
-       <div className="d-ima"> <img src={detailProduct.images.url} alt="product image" /></div>
+       <div className="d-ima"> <img className="det-img " src={detailProduct.images.url} alt="product image" /></div>
         <div className="box-detail">
           <div className="row-t"> 
             <h2>{detailProduct.title}</h2>
@@ -160,9 +160,11 @@ function DetailProduct() {
             to="/cart"
             className="cart"
             onClick={() => addCart(detailProduct)}>
-           Add To Cart
+           Add To Cart 
           </Link>
-         <button style={{padding:'10px'}} onClick={() => history.goBack()}>Back</button>
+         <div style={{display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center'}}><div> <button style={{ padding: '10px' }} onClick={() => history.goBack()}>Back</button>
+          </div><div><Link
+            to="/shop"><button style={{ padding: '10px' }}>Home</button></Link></div></div>
         </div>
       </div>
 

@@ -200,7 +200,7 @@ function Cart() {
     amount: `${total * 100}`,
     metadata: {
       name: `${name}`,
-      number: `${number}`,
+      // number: `${number}`,
     },
 
     publicKey: "pk_live_8c6beb8d305d66ed9a6b84cf48fe861890a1fbed",
@@ -280,12 +280,11 @@ function Cart() {
                   onChange={(e) => setName(e.target.value)}
                   class="form-control"
                   id="floatingInput1"
-                />
+                /> 
               </div>
               {/* ========phone number========= */}
               <div className="singleItems" class="form-floating mb-3">
                   <h5 className="txt-5">Phone Number </h5>
-                   <h8>use momo number when paying via momo</h8>
                 <input
                   type="text"
                   name="number"
@@ -317,10 +316,10 @@ function Cart() {
                   {" "}
                   Delivery Address
                 </h5>
-                <h8> (House No./ close Landmarks <br />
-                  Ghana-Post-GPS )</h8>
+                <h8> (Ghana-Post-GPS <br />
+                 or whatsapp live location )</h8>
                 <textarea
-                  name="message"
+                  name="message" 
                   className="txt"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
@@ -329,11 +328,11 @@ function Cart() {
               </div>
               {/* ========Dcart========= */}
               <div
-                className="singleItems"
+                className="singleItems"  
                 class="form-floating"
                 style={{display: "none"}}>
-                {cart.map((product) => (
-                  <p
+                {cart.map((product) => (  
+                  <p 
                     type="text"
                     name="cart"
                     // className="cartDelivery"

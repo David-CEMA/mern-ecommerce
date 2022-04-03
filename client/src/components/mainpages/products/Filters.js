@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import {GlobalState} from "../../../GlobalState";
 import SearchIcon from "@material-ui/icons/Search";
+import ClearIcon from '@material-ui/icons/Clear';
 
 function Filters() {
   const state = useContext(GlobalState);
@@ -12,9 +13,14 @@ function Filters() {
 
   const handleCategory = (e) => {
     setCategory(e.target.value);
-    setSearch("");
+    setSearch(""); 
   };
 
+  const handleClear = (e) => {
+    setCategory('');
+    setSearch(""); 
+  };
+   
   return (
     <div className="filter_menu">
       <div className="row">
@@ -22,22 +28,23 @@ function Filters() {
           <option value="">All Products</option>
           {categories.map((category) => (
             <option value={"category=" + category._id} key={category._id}>
-              {category.name}
+             {category.name} 
             </option>
           ))}
         </select>
       </div>
-
+      
       <div className="searchbar">
         <input
           type="text"
           value={search}
-          placeholder="Type to Search"
+          placeholder="Search"
           onChange={(e) => setSearch(e.target.value.toLowerCase() )}
         />
         {/* window.location.href = "/"; */}
         <SearchIcon style={{marginLeft: "-35px"}} />
       </div>
+      <div className="clearr" onClick={handleClear} style={{fontSize:'x-small', backgroundColor:'white'}}> clear <br/> fliters</div>
 
       <div className="row-sort">
         <span style={{color: "white"}}>Sort By: </span>
