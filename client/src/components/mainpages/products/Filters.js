@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import {GlobalState} from "../../../GlobalState";
 import SearchIcon from "@material-ui/icons/Search";
-import ClearIcon from '@material-ui/icons/Clear';
+// import ClearIcon from '@material-ui/icons/Clear';
 
 function Filters() {
   const state = useContext(GlobalState);
@@ -12,9 +12,16 @@ function Filters() {
   const [search, setSearch] = state.productsAPI.search;
 
   const handleCategory = (e) => {
+     window.scrollTo(0, 0);
     setCategory(e.target.value);
     setSearch(""); 
   };
+  const handleTheSearch = (e) => {
+     window.scrollTo(0, 0);
+    setCategory('');
+    setSearch(e.target.value.toLowerCase() )
+  };
+
 
   const handleClear = (e) => {
     setCategory('');
@@ -39,7 +46,8 @@ function Filters() {
           type="text"
           value={search}
           placeholder="Search"
-          onChange={(e) => setSearch(e.target.value.toLowerCase() )}
+          onChange={handleTheSearch}
+          // onChange={(e) => setSearch(e.target.value.toLowerCase() )}
         />
         {/* window.location.href = "/"; */}
         <SearchIcon style={{marginLeft: "-35px"}} />

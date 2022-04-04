@@ -127,8 +127,7 @@ function Cart() {
           textAlign:'center'
           }}>
           <div>
-           <p> Your cart is empty go to the shop to buy items.<br/>*** If you have items in the cart already, reload the page , Ensure you have a stable internet connection</p>
-          </div>
+            <p> Your cart is empty go to the shop to buy items.<br />*** If you have items in the cart already, reload the page , Ensure you have a stable internet connection</p></div>
         <div><h1>We deliver to your doorstep</h1>
         <img
           style={{height: "auto", width: "80%"}}
@@ -148,37 +147,20 @@ function Cart() {
           alt="praisejoint 1"
         /></div>
         
-          <div><h1 style={{justifySelf: "center"}}>camera Batteries</h1>
-        <img
-          style={{height: "auto", width: "80%"}}
-          src="./pics/cb.jpg"
-          alt="praisejoint 1"
-        /></div>
+          <div><h1 style={{justifySelf: "center"}}>18650 Batteries</h1>
+       </div>
        <div> <img
           style={{height: "auto", width: "80%"}}
           src="./pics/j6.jpg"
           alt="praisejoint 1"
-        /></div>
-        <div><img
-          style={{height: "auto", width: "80%"}}
-          src="./pics/j2.jpg"
-          alt="praisejoint 1"
-        /></div>
-        <div><img
-          style={{height: "auto", width: "80%"}}
-          src="./pics/j3.jpg"
-          alt="praisejoint 1"
-        /></div>
+          /></div>
+          <div><h1 style={{justifySelf: "center"}}>Car Batteries</h1>
+       </div>
        <div> <img
           style={{height: "auto", width: "80%"}}
           src="./pics/j4.jpg"
           alt="praisejoint 1"
         /></div>
-        <div> <img
-          style={{height: "auto", width: "80%"}}
-          src="./pics/j4.jpg"
-          alt="praisejoint 1"
-          /></div>
           
         <div><img
           style={{height: "auto", width: "80%"}}

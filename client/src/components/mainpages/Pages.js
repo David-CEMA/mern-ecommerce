@@ -10,19 +10,16 @@ import Cart from "./cart/Cart";
 import NotFound from "./utils/not_found/NotFound";
 import Categories from "./categories/Categories";
 import CreateProduct from "./createProduct/CreateProduct";
-// import  '../../../public/homeIndex.html'
-
 import {GlobalState} from "../../GlobalState";
-import LandingPage from "../landingpages/LandingPage";
 
 function Pages() {
   const state = useContext(GlobalState);
   const [isLogged] = state.userAPI.isLogged;
   const [isAdmin] = state.userAPI.isAdmin;
 
-  return ( 
+  return (  
     <Switch>
-      <Route path="/" exact component={LandingPage} />
+      <Route path="/" exact component={Products} />
       <Route path="/shop" exact component={Products} />
       <Route path="/products" exact component={Products} />
       {/* <Route path="/landingpage" exact component={LandingPage}/> */}

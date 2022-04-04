@@ -81,6 +81,66 @@ input {
   border: 1px solid #555;
   text-transform: capitalize;
 }
+/* -- */
+.foorter{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(244, 243, 233);
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+.f-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    letter-spacing: 1px;
+    padding: 10px;
+    width: 300px;
+    background-color: rgba(90, 88, 88, 0.044);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+.f-info:hover {
+    background-color: white;
+    box-shadow: rgb(96, 192, 28) 2px 2px;
+}
+.icon{
+    color: red;
+}
+.the-png{
+    height: 50px;
+    width: auto;
+}
+.textt{
+    color:black;
+    padding: 5px;
+    text-align: center;
+}
+
+.s-media{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: auto;
+    }
+    .media-icons{
+      padding: 10px;
+    }
+    .mediaI{
+      color: rgb(85, 184, 182);
+      font-size: larger;
+    }
+    .pj1-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(96, 192, 28);
+    margin-bottom: -85px;
+    bottom: 0px;
+}
 @media only screen and (max-width: 720px) {
   /* .products {
     width: 100%; */
@@ -109,6 +169,18 @@ input {
     align-items: center;
     align-content: center;
   }
+  /* ------- */
+.pj1-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(96, 192, 28);
+    margin-bottom: -85px;
+    bottom: 0px;
+}
+.the-name{
+    width: 50vw;
+}
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {

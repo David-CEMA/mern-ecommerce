@@ -115,7 +115,7 @@ function Header1() {
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-              <Link class="nav-link" to="/shop">
+              {/* <Link class="nav-link" to="/shop">
                 {isAdmin ? (
                   "Products"
                 ) : (
@@ -124,7 +124,7 @@ function Header1() {
                   </p>
                 )}
               </Link>
-               {isAdmin && adminRouter()}
+               {isAdmin && adminRouter()} */}
 
               {isLogged ? (
                 loggedRouter()
