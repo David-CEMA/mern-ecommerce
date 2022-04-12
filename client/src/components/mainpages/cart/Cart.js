@@ -96,7 +96,7 @@ function Cart() {
         console.log(res);
       })
       .catch((err) => console.log(err));
-    alert("Delivery Details Sent successful ✔");
+    alert("Delivery Details Sent successfully ✔");
   };
 
   const tranSuccess = async () => {
@@ -188,11 +188,11 @@ function Cart() {
     publicKey: "pk_live_8c6beb8d305d66ed9a6b84cf48fe861890a1fbed",
     text: "Pay Now",
     onSuccess: () => {
+      handleSubmit();
       setEmail("");
       setName("");
       setNumber("");
       tranSuccess();
-      handleSubmit();
       // alert("tranSuccess occured");
     },
     onClose: () =>
@@ -309,28 +309,7 @@ function Cart() {
                   id="floatingTextarea1"></textarea>
               </div>
               {/* ========Dcart========= */}
-              <div
-                className="singleItems"  
-                class="form-floating"
-                style={{display: "none"}}>
-                {cart.map((product) => (  
-                  <p 
-                    type="text"
-                    name="cart"
-                    // className="cartDelivery"
-                    value={cart}
-                    // onBeforeInput={(e) => setMessage1(e.target.value)}
-                    class="form-control"
-                    id="floatingTextarea2"
-                    key={product._id}>
-                    <p>
-                      <h5> {product.title}</h5>
-                      <br />
-                      <h5>GHS ¢ {product.price * product.quantity}</h5>
-                    </p>
-                  </p>
-                ))}
-              </div>
+            
               {/* ========submit button========= */}
             
             </form>
