@@ -1,7 +1,6 @@
-import React, {useContext, useState, useEffect} from "react";
+import React, {useContext, useState, useEffect,useRef} from "react";
 import {GlobalState} from "../../../GlobalState";
 import axios from "axios";
-// import {FlutterWaveButton, closePaymentModal} from "flutterwave-react-v3";
 import "../../Email/Hgmail.css";
 import { PaystackButton } from "react-paystack";
 // import ReactWhatsapp from 'react-whatsapp';
@@ -82,13 +81,17 @@ function Cart() {
     }
   };
   // handle submit-------------------------
+  //  const form = useRef();
 
-  const handleSubmit = (e) => {
+  
+  const handleSubmitt =  (e) => {
     e.preventDefault();
+    // clean
     emailjs
       .sendForm(
         "service_iz9cqfk",
         "template_l9y3527",
+        // form.current,
         e.target,
         "user_iapuX0T9u5NnpKLDnR0ro"
       )
@@ -96,7 +99,8 @@ function Cart() {
         console.log(res);
       })
       .catch((err) => console.log(err));
-    alert("Delivery Details Sent successfully ✔");
+    // clean
+    alert("Delivery Details Recieved ✔");
   };
 
   const tranSuccess = async () => {
@@ -172,7 +176,7 @@ function Cart() {
         </div>
     );
 
-  console.log(total);
+  // console.log(total);
 
   
 
@@ -186,18 +190,20 @@ function Cart() {
     },
 
     publicKey: "pk_live_8c6beb8d305d66ed9a6b84cf48fe861890a1fbed",
+    // publicKey: "pk_test_82428103be9d2d8235d2f800b46679aa6985ecbd",
     text: "Pay Now",
     onSuccess: () => {
-      handleSubmit();
+      // handleSubmitt();
+        tranSuccess();
       setEmail("");
       setName("");
       setNumber("");
-      tranSuccess();
+      setMessage("");
       // alert("tranSuccess occured");
     },
-    onClose: () =>
+    onClose: () =>  
       alert(
-        "Share your experience with us on facebook also share and our website to others. Thank you for shopping with us !"
+        "Share your experience with us on facebook, instagram & google also share our website to others. Thank you for shopping with us !"
       ),
   };
 
@@ -250,7 +256,8 @@ function Cart() {
 
         <div className="row">
           <div className="formholder">
-            <form onSubmit={handleSubmit} name="contactForm">
+              <form  onSubmit={handleSubmitt} 
+                name="contactForm">
               {/* ========name========= */}
               <div className="singleItems" class="form-floating mb-3">
                 <h5 className="txt-5">Your Name</h5>
@@ -269,12 +276,13 @@ function Cart() {
                   <h5 className="txt-5">Phone Number </h5>
                 <input
                   type="text"
-                  name="number"
+                  name="number"  
                   className="name"
                   value={number}
                   onChange={(e) => setNumber(e.target.value)}
                   class="form-control"
-                  id="floatingInput2"
+                    id="floatingInput2"
+                    required = {true}
                 />
               </div>
               {/* ========email========= */}
@@ -298,8 +306,9 @@ function Cart() {
                   {" "}
                   Delivery Address
                 </h5>
-                <h8> (Ghana-Post-GPS <br />
-                 or whatsapp live location )</h8>
+                  <p>*Indicate your Region</p>
+                <h6> (Use Ghana-Post-Service GPS <br />
+                    or close landmarks) </h6>
                 <textarea
                   name="message" 
                   className="txt"
@@ -309,14 +318,16 @@ function Cart() {
                   id="floatingTextarea1"></textarea>
               </div>
               {/* ========Dcart========= */}
-            
+             
               {/* ========submit button========= */}
-            
+                <div className="sendBt">
+                  <button type="submit">Confirm</button>
+                </div>
             </form>
 
             {/* ========some error========= */}
           </div>
-        </div>
+        </div> 
       </section>
       {/* -------------- */}
       <div
@@ -363,7 +374,6 @@ function Cart() {
               maxWidth: "100px",
               borderRadius: "10px",
               backgroundColor: "whitesmoke",
-              // backgroundColor: "#1d2594e3",
               display: "flex",
               justifyContent: "center",
               alignContent: "center",
@@ -384,16 +394,6 @@ function Cart() {
           </div>
         </div>
 
-        {/* <a href="tel:+233557548921">
-          <button
-            style={{
-              margin: "10px",
-            }}
-            type="button"
-            class="btn btn-warning">
-            CALL CUSTOMER CARE
-          </button>
-        </a> */}
       </div>
       </div> 
       </div>

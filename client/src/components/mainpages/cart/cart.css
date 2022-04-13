@@ -70,6 +70,23 @@
     justify-self: center;
     align-self: center;
 }
+.sendBt{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}.sendBt button{
+    color: green;
+    background-color: rgb(219, 209, 195);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+}
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
    .detail-cart {
