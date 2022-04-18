@@ -1,9 +1,10 @@
 .chat-help {
-  margin-left: -2px;
+  margin-left: 0px;
   width: 2rem;
   display: block;
   position: sticky;
   bottom: 20px;
+  padding: 2px;
 }
 .hoverB{
   width: 2.5rem;
@@ -14,6 +15,7 @@
 @media only screen and (max-width: 720px) {
   .hoverB{
   width: 1.7rem;
+  /* background-color: rgb(235, 14, 220); */
   background-color: rgb(244, 243, 233);
   margin-top: 15px;
   border-radius: 10px;

@@ -22,11 +22,12 @@ function UserAPI(token) {
           setCart(res.data.cart);
         } catch (err) {
           alert(err.response.data.msg);
+          // alert(err);
         }
       };
 
-      getUser();
-    }
+      getUser(); 
+    } 
   }, [token]);
 
   const addCart = async (product) => {

@@ -1,11 +1,5 @@
 import React from "react";
 import "./Footer.css";
-import FacebookIcon from "@material-ui/icons/Facebook";
-// import WhatsAppIcon from "@material-ui/icons/WhatsApp";
-// import CallIcon from "@material-ui/icons/Call";
-import InfoIcon from "@material-ui/icons/Info";
-// import EmailIcon from "@material-ui/icons/Email";
-// import ReactWhatsapp from "react-whatsapp";
 
 function Footer() {
   return (
@@ -15,13 +9,13 @@ function Footer() {
       <img
         style={{width: "100%", height: "auto", margin: "5px"}}
         src="./pics/ps.png"
-        alt="refresh"
+        alt="praise joint 1"
       />
       <h3>Your Online Battery Shop</h3>
       <img
         style={{width: "100%", height: "auto", margin: "5px"}}
         src="./pics/dd.jpg"
-        alt="refresh"
+        alt="praise joint 1"
       />
     </div>
   );

@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext} from "react";
 import {GlobalState} from "../../GlobalState";
 import {Link} from "react-router-dom";
 import axios from "axios";
@@ -6,11 +6,15 @@ import './header.css'
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
 function Header() {
+   // offline Handler
+  window.addEventListener('offline', function (e) {
+  e.preventDefault();
+    alert("You are offline please turn on internet connection to continue shopping. Praise Joint 1 ltd is not liable for any errors that happen due to poor internet connection. ");
+});
   const state = useContext(GlobalState);
   const [isLogged] = state.userAPI.isLogged;
   const [isAdmin] = state.userAPI.isAdmin;
   const [cart] = state.userAPI.cart;
-  const [search, setSearch] = state.productsAPI.search;
 
   const logoutUser = async () => {
     await axios.get("/user/logout");
@@ -103,7 +107,7 @@ function Header() {
     <a  href="/">{isAdmin ? ( 
               "Admin"
             ) : (
-              <img className="logoB" src="./pics/9.png" alt="refresh" />
+              <img className="logoB" src="./pics/9.png" alt="praise joint 1" />
         )}</a> 
             </div>
             </div>

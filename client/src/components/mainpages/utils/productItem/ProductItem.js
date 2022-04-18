@@ -1,6 +1,6 @@
-import React, {useContext} from "react";
-import {Link} from "react-router-dom";
-import {GlobalState} from "../../../../GlobalState";
+import React from "react";
+// import {Link} from "react-router-dom";
+// import {GlobalState} from "../../../../GlobalState";
 import BtnRender from "./BtnRender";
 
 function ProductItem({product, isAdmin, deleteProduct, handleCheck}) {
@@ -14,7 +14,7 @@ function ProductItem({product, isAdmin, deleteProduct, handleCheck}) {
           onChange={() => handleCheck(product._id)}
         />
       )}
-        <img src={product.images.url} alt="pj1 battery image" />
+        <img src={product.images.url} alt="pj1 battery " />
      
 
       <div className="product_box">

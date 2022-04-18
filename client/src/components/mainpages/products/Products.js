@@ -3,13 +3,13 @@ import {GlobalState} from "../../../GlobalState";
 import ProductItem from "../utils/productItem/ProductItem";
 import Loading from "../utils/loading/Loading";
 import axios from "axios";
-import Filters from "./Filters";
+// import Filters from "./Filters";
 import LoadMore from "./LoadMore";
 import Footer from "../../footer/Footer";
 import Header1 from "../../headers/Header1";
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // import ContactIcon from "../../ContactIcon";
 
 function Products() {

@@ -8,35 +8,35 @@ import CallIcon from "@material-ui/icons/Call";
 function ContactIcon() {
   return (
     <div className="chat-help"> 
-      <div className="icon-1">
+      {/* <div className="icon-1"> */}
         {/* <Tooltip title="WhatsApp Us" arrow> */}
-        <button
+        <div
           className="hoverB">
           <ReactWhatsapp number="+233557548921">
             <WhatsAppIcon
               style={{
                 backgroundColor: "transparent",
-                height: "1.5rem",
-                width: "1.5rem",
+                height: "1.6rem",
+                width: "1.6rem",
                 color: "green",
-              }}
+              }} 
             />
           </ReactWhatsapp>
-        </button>
+        {/* </div> */}
         {/* </Tooltip> */}
       </div>
 
       <a href="tel:+233557548921">
         {/* <Tooltip title="Call To Order" arrow> */}
-        <button className="hoverB">
+        <div className="hoverB">
           <CallIcon
             style={{
-              height: "1.5rem",
-              width: "1.5rem",
+              height: "1.6rem",
+              width: "1.6rem",
               color: "green",
             }}
           />
-        </button>
+        </div>
         {/* </Tooltip> */}
       </a>
     </div>

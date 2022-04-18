@@ -146,7 +146,7 @@ function DetailProduct() {
   </div>
 </nav>
       <div className="detail">
-       <div className="d-ima"> <img className="det-img " src={detailProduct.images.url} alt="product image" /></div>
+       <div className="d-ima"> <img className="det-img " src={detailProduct.images.url} alt="product" /></div>
         <div className="box-detail">
           <div className="row-t"> 
             <h2>{detailProduct.title}</h2>

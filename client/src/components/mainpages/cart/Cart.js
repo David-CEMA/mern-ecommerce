@@ -1,4 +1,4 @@
-import React, {useContext, useState, useEffect,useRef} from "react";
+import React, {useContext, useState, useEffect} from "react";
 import {GlobalState} from "../../../GlobalState";
 import axios from "axios";
 import "../../Email/Hgmail.css";
@@ -6,7 +6,7 @@ import { PaystackButton } from "react-paystack";
 // import ReactWhatsapp from 'react-whatsapp';
 import PinDropIcon from "@material-ui/icons/PinDrop";
 import CancelIcon from "@material-ui/icons/Cancel";
-import emailjs from "emailjs-com";
+// import emailjs from "emailjs-com";
 import Header from "../../headers/Header";
 
 function Cart() {
@@ -18,22 +18,24 @@ function Cart() {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  // const [message1, setMessage1] = useState("");
-  // --paystack--------
-
-  // const publicKey = process.env.PAYSTACK_PUBLIC_KEY;
-
+  // const [message, setMessage] = useState("");
+  // const [messageList, setMessageList] = useState('')
+  
+  // offline Handler
+//   window.addEventListener('offline', function (e) {
+//   e.preventDefault();
+//     alert("You are offline please turn on internet connection to continue shopping. Praise Joint 1 ltd is not liable for any errors that happen due to poor internet connection. ***This message will _disappear_ when the internet connection is restored");
+// });
   useEffect(() => {
     const getTotal = () => { 
-      const total = cart.reduce((prev, item) => {
+      const total = cart.reduce((prev, item) => { 
         return prev + item.price * item.quantity;
       }, 0);
 
       setTotal(total);
     };
 
-    getTotal();
+    getTotal(); 
   }, [cart]);
 
   const addToCart = async (cart) => {
@@ -80,29 +82,32 @@ function Cart() {
       addToCart(cart);
     }
   };
-  // handle submit-------------------------
-  //  const form = useRef();
 
+  // **********************
+  // console.log(cartList);
   
-  const handleSubmitt =  (e) => {
-    e.preventDefault();
-    // clean
-    emailjs
-      .sendForm(
-        "service_iz9cqfk",
-        "template_l9y3527",
-        // form.current,
-        e.target,
-        "user_iapuX0T9u5NnpKLDnR0ro"
-      )
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => console.log(err));
-    // clean
-    alert("Delivery Details Recieved ✔");
+  const received = (e) => {
+    // e.preventDefault(); 
+    alert('Details received successfully');
+    alert('Click *Pay Now* to proceed with secured payments via paystack. Mobile money (MTN, Voda, AirtelTigo) & Credit/Debit Cards');
   };
-
+  // const handleSubmitt =  (e) => { 
+  //   e.preventDefault();
+  //   // clean
+  //   emailjs
+  //     .sendForm(
+  //       "service_iz9cqfk",
+  //       "template_l9y3527",
+  //       // form.current,
+  //       e.target,
+  //       "user_iapuX0T9u5NnpKLDnR0ro"
+  //     )
+  //     .then((res) => {
+  //       console.log(res);
+  //     })
+  //     .catch((err) => console.log(err));
+  //   alert("Delivery Details Recieved ✔");
+  // }; 
   const tranSuccess = async () => {
     await axios.post(
       "/api/payment",
@@ -176,7 +181,6 @@ function Cart() {
         </div>
     );
 
-  // console.log(total);
 
   
 
@@ -195,15 +199,15 @@ function Cart() {
     onSuccess: () => {
       // handleSubmitt();
         tranSuccess();
-      setEmail("");
       setName("");
+      setEmail("");
       setNumber("");
-      setMessage("");
+      // setMessage("");
       // alert("tranSuccess occured");
     },
     onClose: () =>  
       alert(
-        "Share your experience with us on facebook, instagram & google also share our website to others. Thank you for shopping with us !"
+        "Share your experience with us on facebook, instagram & google. Thank you for shopping with us !"
       ),
   };
 
@@ -230,19 +234,11 @@ function Cart() {
               <span>{product.quantity}</span>
               <button onClick={() => increment(product._id)}> + </button>
             </div> 
-
-            {/* <div className="delete" onClick={() => removeProduct(product._id)}>
-              <CancelIcon /> 
-            </div> */}
           </div>
         </div> 
       ))}
-        {/* whatsapp payment */}
-        {/* <div className="w-a">
-          <ReactWhatsapp number="1-212-736-5000" message="Hello World!!!" ></ReactWhatsapp>
-        </div> */}
-      {/* email-form for customer-- details to shop owner */}
-      <section className="sec-main">
+        
+      <div className="sec-main">
         {/* ===-------------------------=== */}
         <div className="snd">
           <button type="button" class="btn btn-light pulse position-relative">
@@ -251,24 +247,36 @@ function Cart() {
               <span class="visually-hidden">EMAIL</span>
             </span>
           </button>
-          <p className="snd-p">Complete The Delivery Address Form</p>
+          <p className="snd-p">Complete The Delivery Details Form</p>
         </div>
 
         <div className="row">
           <div className="formholder">
-              <form  onSubmit={handleSubmitt} 
+              <form action="https://formsubmit.co/802366c918dcf3f99cf0d0f20f9c9be4" method="POST"
+                // onSubmit={handleSubmitt} 
                 name="contactForm">
               {/* ========name========= */}
-              <div className="singleItems" class="form-floating mb-3">
+                <div className="singleItems" class="form-floating mb-3">
+                  {/* table format */}
+                  <input className="hidden-input" name="_template" value="table"></input>
+                  {/* disable recapture */}
+                  <input className="hidden-input" name="_captcha" defaultValue="false"></input>
+                  {/* relink back to cart */}
+                  <input className="hidden-input" name="_next" defaultValue="https://www.praisejoint1.com/cart/"></input>
+                  {/* cc to admin email */}
+                  <input className="hidden-input" name="_cc" defaultValue="kojodozer@gmail.com"></input>
+ 
+
+                  {/* forms begining */}
                 <h5 className="txt-5">Your Name</h5>
                 <input
-                  type="text"
+                  type="text" 
                   name="name"
                   className="name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  // value={name}
+                  // onChange={(e) => setName(e.target.value)}
                   class="form-control"
-                  id="floatingInput1"
+                  id="floatingInput1"     
                 /> 
               </div>
               {/* ========phone number========= */}
@@ -278,8 +286,8 @@ function Cart() {
                   type="text"
                   name="number"  
                   className="name"
-                  value={number}
-                  onChange={(e) => setNumber(e.target.value)}
+                  // value={number}
+                  // onChange={(e) => setNumber(e.target.value)}
                   class="form-control"
                     id="floatingInput2"
                     required = {true}
@@ -291,45 +299,76 @@ function Cart() {
                 <input
                   type="email"
                   name="email"
-                  className="name"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                    className="name"
+                  // value={email}
+                  // onChange={(e) => setEmail(e.target.value)}
+                    
                   class="form-control"
                   id="floatingInput4"
                 />
               </div>
 
               {/* ========message========= */}
-              <div className="singleItems" class="form-floating">
+              <div>
                 <h5 className="txt-5">
                   {" "}
                   Delivery Address
                 </h5>
-                  <p>*Indicate your Region</p>
+                  <p style={{color:'rebeccapurple'}}>*1. Indicate your Region</p>
+                  <p>Next</p>
                 <h6> (Use Ghana-Post-Service GPS <br />
                     or close landmarks) </h6>
+                  <p>*Or type (I will give direction by phone call) the delivery team will contact you.</p>
                 <textarea
-                  name="message" 
-                  className="txt"
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
+                  name="deliveryAddress" 
+                  className="txt" 
+                  // value={message}
+                  // onChange={(e) => setMessage(e.target.value)}
                   class="form-control"
-                  id="floatingTextarea1"></textarea>
-              </div>
-              {/* ========Dcart========= */}
-             
+                    // id="floatingTextarea1"
+                    rows="10" cols="50"></textarea>
+                </div> 
+
+                {/* -------------================list cart---------------- */}
+                {/* <div> 
+                    {cart.map((product) => (
+                  <textarea name='productList'
+                    key={product._id}
+                    className="list-items"
+                    class="form-control" 
+                    defaultValue={
+                        `${product.title}, quantity : ${product.quantity}, price : ${product.price * product.quantity}`
+                      }
+                       >
+                         </textarea> 
+                ))}
+                </div>  */}
+                {/* testwork */}
+                <div className="itemList-admin"> 
+                  <textarea name='productList'
+                    // key={product._id}
+                    className="list-items"
+                    class="form-control"  
+                    defaultValue={cart.map((product)  => (
+                        `${product.title}, quantity : ${product.quantity}, price : ${product.price * product.quantity}`
+                    ))}
+                    // onChange={(e) => setMessageList(e.target.value)}
+                       >
+                         </textarea> 
+                        </div> 
               {/* ========submit button========= */}
+                 
                 <div className="sendBt">
-                  <button type="submit">Confirm</button>
+                  <button type="submit" className='cbutton' onClick={received}><span>Confirm</span>
+  <div class="liquid"></div></button>
                 </div>
             </form>
 
-            {/* ========some error========= */}
+            {/* ========some error========= */} 
           </div>
         </div> 
-      </section>
-      {/* -------------- */}
+      </div>
+      {/* -------------- */} 
       <div
         style={{
           borderRadius: "10px",
@@ -385,7 +424,6 @@ function Cart() {
               margin: "10px",
               fontSize: "larger",
             }}>
-            {/* <FlutterWaveButton style={{margin: "5px"}} {...fwConfig} /> */}
             <PaystackButton
               className="paystack-button"
               style={{margin: "5px"}}

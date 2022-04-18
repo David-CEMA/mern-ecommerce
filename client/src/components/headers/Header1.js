@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext} from "react";
 import {GlobalState} from "../../GlobalState";
 import {Link} from "react-router-dom";
 import axios from "axios";
@@ -8,21 +8,23 @@ import Filters from "../mainpages/products/Filters";
 
 
 function Header1() {
+   // offline Handler
+  window.addEventListener('offline', function (e) {
+  e.preventDefault();
+    alert("You are offline please turn on internet connection to continue shopping. Praise Joint 1 ltd is not liable for any errors that happen due to poor internet connection.");
+});
   const state = useContext(GlobalState);
   const [isLogged] = state.userAPI.isLogged;
   const [isAdmin] = state.userAPI.isAdmin;
   const [cart] = state.userAPI.cart;
-  const [search, setSearch] = state.productsAPI.search;
 
   const logoutUser = async () => {
     await axios.get("/user/logout");
-
     localStorage.removeItem("firstLogin");
-
     window.location.href = "/";
   };
 
-  const adminRouter = () => {
+  const adminRouter = () => { 
     return (
       <div>
         <li class="nav-item">
@@ -105,7 +107,7 @@ function Header1() {
     <a  href="/">{isAdmin ? ( 
               "Admin"
             ) : (
-              <img className="logoB" src="./pics/9.png" alt="refresh" />
+              <img className="logoB" src="./pics/9.png" alt="praise joint 1" />
         )}</a> 
             </div>
             </div>
@@ -123,8 +125,8 @@ function Header1() {
                     Shop
                   </p>
                 )}
-              </Link>
-               {isAdmin && adminRouter()} */}
+              </Link>*/}
+               {isAdmin && adminRouter()} 
 
               {isLogged ? (
                 loggedRouter()
