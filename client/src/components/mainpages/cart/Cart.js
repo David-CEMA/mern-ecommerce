@@ -86,7 +86,7 @@ function Cart() {
   // **********************
   // console.log(cartList);
   
-  const received = (e) => {
+  const received = () => {
     // e.preventDefault(); 
     alert('Details received successfully');
     alert('Click *Pay Now* to proceed with secured payments via paystack. Mobile money (MTN, Voda, AirtelTigo) & Credit/Debit Cards');
