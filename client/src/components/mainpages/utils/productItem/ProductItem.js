@@ -7,7 +7,7 @@ function ProductItem({product, isAdmin, deleteProduct, handleCheck}) {
 
   return (
     <div className="product_card">
-      {isAdmin && (
+      {isAdmin && ( 
         <input
           type="checkbox"
           checked={product.checked}

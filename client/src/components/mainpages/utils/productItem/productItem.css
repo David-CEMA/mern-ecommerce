@@ -43,7 +43,7 @@
   text-decoration: line-through;
    color: #404140 !important;
    font-size: large;
-   margin-left: 10px;
+   margin-left: 5px;
 }
 .product_box p {
   width: 100%;
@@ -95,7 +95,7 @@
     max-width: 160px;
     min-width: 80%;
     border-radius: 5px;
-    height: 340px;
+    height: 350px;
     margin: 10px;
   }
   .product_card img {
@@ -131,7 +131,7 @@
     max-width: 160px;
     min-width: 80%;
     border-radius: 5px;
-    height: 280px;
+    height: 290px;
     margin: 5px;
   }
   .product_card img {
