@@ -20,6 +20,7 @@ function ProductItem({product, isAdmin, deleteProduct, handleCheck}) {
       <div className="product_box">
         <h2 title={product.title}>{product.title}</h2>
         <span>GHS ¢{product.price}</span>
+        <span className="cancelThrough"> ¢{product.price + 5}</span>
         <p>{product.description}</p>
       </div>
 
