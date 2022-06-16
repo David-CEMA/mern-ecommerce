@@ -57,7 +57,7 @@ function Filters() {
       <div className="row-sort">
         <span style={{color: "white"}}>Sort By: </span>
         <select value={sort} onChange={(e) => setSort(e.target.value)}>
-          <option value="">New Products</option>
+          <option value="">New LISTING</option>
           <option value="sort=oldest">Old Products</option>
           <option value="sort=-sold">Best sales</option>
           <option value="sort=-price">Price: Highest-Lowest</option>
