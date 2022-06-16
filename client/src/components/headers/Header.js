@@ -9,7 +9,7 @@ function Header() {
    // offline Handler
   window.addEventListener('offline', function (e) {
   e.preventDefault();
-    alert("You are offline please turn on internet connection to continue shopping. Praise Joint 1 ltd is not liable for any errors that happen due to poor internet connection. ");
+    alert("You are offline. You will need a stable internet connection to continue shopping. Praise Joint 1 ltd is not liable for any errors that happen due to poor internet connection. ");
 });
   const state = useContext(GlobalState);
   const [isLogged] = state.userAPI.isLogged;

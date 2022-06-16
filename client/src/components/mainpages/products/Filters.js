@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import {GlobalState} from "../../../GlobalState";
-import SearchIcon from "@material-ui/icons/Search";
+import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
 // import ClearIcon from '@material-ui/icons/Clear';
 
 function Filters() {
@@ -35,12 +35,12 @@ function Filters() {
           <option value="">All Products</option>
           {categories.map((category) => (
             <option value={"category=" + category._id} key={category._id}>
-             {category.name} 
+              {category.name}
             </option>
           ))}
         </select>
       </div>
-      
+
       <div className="searchbar">
         <input
           type="text"
@@ -50,12 +50,19 @@ function Filters() {
           // onChange={(e) => setSearch(e.target.value.toLowerCase() )}
         />
         {/* window.location.href = "/"; */}
-        <SearchIcon style={{marginLeft: "-35px"}} />
+        <SearchRoundedIcon style={{ marginLeft: "-35px" }} />
       </div>
-      <div className="clearr" onClick={handleClear} style={{fontSize:'x-small', backgroundColor:'white'}}> clear <br/> fliters</div>
+      <div
+        className="clearr"
+        onClick={handleClear}
+        style={{ fontSize: "x-small", backgroundColor: "white" }}
+      >
+        {" "}
+        clear <br /> fliters
+      </div>
 
       <div className="row-sort">
-        <span style={{color: "white"}}>Sort By: </span>
+        <span style={{ color: "white" }}>Sort By: </span>
         <select value={sort} onChange={(e) => setSort(e.target.value)}>
           <option value="">New LISTING</option>
           <option value="sort=oldest">Old Products</option>
