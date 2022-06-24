@@ -2,7 +2,7 @@ import React, {useContext, useState, useEffect} from "react";
 import {GlobalState} from "../../../GlobalState";
 import axios from "axios";
 import './cart.css';
-import "../../Email/hgmail.css";
+import "../../Email/hagmail.css";
 import { PaystackButton } from "react-paystack";
 // import ReactWhatsapp from 'react-whatsapp';
 import PinDropIcon from "@material-ui/icons/PinDrop";

@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "./hgmail.css";
+import "./hagmail.css";
 import PinDropIcon from "@material-ui/icons/PinDrop";
 import emailjs from "emailjs-com";
 

@@ -1,0 +1,88 @@
+.sec-main {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.323);
+}
+.snd {
+  margin: 10px;
+}
+.snd p {
+  color: gray;
+}
+.row {
+  margin: 10px;
+  background-color: #f4f4fdf5;
+}
+
+.txt-5 {
+  color: black;
+}
+.formholder {
+  padding: 1rem;
+  margin: 5px;
+  border-style: unset;
+  background-color: #d0f3714b;
+  width: 100%;
+  /* background-image: linear-gradient(
+    to bottom right,
+    #f1f1f511,
+    #ffffff05,
+    #e3e4eb0e
+  ); */
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .sec {
+    padding: 5rem;
+    margin: 20px;
+    display: grid;
+  }
+  .snd {
+    margin-left: 25px;
+  }
+  .row {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .formholder {
+    padding: 3rem;
+    margin: 10px;
+  }
+}
+/* for the pulse mail icon */
+
+.pulse {
+  overflow: visible;
+  position: relative;
+}
+.pulse:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: inherit;
+  border-radius: inherit;
+  transition: opacity 0.3s, transform 0.3s;
+  animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+  z-index: -1;
+}
+@keyframes pulse-animation {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
