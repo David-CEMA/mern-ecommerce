@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalState } from "../GlobalState"
-import "./contactIcon.css";
+import "./contacticon.css";
 import ReactWhatsapp from "react-whatsapp";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import CallIcon from "@material-ui/icons/Call";
