@@ -25,12 +25,12 @@ function Filters() {
 
   const handleClear = (e) => {
     setCategory('');
-    setSearch(""); 
+    setSearch("");   
   };
    
   return (
     <div className="filter_menu">
-      <div className="row">
+      {/* <div className="row">
         <select name="category" value={category} onChange={handleCategory}>
           <option value="">All Products</option>
           {categories.map((category) => (
@@ -39,14 +39,14 @@ function Filters() {
             </option>
           ))}
         </select>
-      </div>
+      </div> */}
 
       <div className="searchbar">
         <input
           type="text"
-          value={search}
+          value={search} 
           placeholder="Search"
-          onChange={handleTheSearch}
+          onChange={handleTheSearch} 
           // onChange={(e) => setSearch(e.target.value.toLowerCase() )}
         />
         {/* window.location.href = "/"; */}
@@ -55,10 +55,10 @@ function Filters() {
       <div
         className="clearr"
         onClick={handleClear}
-        style={{ fontSize: "x-small", backgroundColor: "white" }}
+        style={{ fontSize: "small", backgroundColor: "white",padding:'2px',borderRadius:'5px' }}
       >
         {" "}
-        clear <br /> fliters
+        Clear Fliters
       </div>
 
       <div className="row-sort">

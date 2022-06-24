@@ -30,7 +30,7 @@ function OrderDetails() {
       <table>
         <thead>
           <tr>
-            <th>Name</th>
+            {/* <th>Name</th> */}
             {/* <th>Address</th>
             <th>Postal Code</th>
             <th>Country Code</th> */}
@@ -38,7 +38,7 @@ function OrderDetails() {
         </thead>
         <tbody>
           <tr>
-            <td>user info</td>
+            {/* <td>user info</td> */}
             {/* <td>
               {orderDetails.address.line1 + " - " + orderDetails.address.city}
             </td>

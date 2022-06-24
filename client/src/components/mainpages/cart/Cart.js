@@ -1,7 +1,8 @@
 import React, {useContext, useState, useEffect} from "react";
 import {GlobalState} from "../../../GlobalState";
 import axios from "axios";
-import "../../Email/Hgmail.css";
+import './cart.css';
+import "../../Email/hgmail.css";
 import { PaystackButton } from "react-paystack";
 // import ReactWhatsapp from 'react-whatsapp';
 import PinDropIcon from "@material-ui/icons/PinDrop";
@@ -47,7 +48,7 @@ function Cart() {
       }
     );
   };
-
+ 
   const increment = (id) => {
     cart.forEach((item) => {
       if (item._id === id) {
@@ -195,7 +196,7 @@ function Cart() {
 
     publicKey: "pk_live_8c6beb8d305d66ed9a6b84cf48fe861890a1fbed",
     // publicKey: "pk_test_82428103be9d2d8235d2f800b46679aa6985ecbd",
-    text: "Pay Now",
+    text: "Checkout",
     onSuccess: () => {
       // handleSubmitt();
         tranSuccess();
@@ -207,7 +208,7 @@ function Cart() {
     },
     onClose: () =>  
       alert(
-        "Share your experience with us on facebook, instagram & google. Thank you for shopping with us !"
+        "Thank you for shopping with us !"
       ),
   };
 
@@ -388,25 +389,7 @@ function Cart() {
             alignItems: "center",
             padding: "10px",
           }}>
-          <div  style={{
-            borderRadius: "10px",
-            backgroundColor: "transparent",
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            alignContent: "center",
-            alignItems: "center",
-            padding: "10px",
-          }}>
-            <div><p style={{color: "black", padding: "10px", margin: "5px"}}>
-              Click 'Pay Now' to pay via mobile money or credit/debit card.
-            </p></div>
-            <div><img
-              style={{width: "100%", height: "100%", margin: "5px"}}
-              src="./pics/f2.jpg"
-              alt="reload"
-            /></div>
-          </div>
+          
           <div
             style={{
               maxHeight: "40px",
@@ -417,7 +400,7 @@ function Cart() {
               justifyContent: "center",
               alignContent: "center",
               alignSelf: "center",
-              justifySelf: "center",
+              justifySelf: "center", 
               border: "4px solid #CCC",
               boxShadow: "2px 2px 5px 0px gray",
               cursor: "pointer",
@@ -426,7 +409,7 @@ function Cart() {
             }}>
             <PaystackButton
               className="paystack-button"
-              style={{margin: "5px"}}
+              style={{margin: "5px",padding:'5px'}}
               {...componentProps}
             />
           </div>

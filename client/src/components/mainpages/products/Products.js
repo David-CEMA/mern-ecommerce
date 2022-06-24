@@ -1,5 +1,6 @@
 import React, {useContext, useState} from "react";
-import {GlobalState} from "../../../GlobalState";
+import { GlobalState } from "../../../GlobalState";
+import './products.css'
 import ProductItem from "../utils/productItem/ProductItem";
 import Loading from "../utils/loading/Loading";
 import axios from "axios";
@@ -7,8 +8,7 @@ import axios from "axios";
 import LoadMore from "./LoadMore";
 import Footer from "../../footer/Footer";
 import Header1 from "../../headers/Header1";
-import InstagramIcon from '@material-ui/icons/Instagram';
-import FacebookIcon from '@material-ui/icons/Facebook';
+
 // import { Link } from "react-router-dom";
 // import ContactIcon from "../../ContactIcon";
 
@@ -44,7 +44,7 @@ function Products() {
 
       await destroyImg;
       await deleteProduct;
-      setCallback(!callback);
+      setCallback(!callback); 
       setLoading(false);
     } catch (err) {
       alert(err.response.data.msg);
@@ -55,7 +55,7 @@ function Products() {
     products.forEach((product) => {
       product.checked = !isCheck;
     });
-    setProducts([...products]);
+    setProducts([...products]); 
     setIsCheck(!isCheck);
   };
 
@@ -68,7 +68,7 @@ function Products() {
   if (loading)
     return (
        <div> <Header1/>
-      <div>
+      <div> 
         <Loading />
         </div>
         </div>
@@ -155,12 +155,8 @@ function Products() {
                 </div>
             </div>
       </div>
-      <div className="s-media"><div className="media-icons"> <a href='https://www.instagram.com/praisejoint1batteriesgh/'><InstagramIcon className="mediaI"/></a></div>
-        <div className="media-icons"> <a href='https://web.facebook.com/praisejoint1batteries/'><FacebookIcon className="mediaI"/></a></div></div>
-     
-      <div className="pj1-logo">
-            <img className="the-name" src="./pics/9.png" alt="aaa batteries, car batteries, charger, 18640 battery charger"/>
-        </div>
+      {/* <div className="s-media"><div className="media-icons"> <a href='https://www.instagram.com/praisejoint1batteriesgh/'><InstagramIcon className="mediaI"/></a></div>
+        <div className="media-icons"> <a href='https://web.facebook.com/praisejoint1batteries/'><FacebookIcon className="mediaI"/></a></div></div>   */}
       </div>
   );
 }

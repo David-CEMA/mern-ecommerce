@@ -3,24 +3,19 @@ import {GlobalState} from "../../GlobalState";
 import {Link} from "react-router-dom";
 import axios from "axios";
 import './header.css'
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import Filters from "../mainpages/products/Filters";
 
 
 function Header1() {
-   // offline Handler
-  window.addEventListener('offline', function (e) {
-  e.preventDefault();
-    alert("You are offline please turn on internet connection to continue shopping. Praise Joint 1 ltd is not liable for any errors that happen due to poor internet connection.");
-});
+   
   const state = useContext(GlobalState);
   const [isLogged] = state.userAPI.isLogged;
   const [isAdmin] = state.userAPI.isAdmin;
-  const [cart] = state.userAPI.cart;
 
   const logoutUser = async () => {
     await axios.get("/user/logout");
-    localStorage.removeItem("firstLogin");
+    localStorage.removeItem("firstLogin"); 
     window.location.href = "/";
   };
 
@@ -28,7 +23,7 @@ function Header1() {
     return (
       <div>
         <li class="nav-item">
-          <Link to="/create_product">
+          <Link to="/create_product"> 
             {" "}
             <p style={{color: "#f8f9fa", margin: "10px"}}>Create Product</p>
           </Link>
@@ -61,91 +56,39 @@ function Header1() {
   };
 
   return (
-    // <div className="bbb">
-    
-         /* <div class="bubbles">
-      <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-  </div>   */
-      
-      <nav class="navbar navbar-expand-lg  navbar-light ">
+    <nav class="navbar navbar-expand-lg  navbar-light ">
       <div class="container-fluid">
         <div class="navbar-brand">
-          <div className="nb">
-          <div className="cc">
-          
-           {isAdmin ? (
-       ""
-        ) : (
-          <div   className="cart-icon">
-            <Link to="/cart">
-              <button type="button" class="btn  position-relative"  style={{color:'white',backgroundColor:'transparent',padding:'5px'}}>
-                <ShoppingCartIcon />
-                <span
-                  style={{
-                    display: "flex",
-                    alignContent: "center",
-                      justifyContent: "center"
-                  }}
-                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light text-dark">
-                  {cart.length}
-                </span>
-              </button>
-            </Link> 
-          </div>
-            )}
-            </div>
-          <div className="lc">
-    <a  href="/">{isAdmin ? ( 
-              "Admin"
-            ) : (
-              <img className="logoB" src="./pics/9.png" alt="praise joint 1" />
-        )}</a> 
-            </div>
-            </div>
-          </div>
-    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-              {/* <Link class="nav-link" to="/shop">
-                {isAdmin ? (
-                  "Products"
-                ) : (
-                  <p className="m1" style={{color: "#f8f9fa", margin: "10px"}}>
-                    Shop
-                  </p>
-                )}
-              </Link>*/}
-               {isAdmin && adminRouter()} 
-
-              {isLogged ? (
-                loggedRouter()
+              {isAdmin ? (
+                ""
               ) : (
-                  <Link class="nav-link" to="/login">
-                  <p className="m1" style={{color: "#f8f9fa", margin: "10px"}}>
-                    Login ✥ Sign Up
-                  </p>
-                </Link>
+                <img
+                  className="logoB"
+                  src="./pics/9.png"
+                  alt="praise joint 1"
+                />
               )}
+        </div>
+        {/* ------- */}
+        <div class="navbar-nav">
+          {isAdmin && adminRouter()}
+
+          {isLogged ? (
+            loggedRouter()
+          ) : (
+            <Link class="nav-link" to="/login">
+              <p className="m1" style={{ color: "#f8f9fa", margin: "10px" }}>
+                <AccountCircleIcon />
+              </p>
+            </Link> 
+          )}
+        </div>
+        
       </div>
-    </div>
-  </div>
-         <div className="filter-Holder">
-      <Filters/>
+      <div className="filter-Holder">
+        <Filters />
       </div>
-          </nav>
-     /* </div>  */
-    
+    </nav>
   );
 }
 

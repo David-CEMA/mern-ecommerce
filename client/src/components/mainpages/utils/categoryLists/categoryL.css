@@ -1,0 +1,31 @@
+
+.clll{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.blockk{
+    /* height: 250px; */
+    color: black;
+    text-shadow: white 0px 2px 2px ;
+    font-weight: 500;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.cboxx{
+    display: block;
+    text-align: center;
+    letter-spacing: 2px;
+    height: auto;
+    width: max-content;
+    background-color: #a4f9be;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: #3a998e -1px 1px 5px 5px;
+}
+

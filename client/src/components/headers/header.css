@@ -12,170 +12,35 @@
   height: 100%;
   top: 0;
   z-index: 999;
+  padding: 0;
 }
 @keyframes example {
   0% {
-    background-color: rgb(131, 233, 97);
+    background-color: rgb(115, 198, 150);
   }
 
   25% {
-    background-color: rgb(82, 190, 82);
+    background-color: rgb(115, 198, 150);
   }
 
   50% {
-    background-color: #377b4a;
+    background-color: #8ac69b;
   }
 
   75% {
-    background-color: rgb(131, 233, 97);
+    background-color: rgb(115, 198, 150);
   }
 
   100% {
-    background-color: rgb(74, 175, 111);
+    background-color: rgb(143, 210, 168);
   }
-}
-.nb{
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-justify-items: center; 
-  width: 50vw;
-}
-@media only screen and (max-width: 600px) {
-  .nb {
-    width: 70vw;
-  }
-}
-.cc {
-  flex: 0.3;
-}
-.lc{
- flex: 0.7;
-}
-
-.cart-icon{
-  background-color: transparent;
 }
 .logoB {
   height: 100%;
-  width: 100%;
+  width: 30vw;
+  /* padding: 0; */
 }
 .filter-Holder{
   width: 100%;
-}
-.bubbles {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-}
-
-.bubble {
-  position: absolute;
-  bottom: -100px;
-  width: 40px;
-  height: 40px;
-  background: #f1f1f1;
-  border-radius: 50%;
-  opacity: 0.5;
-  animation: rise 10s infinite ease-in;
-}
-
-.bubble:nth-child(1) {
-  width: 40px;
-  height: 40px;
-  left: 10%;
-  animation-duration: 8s;
-}
-
-.bubble:nth-child(2) {
-  width: 20px;
-  height: 20px;
-  left: 20%;
-  animation-duration: 5s;
-  animation-delay: 1s;
-}
-
-.bubble:nth-child(3) {
-  width: 50px;
-  height: 50px;
-  left: 35%;
-  animation-duration: 7s;
-  animation-delay: 2s;
-}
-
-.bubble:nth-child(4) {
-  width: 80px;
-  height: 80px;
-  left: 50%;
-  animation-duration: 11s;
-  animation-delay: 0s;
-}
-
-.bubble:nth-child(5) {
-  width: 35px;
-  height: 35px;
-  left: 55%;
-  animation-duration: 6s;
-  animation-delay: 1s;
-}
-
-.bubble:nth-child(6) {
-  width: 45px;
-  height: 45px;
-  left: 65%;
-  animation-duration: 8s;
-  animation-delay: 3s;
-}
-
-.bubble:nth-child(7) {
-  width: 90px;
-  height: 90px;
-  left: 70%;
-  animation-duration: 12s;
-  animation-delay: 2s;
-}
-
-.bubble:nth-child(8) {
-  width: 25px;
-  height: 25px;
-  left: 80%;
-  animation-duration: 6s;
-  animation-delay: 2s;
-}
-
-.bubble:nth-child(9) {
-  width: 15px;
-  height: 15px;
-  left: 70%;
-  animation-duration: 5s;
-  animation-delay: 1s;
-}
-
-.bubble:nth-child(10) {
-  width: 90px;
-  height: 90px;
-  left: 25%;
-  animation-duration: 10s;
-  animation-delay: 4s;
-}
-
-@keyframes rise {
-  0% {
-    bottom: -100px;
-    transform: translateX(0);
-  }
-
-  50% {
-    transform: translate(100px);
-  }
-
-  100% {
-    bottom: 1080px;
-    transform: translateX(-200px);
-  }
+  padding: 0;
 }
