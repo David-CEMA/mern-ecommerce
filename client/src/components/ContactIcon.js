@@ -59,18 +59,16 @@ const state = useContext(GlobalState);
           />
         </div>
       </a> */}
-      <div className="buttom-tab>">
+      <div className="buttom-tab>"> 
         <Link to="/">
           <div className="home">
             <HomeRoundedIcon />
-            <div>HOME</div>
           </div>
         </Link>
       </div>
       <Link to="/categories">
         <div className="categ">
           <AppsRoundedIcon />
-          <div>CATEGORIES</div>
         </div>
       </Link>
       <Link to="/cart">
@@ -83,8 +81,8 @@ const state = useContext(GlobalState);
             }}
           >
             <ShoppingCartRoundedIcon />
+          <div> ({cart.length})</div>
           </div>
-          <div>CART ITEMS ({cart.length})</div>
         </div>
       </Link>
       <Link to="/">
@@ -96,8 +94,9 @@ const state = useContext(GlobalState);
           >
             <PermPhoneMsgRoundedIcon
               style={{
-                height: "2rem",
-                width: "2rem",
+                marginTop:'-5px',
+                height: "1.5rem",
+                width: "1.5rem",
                 color: "rgb(21, 95, 102)",
               }}
             />
