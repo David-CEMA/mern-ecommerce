@@ -21,6 +21,8 @@ function Pages() {
   return (
     <Switch>
       <Route path="/" exact component={Products} />
+      <Route exact path="/about" render={() => {window.location.href="about.html"}} />
+      <Route exact path="/contact" render={() => {window.location.href="contact.html"}} />
       <Route path="/shop" exact component={Products} />
       <Route path="/products" exact component={Products} />
       <Route path="/categories" exact component={CategoryL} />
@@ -32,7 +34,7 @@ function Pages() {
 
       <Route path="/login" exact component={isLogged ? NotFound : Login} />
       <Route
-        path="/register"
+        path="/register" 
         exact
         component={isLogged ? NotFound : Register}
       />
@@ -41,7 +43,7 @@ function Pages() {
         path="/category"
         exact
         component={isAdmin ? Categories : NotFound}
-      />
+      />  
       <Route
         path="/create_product"
         exact

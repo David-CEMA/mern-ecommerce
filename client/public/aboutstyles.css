@@ -1,0 +1,129 @@
+.glasspane{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(13, 39, 44, 0.85),rgba(10, 29, 26, 0.815)),url(https://www.totalbattery.com/wp-content/uploads/2019/03/bat-banner4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.logo-space{
+    width: 120px;
+    cursor: pointer;
+    color: #fff; 
+}
+.cnav {
+    width: 85%;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 35px 0;
+	display: flex;
+	place-items: center;
+}
+
+.cnav ul {
+	display: flex;
+	list-style: none;
+}
+.cnav ul li a {
+	text-decoration: none;
+	/* font-size: 40px; */
+	text-transform: uppercase;
+	margin: 0 20px;
+	color: rgb(30, 241, 160);;
+	font-family: russo one;
+	position: relative;
+}
+.cnav ul li a:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	background-color: rgb(30, 241, 160);
+	bottom: 0;
+	left: 0;
+	transform: scaleX(0);
+	transform-origin: bottom right;
+	transition: transform 0.25s linear;
+}
+.cnav ul li a:hover::after {
+	transform-origin: bottom left;
+	transform: scaleX(1);
+}
+.content-welcome-text{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-shadow: rgb(30, 241, 160) 2px;
+}
+.content-welcome-text h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.content-welcome-text p{
+    margin: 20px 0;
+    font-weight: 100;
+    line-height: 25px;
+}
+.online-store{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(30, 241, 160);
+    padding: 5px;
+}
+.online-store-info{
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: larger;
+    line-height: 30px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.548) ;
+}
+.hero-image{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+.hero-img{
+    width: 100%;
+    height: 100%;
+}
+/* ========================== */
+@media only screen and (max-width: 700px) {
+    /* .glasspane{
+        display: flex;
+        align-content: center;
+    } */
+
+    .content-welcome-text{
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        text-shadow: rgb(30, 241, 160) 2px;
+        background-color: rgba(112, 216, 152, 0.295);
+    }
+
+    .content-welcome-text h1{
+        font-size: xx-large;
+        margin-top: 80px;
+    }
+    
+    .content-welcome-text p{
+        /* margin: 20px 0; */
+        padding: 20px;
+        font-weight: 100;
+        line-height: 25px;
+        text-align: center;
+    }
+    .cnav {
+        /* width: 85%; */
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        place-items: center;
+    }
+}

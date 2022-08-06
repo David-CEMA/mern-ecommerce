@@ -43,12 +43,12 @@ function Header1() {
        <div style={{display:'flex'}}>
         <div><li class="nav-link">
           <Link to="/history">
-            <p style={{color: "#f8f9fa", margin: "10px"}}>History</p>
+            <p style={{color: "#f8f9fa", margin: "5px"}}>History</p>
           </Link>
         </li></div>
         <div><li class="nav-link">
           <Link to="/" onClick={logoutUser}>
-            <p style={{color: "#f8f9fa", margin: "10px"}}>Logout</p> 
+            <p style={{color: "#f8f9fa", margin: "5px"}}>Logout</p> 
           </Link>
         </li></div>
       </div>  
@@ -62,11 +62,11 @@ function Header1() {
               {isAdmin ? (
                 ""
               ) : (
-                <img
+                /* <img
                   className="logoB"
                   src="./pics/9.png"
                   alt="praise joint 1"
-                />
+                /> */<Filters/>
               )}
         </div>
         {/* ------- */}
@@ -85,9 +85,9 @@ function Header1() {
         </div>
         
       </div>
-      <div className="filter-Holder">
+      {/* <div className="filter-Holder">
         <Filters />
-      </div>
+      </div> */}
     </nav>
   );
 }

@@ -3,7 +3,7 @@
   align-content: center;
   justify-content: center;
   position: sticky;
-  margin-top: 95vh;
+  margin-top: 5vh;
   bottom: 0;
   width: 100%;
   background-color: #f4ffd4;
@@ -31,7 +31,7 @@ width: 100%;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  font-size: smaller;
+  font-size: large;
   color: rgb(21, 95, 102);
   margin-left: 10px;
   margin-right: 10px;

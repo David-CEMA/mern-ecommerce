@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom";
 // import {getUser} from "../../../../../../../controllers/userCtrl";
 import {GlobalState} from "../../../GlobalState";
 import Header from "../../headers/Header";
+import './history.css'
 
 function OrderDetails() {
   const state = useContext(GlobalState);
@@ -61,7 +62,7 @@ function OrderDetails() {
           {orderDetails.cart.map((item) => (
             <tr key={item._id}>
               <td>
-                <img src={item.images.url} alt="" />
+                <img className="historyImg" src={item.images.url} alt="item bought" />
               </td>
               <td>{item.title}</td>
               <td>{item.quantity}</td>
@@ -71,6 +72,8 @@ function OrderDetails() {
         </tbody>
       </table>
       </div>
+      <div> <button style={{ padding: '10px' }} onClick={() => history.goBack()}>Back</button>
+          </div>
       </div>
   );
 }
