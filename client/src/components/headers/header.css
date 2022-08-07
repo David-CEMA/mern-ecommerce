@@ -1,20 +1,24 @@
 
 .navbar{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   position: relative;
-  animation-name: example;
+  padding: 2px;
+  background-color: rgb(131, 233, 97);
+  /* animation-name: example;
   animation-duration: 10s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
   position: sticky;
   width: 100%;
-  height: max-content;
+  height: 100%;
   top: 0;
+  color: black;
   z-index: 999;
-  padding: 0;
 }
-@keyframes example {
+/* @keyframes example {
   0% {
     background-color: rgb(115, 198, 150);
   }
@@ -29,18 +33,25 @@
 
   75% {
     background-color: rgb(115, 198, 150);
-  }
+  } 
 
   100% {
     background-color: rgb(143, 210, 168);
   }
-}
+} */
 .logoB {
   height: 100%;
   width: 30vw;
-  /* padding: 0; */
 }
-.filter-Holder{
-  width: 100%;
-  padding: 0;
+.m1{
+  color: white;
+}
+
+.history-logout{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: whitesmoke;
+  height: 100%;
+  text-decoration: dashed;
 }

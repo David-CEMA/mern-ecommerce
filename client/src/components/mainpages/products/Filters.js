@@ -5,17 +5,17 @@ import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
 
 function Filters() {
   const state = useContext(GlobalState);
-  const [categories] = state.categoriesAPI.categories;
+  // const [categories] = state.categoriesAPI.categories;
 
   const [category, setCategory] = state.productsAPI.category;
   const [sort, setSort] = state.productsAPI.sort;
   const [search, setSearch] = state.productsAPI.search;
 
-  const handleCategory = (e) => {
-     window.scrollTo(0, 0);
-    setCategory(e.target.value);
-    setSearch(""); 
-  };
+  // const handleCategory = (e) => {
+  //    window.scrollTo(0, 0);
+  //   setCategory(e.target.value);
+  //   setSearch(""); 
+  // };
   const handleTheSearch = (e) => {
      window.scrollTo(0, 0);
     setCategory('');

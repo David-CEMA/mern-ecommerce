@@ -22,7 +22,7 @@ function Pages() {
     <Switch>
       <Route path="/" exact component={Products} />
       <Route exact path="/about" render={() => {window.location.href="about.html"}} />
-      <Route exact path="/contact" render={() => {window.location.href="contact.html"}} />
+      <Route exact path="/contact" render={() => {window.location.href="contact.html"}} />  
       <Route path="/shop" exact component={Products} />
       <Route path="/products" exact component={Products} />
       <Route path="/categories" exact component={CategoryL} />

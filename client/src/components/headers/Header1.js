@@ -25,13 +25,13 @@ function Header1() {
         <li class="nav-item">
           <Link to="/create_product"> 
             {" "}
-            <p style={{color: "#f8f9fa", margin: "10px"}}>Create Product</p>
+            <p style={{color: "#f8f9fa", margin: "5px"}}>Create Product</p>
           </Link>
         </li>
         <li class="nav-item">
           <Link to="/category">
             {" "}
-            <p style={{color: "#f8f9fa", margin: "10px"}}>Categories</p>
+            <p style={{color: "#f8f9fa", margin: "5px"}}>Categories</p>
           </Link>
         </li>
       </div>
@@ -40,55 +40,47 @@ function Header1() {
 
   const loggedRouter = () => {
     return (
-       <div style={{display:'flex'}}>
-        <div><li class="nav-link">
+       <div className="history-logout">
           <Link to="/history">
-            <p style={{color: "#f8f9fa", margin: "5px"}}>History</p>
+        <div style={{padding:'1px',height:'100%',color:'whitesmoke',marginRight:'5px'}}>
+            History
+        </div>
           </Link>
-        </li></div>
-        <div><li class="nav-link">
           <Link to="/" onClick={logoutUser}>
-            <p style={{color: "#f8f9fa", margin: "5px"}}>Logout</p> 
+        <div style={{padding:'1px',height:'100%',color:'whitesmoke'}}>
+            Logout 
+        </div>
           </Link>
-        </li></div>
       </div>  
     );
   };
 
   return (
-    <nav class="navbar navbar-expand-lg  navbar-light ">
-      <div class="container-fluid">
-        <div class="navbar-brand">
+    <div class="navbar navbar-expand-lg  navbar-light ">
+      <div class="container-fluid" >
+        <div>
               {isAdmin ? (
                 ""
               ) : (
-                /* <img
-                  className="logoB"
-                  src="./pics/9.png"
-                  alt="praise joint 1"
-                /> */<Filters/>
+
+              <Filters/>
               )}
         </div>
         {/* ------- */}
-        <div class="navbar-nav">
+            <Link  to="/login">
+        <div className="m1">
           {isAdmin && adminRouter()}
 
           {isLogged ? (
             loggedRouter()
           ) : (
-            <Link class="nav-link" to="/login">
-              <p className="m1" style={{ color: "#f8f9fa", margin: "10px" }}>
                 <AccountCircleIcon />
-              </p>
-            </Link> 
           )}
         </div>
+            </Link> 
         
       </div>
-      {/* <div className="filter-Holder">
-        <Filters />
-      </div> */}
-    </nav>
+    </div>
   );
 }
 
